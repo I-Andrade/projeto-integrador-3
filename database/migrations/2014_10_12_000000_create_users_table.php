@@ -22,6 +22,15 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+        Schema::create('Wallpapers', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('image');
+            $table->string('category')->nullable();
+            $table->string('author');
+            $table->string('description');
+            $table->timestamps();
+        });
     }
 
     /**
