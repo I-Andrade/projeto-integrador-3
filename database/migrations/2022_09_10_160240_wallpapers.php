@@ -21,6 +21,7 @@ class Wallpapers extends Migration
             $table->string('author');
             $table->string('description');
             $table->timestamps('created_at');
+            $table->timestamps('updated_at');
         });
     }
 
