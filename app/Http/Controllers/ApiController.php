@@ -21,12 +21,7 @@ class ApiController extends Controller
 
     public function createWallpaper(Request $request)
     {
-        $wallpaper = new Wallpaper;
-        $wallpaper-> name = $request->name;
-        $wallpaper-> image = $request->image;
-        $wallpaper-> category = $request->category;
-        $wallpaper-> author = $request->author;
-        $wallpaper-> description = $request->description;
+        $wallpaper = Wallpaper::create($request->all());
         $wallpaper->save();
         return response()->json(["message" => "Wallpaper created successfully"], 201);
 }
