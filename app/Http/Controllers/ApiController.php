@@ -24,7 +24,7 @@ class ApiController extends Controller
         $wallpaper = Wallpaper::create($request->all());
         $wallpaper->save();
         return response()->json(["message" => "Wallpaper created successfully"], 201);
-}
+    }
 
     public function updateWallpaper(Request $request, $id)
     {
