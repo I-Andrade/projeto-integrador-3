@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wallpaper extends Model
 {
+    use HasFactory;
     protected $table = 'wallpapers';
     protected $fillable = ['name', 'image', 'category', 'author', 'description'];
-    //use HasFactory;
 }
