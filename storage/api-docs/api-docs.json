@@ -1,0 +1,75 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Wallpaper API (PI3 Univesp)",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/wallpapers": {
+            "get": {
+                "summary": "List wallpapers",
+                "operationId": "getAllWallpapers",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/api/wallpaper/{Id}": {
+            "get": {
+                "summary": "List Wallpaper by ID",
+                "operationId": "getWallpaper",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "Target Wallpaper.",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/api/wallpaper": {
+            "post": {
+                "summary": "List Wallpaper by ID",
+                "operationId": "createWallpaper",
+                "parameters": [
+                    {
+                        "name": "Description",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        }
+    }
+}
