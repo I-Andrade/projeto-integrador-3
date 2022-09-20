@@ -10,4 +10,5 @@ jobs:
     - uses: ./.github/actions/composer
     - uses: ./.github/actions/config-laravel
     - uses: ./.github/actions/running-tests
-    - run: ./vendor/bin/phpunit
+    - run: |
+        PHP artisan tests .
