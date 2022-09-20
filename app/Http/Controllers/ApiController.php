@@ -57,6 +57,47 @@ class ApiController extends Controller
         return response()->json($wallpaper);
     }
    
+    /**
+     * @OA\Post(
+     *   path="/api/wallpaper/",
+     *   summary="Create Wallpaper",
+     *   operationId="createWallpaper",
+     *   @OA\Parameter(
+     *     name="name",
+     *     in="query",
+     *     description="Name",
+     *     required=true
+     *   ),
+     *   @OA\Parameter(
+     *   name="image",
+     *   in="query",
+     *   description="Image",
+     *   required=true
+     *   ),
+     *   @OA\Parameter(
+     *   name="category",
+     *   in="query",
+     *   description="Category",
+     *   required=true
+     *   ),
+     *   @OA\Parameter(
+     *   name="author",
+     *   in="query",
+     *   description="Author",
+     *   required=true
+     *   ),
+     *   @OA\Parameter(
+     *   name="description",
+     *   in="query",
+     *   description="Description",
+     *   required=true
+     *   ),
+     *   @OA\Response(response=200, description="successful operation"),
+     *   @OA\Response(response=406, description="not acceptable"),
+     *   @OA\Response(response=500, description="internal server error")
+     * )
+     *
+     */    
     public function createWallpaper(Request $request)
     {
         $wallpaper = Wallpaper::create($request->all());
@@ -64,6 +105,52 @@ class ApiController extends Controller
         return response()->json(["message" => "Wallpaper created successfully"], 201);
     }
 
+    /** @OA\Put(
+    *   path="/api/wallpaper/{id}",
+    *   summary="Update Wallpaper",
+    *   operationId="updateWallpaper",
+    *   @OA\Parameter(
+    *   name="id",
+    *   in="path",
+    *   description="Name",
+    *   required=false
+    *   ),
+    *   @OA\Parameter(
+    *   name="name",
+    *   in="query",
+    *   description="Name",
+    *   required=false
+    *   ),
+    *   @OA\Parameter(
+    *   name="image",
+    *   in="query",
+    *   description="Image",
+    *   required=false
+    *   ),
+    *   @OA\Parameter(
+    *   name="category",
+    *   in="query",
+    *   description="Category",
+    *   required=false
+    *   ),
+    *   @OA\Parameter(
+    *   name="author",
+    *   in="query",
+    *   description="Author",
+    *   required=false
+    *   ),
+    *   @OA\Parameter(
+    *   name="description",
+    *   in="query",
+    *   description="Description",
+    *   required=false
+    *   ),
+    *   @OA\Response(response=200, description="successful operation"),
+    *   @OA\Response(response=406, description="not acceptable"),
+    *   @OA\Response(response=500, description="internal server error")
+    * )
+    *
+    */ 
     public function updateWallpaper(Request $request, $id)
     {
         $wallpaper = Wallpaper::find($id);
@@ -71,10 +158,27 @@ class ApiController extends Controller
         return response()->json($wallpaper);
     }
 
+    /**
+     * @OA\Delete(
+     *   path="/api/wallpaper/{Id}",
+     *   summary="Delete Wallpaper by ID",
+     *   operationId="deleteWallpaper",
+     *   @OA\Parameter(
+     *     name="Id",
+     *     in="path",
+     *     description="Target Wallpaper.",
+     *     required=true
+     *   ),
+     *   @OA\Response(response=200, description="successful operation"),
+     *   @OA\Response(response=406, description="not acceptable"),
+     *   @OA\Response(response=500, description="internal server error")
+     * )
+     *
+     */    
     public function deleteWallpaper($id)
     {
         $wallpaper = Wallpaper::find($id);
         $wallpaper->delete();
-        return response()->json('deleted');
+        return response()->json('Deleted');
     }
 }
