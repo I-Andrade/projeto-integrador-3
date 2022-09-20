@@ -10,7 +10,7 @@ jobs:
     - uses: ./.github/actions/composer
     - uses: ./.github/actions/config-laravel
 
-    - name: Checkout repository
+    - name: tests
       run: |
         php artisan migrate
     - run: ./vendor/bin/phpunit
