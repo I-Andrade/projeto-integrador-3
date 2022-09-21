@@ -12,5 +12,4 @@ jobs:
 
     - name: tests
       run: |
-        php artisan migrate:install --no-interaction -vvv
-    - run: ./vendor/bin/phpunit
+        php artisan test
