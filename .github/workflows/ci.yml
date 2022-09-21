@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: ./.github/actions/composer
-    - uses: ./.github/actions/config-laravel
-    - run: ./vendor/bin/phpunit
+    - name: Composer
+      uses: ./.github/actions/composer
+    - name: Laravel Configuration
+      uses: ./.github/actions/config-laravel
+    - name: Tests
+      run: |
+        php artisan test
