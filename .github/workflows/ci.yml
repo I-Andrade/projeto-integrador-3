@@ -9,7 +9,4 @@ jobs:
     - uses: actions/checkout@v1
     - uses: ./.github/actions/composer
     - uses: ./.github/actions/config-laravel
-
-    - name: tests
-      run: |
-        php artisan test
+    - run: ./vendor/bin/phpunit
