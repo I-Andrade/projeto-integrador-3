@@ -12,5 +12,4 @@ jobs:
 
     - name: tests
       run: |
-        php artisan migrate
         php artisan test
