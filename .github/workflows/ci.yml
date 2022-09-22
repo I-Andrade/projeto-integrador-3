@@ -14,5 +14,3 @@ jobs:
     - name: Tests
       run: |
         php artisan test
-    - name: Code Sniffer
-      run: ./vendor/bin/phpcs
