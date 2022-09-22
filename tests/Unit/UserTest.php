@@ -21,6 +21,7 @@ class UserTest extends TestCase
     {
         $qtde = 20;
         User::factory()->unverified()->count($qtde)->create();
+        
         $users = User::all();
         $this->assertCount($qtde,$users);
         $this->assertNotEmpty($users->first->name);
