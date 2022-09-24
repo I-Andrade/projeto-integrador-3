@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    
+    $response = Http::get('https://graph.instagram.com/me/media?fields=id,media_url,username,timestamp&access_token=IGQVJYcHpFV1dyS0pNbmZAMUkxhaEtvaFQ0aTdmUzNpbXBoczA4NVNXbWVEQlhIQXpKR2dVWnJvTTR3N3ltVUlJM2ZAKaHNnUHJzb2NVM0xtQm9kWmM5UEhqOWhGNHpnOEFyMmtMTzhUaWJXU1RMWWdiYUNJTjJWNDlCLVdj');
+    return view('welcome')->with(['fotos' => $response->json('data')]);
 });
 
 Route::get('blog', function () {
