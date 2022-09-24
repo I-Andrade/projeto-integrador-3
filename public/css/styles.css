@@ -20,16 +20,16 @@ html {
 }
 
 body, p {
-	color: #f3f6f9; 
-	font: 400 1rem/1.5625rem "Raleway", sans-serif;
+	color: #213737;
+	font: 400 1rem/1.5625rem "Mukta", sans-serif;
 }
 
 .p-large {
-	font: 400 1.125rem/1.75rem "Raleway", sans-serif;
+	font: 400 1.125rem/1.75rem "Mukta", sans-serif;
 }
 
 .p-small {
-	font: 400 0.875rem/1.375rem "Raleway", sans-serif;
+	font: 400 0.875rem/1.375rem "Mukta", sans-serif;
 }
 
 .p-heading {
@@ -38,33 +38,33 @@ body, p {
 }
 
 h1 {
-	color: #f9f9fb;
-	font: 700 2.75rem/3.375rem "Raleway", sans-serif;
+	color: #213737;
+	font: 700 2.75rem/3.375rem "Vollkorn", sans-serif;
 }
 
 h2 {
-	color: #f9f9fb;
-	font: 700 2.25rem/2.75rem "Raleway", sans-serif;
+	color: #213737;
+	font: 700 2.25rem/2.75rem "Vollkorn", sans-serif;
 }
 
 h3 {
-	color: #f9f9fb;
-	font: 700 1.75rem/2.25rem "Raleway", sans-serif;
+	color: #213737;
+	font: 700 1.75rem/2.25rem "Vollkorn", sans-serif;
 }
 
 h4 {
-	color: #f9f9fb;
-	font: 700 1.25rem/1.75rem "Raleway", sans-serif;
+	color: #213737;
+	font: 700 1.25rem/1.75rem "Vollkorn", sans-serif;
 }
 
 h5 {
-	color: #f9f9fb;
-	font: 700 1.125rem/1.5rem "Raleway", sans-serif;
+	color: #213737;
+	font: 700 1.125rem/1.5rem "Vollkorn", sans-serif;
 }
 
 h6 {
-	color: #f9f9fb;
-	font: 700 1rem/1.375rem "Raleway", sans-serif;
+	color: #213737;
+	font: 700 1rem/1.375rem "Vollkorn", sans-serif;
 }
 
 a {
@@ -97,8 +97,8 @@ a.green {
 	border: 0.125rem solid #E45032;
 	border-radius: 2rem;
 	background-color: #E45032;
-	color: #f9f9fb;
-	font: 700 0.875rem/0 "Raleway", sans-serif;
+	color: #213737;
+	font: 700 0.875rem/0 "Mukta", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 }
@@ -115,8 +115,8 @@ a.green {
 	border: 0.125rem solid #E45032;
 	border-radius: 2rem;
 	background-color: #E45032;
-	color: #f9f9fb;
-	font: 700 0.875rem/0 "Raleway", sans-serif;
+	color: #213737;
+	font: 700 0.875rem/0 "Mukta", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 }
@@ -134,14 +134,14 @@ a.green {
 	border-radius: 2rem;
 	background-color: transparent;
 	color: #E45032;
-	font: 700 0.875rem/0 "Raleway", sans-serif;
+	font: 700 0.875rem/0 "Mukta", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 }
 
 .btn-outline-reg:hover {
 	background-color: #E45032;
-	color: #f9f9fb;
+	color: #213737;
 	text-decoration: none;
 }
 
@@ -152,14 +152,14 @@ a.green {
 	border-radius: 2rem;
 	background-color: transparent;
 	color: #E45032;
-	font: 700 0.875rem/0 "Raleway", sans-serif;
+	font: 700 0.875rem/0 "Mukta", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 }
 
 .btn-outline-lg:hover {
 	background-color: #E45032;
-	color: #f9f9fb;
+	color: #213737;
 	text-decoration: none;
 }
 
@@ -170,14 +170,14 @@ a.green {
 	border-radius: 2rem;
 	background-color: transparent;
 	color: #E45032;
-	font: 700 0.75rem/0 "Raleway", sans-serif;
+	font: 700 0.75rem/0 "Mukta", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s;
 }
 
 .btn-outline-sm:hover {
 	background-color: #E45032;
-	color: #f9f9fb;
+	color: #213737;
 	text-decoration: none;
 }
 
@@ -198,15 +198,15 @@ a.green {
 	position: absolute;
 	top: 0.87rem;
 	left: 1.375rem;
-	color: #f9f9fb;
+	color: #213737;
 	opacity: 1;
-	font: 400 1rem/1.5rem "Raleway", sans-serif;
+	font: 400 1rem/1.5rem "Mukta", sans-serif;
 	cursor: text;
 	transition: all 0.2s ease;
 }
 
 /* IE10+ hack to solve lower label text position compared to the rest of the browsers */
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
 	.label-control {
 		top: 0.9375rem;
 	}
@@ -231,9 +231,9 @@ a.green {
 	padding-left: 1.3125rem;
 	border: 1px solid #636a77;
 	border-radius: 0.25rem;
-	background-color: #41495a;
-	color: #f9f9fb;
-	font: 400 1rem/1.875rem "Raleway", sans-serif;
+	background-color: #f3f6f9;
+	color: #213737;
+	font: 400 1rem/1.875rem "Mukta", sans-serif;
 	transition: all 0.2s;
 	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
 }
@@ -245,7 +245,7 @@ a.green {
 }
 
 /* IE10+ hack to solve lower label text position compared to the rest of the browsers */
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
 	.form-control-input {
 		padding-top: 1.25rem;
 		padding-bottom: 0.75rem;
@@ -285,27 +285,27 @@ select::-ms-expand {
 	padding-left: 1.3125rem;
 	border: 1px solid #636a77;
 	border-radius: 0.25rem;
-	background-color: #41495a;
-	color: #f9f9fb;
-	font: 400 1rem/1.5625rem "Raleway", sans-serif;
+	background-color: #f3f6f9;
+	color: #213737;
+	font: 400 1rem/1.5625rem "Mukta", sans-serif;
 	transition: all 0.2s;
 }
 
 .form-control-input:focus,
 .form-control-select:focus,
 .form-control-textarea:focus {
-	border: 1px solid #f9f9fb;
+	border: 1px solid #E45032;
 	outline: none; /* Removes blue border on focus */
 }
 
 .form-control-input:hover,
 .form-control-select:hover,
 .form-control-textarea:hover {
-	border: 1px solid #f9f9fb;
+	border: 1px solid #213737;
 }
 
 .checkbox {
-	font: 400 0.875rem/1.375rem "Raleway", sans-serif;
+	font: 400 0.875rem/1.375rem "Mukta", sans-serif;
 }
 
 input[type='checkbox'] {
@@ -314,7 +314,7 @@ input[type='checkbox'] {
 }
 
 /* IE10+ hack to raise checkbox field position compared to the rest of the browsers */
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {  
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
 	input[type='checkbox'] {
 		vertical-align: -9%;
 	}
@@ -327,8 +327,8 @@ input[type='checkbox'] {
 	border: 1px solid #E45032;
 	border-radius: 1.5rem;
 	background-color: #E45032;
-	color: #f9f9fb;
-	font: 700 0.875rem/1.75rem "Raleway", sans-serif;
+	color: #ffffff;
+	font: 700 0.875rem/1.75rem "Mukta", sans-serif;
 	cursor: pointer;
 	transition: all 0.2s;
 }
@@ -352,17 +352,17 @@ input[type='checkbox'] {
 /* animate in */
 .my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
 	opacity: 1;
-	-webkit-transform: translateY(0) perspective(37.5rem) rotateX(0); 
-	-ms-transform: translateY(0) perspective(37.5rem) rotateX(0); 
-	transform: translateY(0) perspective(37.5rem) rotateX(0); 
+	-webkit-transform: translateY(0) perspective(37.5rem) rotateX(0);
+	-ms-transform: translateY(0) perspective(37.5rem) rotateX(0);
+	transform: translateY(0) perspective(37.5rem) rotateX(0);
 }
 
 /* animate out */
 .my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
 	opacity: 0;
-	-webkit-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg); 
-	-ms-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg); 
-	transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg); 
+	-webkit-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg);
+	-ms-transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg);
+	transform: translateY(-0.625rem) perspective(37.5rem) rotateX(10deg);
 }
 
 /* dark overlay, start state */
@@ -449,7 +449,7 @@ input[type='checkbox'] {
 	left: 50%; /* centers the loading animation horizontally one the screen */
 	width: 3.75rem;
 	height: 1.25rem;
-	margin: -0.625rem 0 0 -1.875rem; /* is width and height divided by two */ 
+	margin: -0.625rem 0 0 -1.875rem; /* is width and height divided by two */
 	text-align: center;
 }
 
@@ -458,7 +458,7 @@ input[type='checkbox'] {
 	width: 1rem;
 	height: 1rem;
 	border-radius: 100%;
-	background-color: #f9f9fb;
+	background-color: #213737;
 	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
 }
@@ -479,11 +479,11 @@ input[type='checkbox'] {
 }
 
 @keyframes sk-bouncedelay {
-	0%, 80%, 100% { 
+	0%, 80%, 100% {
 		-webkit-transform: scale(0);
 		-ms-transform: scale(0);
 		transform: scale(0);
-	} 40% { 
+	} 40% {
 		-webkit-transform: scale(1.0);
 		-ms-transform: scale(1.0);
 		transform: scale(1.0);
@@ -495,23 +495,25 @@ input[type='checkbox'] {
 /*     03. Navigation     */
 /**************************/
 .navbar-custom {
-	background-color: #1b1b1b;
+	background-color: #f9f5f0;
 	box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.2);
-	font: 700 0.75rem/0.75rem "Raleway", sans-serif;
+	font: 700 0.75rem/0.75rem "Mukta", sans-serif;
 	font-size: 1.200rem;
 	transition: all 0.2s;
+
 }
 
 .navbar-custom .navbar-brand.logo-image img {
-	width: 7.5rem;
-	height: 2.125rem;
+	width: 5.5rem;
+	height: 5.5rem;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
+    border-radius: 100%;
 }
 
 .navbar-custom .navbar-brand.logo-text {
-	font: 700 2rem/1.375rem "Raleway", sans-serif;
-	color: #f9f9fb;
+	font: 700 2rem/1.375rem "Mukta", sans-serif;
+	color: #213737;
 	text-decoration: none;
 }
 
@@ -522,7 +524,7 @@ input[type='checkbox'] {
 
 .navbar-custom .nav-item .nav-link {
 	padding: 0.625rem 0.75rem 0.625rem 0.75rem;
-	color: #f9f9fb;
+	color: #213737;
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
@@ -557,11 +559,11 @@ input[type='checkbox'] {
 	margin-top: 0;
 	border: none;
 	border-radius: 0.25rem;
-	background-color: #2e3543;
+	background-color: #e2cac6;
 }
 
 .navbar-custom .dropdown-item {
-	color: #f9f9fb;
+	color: #213737;
 	text-decoration: none;
 }
 
@@ -570,7 +572,7 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .dropdown-item .item-text {
-	font: 700 0.75rem/0.75rem "Raleway", sans-serif;
+	font: 700 0.75rem/0.75rem "Mukta", sans-serif;
 }
 
 .navbar-custom .dropdown-item:hover .item-text {
@@ -594,7 +596,7 @@ input[type='checkbox'] {
 .navbar-custom .navbar-toggler {
 	padding: 0;
 	border: none;
-	color: #f9f9fb;
+	color: #213737;
 	font-size: 2rem;
 }
 
@@ -622,7 +624,7 @@ input[type='checkbox'] {
 .header {
 	position: relative;
 	background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),  center center no-repeat;
-	background-size: cover; 
+	background-size: cover;
 }
 
 .header .header-content {
@@ -633,7 +635,7 @@ input[type='checkbox'] {
 
 .header .countdown {
 	margin-bottom: 1.25rem;
-	color: #f9f9fb;
+	color: #213737;
 	text-align: center;
 }
 
@@ -645,7 +647,7 @@ input[type='checkbox'] {
 	margin-bottom: 1.25rem;
 	margin-left: 0.5rem;
 	padding-top: 1.75rem;
-	border: 0.125rem solid #f9f9fb;
+	border: 0.125rem solid #213737;
 	border-radius: 50%;
 	font-weight: 700;
 	font-size: 2rem;
@@ -654,7 +656,7 @@ input[type='checkbox'] {
 }
 
 .header .countdown #clock .counter-number .timer-text {
-	font: 400 0.75rem/1rem "Raleway", sans-serif;
+	font: 400 0.75rem/1rem "Mukta", sans-serif;
 	text-align: center;
 }
 
@@ -692,7 +694,7 @@ input[type='checkbox'] {
 	padding-top: 3rem;
 	padding-bottom: 6rem;
 	padding-left: 0%;
-	background-color: #1b1b1b;
+	background-color: #f9f5f0;
 }
 
 .form-1 .text-container {
@@ -737,7 +739,7 @@ input[type='checkbox'] {
 	width: 100%;
 	vertical-align: center;
 }
- 
+
 .about-image img{
 	float: left;
 	height: 400px;
@@ -753,7 +755,7 @@ input[type='checkbox'] {
 .form-2 {
 	padding-top: 7rem;
 	padding-bottom: 6.25rem;
-	background-color: #2e3543;
+	background-color: #f9f5f0;
 }
 
 .form-2 h2 {
@@ -798,7 +800,7 @@ input[type='checkbox'] {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	border: none; 
+	border: none;
 }
 
 
@@ -808,7 +810,7 @@ input[type='checkbox'] {
 .footer {
 	padding-top: 5rem;
 	margin-top: -3rem;
-	background-color: #1b1b1b;
+	background-color: #f9f5f0;
 }
 
 .footer .footer-col {
@@ -841,21 +843,21 @@ input[type='checkbox'] {
 }
 
 .footer .fa-stack .fa-stack-1x {
-    color: #2f3a43;
+    color: #ffffff;
 	transition: all 0.2s ease;
 }
 
 .footer .fa-stack .fa-stack-2x {
-	color: #f9f9fb;
+	color: #213737;
 	transition: all 0.2s ease;
 }
 
 .footer .fa-stack:hover .fa-stack-1x {
-	color: #f9f9fb;
+	color: #E45032;
 }
 
 .footer .fa-stack:hover .fa-stack-2x {
-    color: #E45032;
+    color: #ffffff;
 }
 
 
@@ -865,7 +867,7 @@ input[type='checkbox'] {
 .copyright {
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
-	background-color: #1b1b1b;
+	background-color: #f9f5f0;
 	text-align: center;
 }
 
@@ -958,10 +960,10 @@ input[type='checkbox'] {
 
 /*****************************/
 /*     Media Queries     */
-/*****************************/	
+/*****************************/
 /* Min-width width 768px */
 @media (min-width: 768px) {
-	
+
 	/* General Styles */
 	.p-heading {
 		width: 85%;
@@ -975,11 +977,11 @@ input[type='checkbox'] {
 	.navbar-custom {
 		padding: 2.125rem 1.5rem 2.125rem 2rem;
 		box-shadow: none;
-        background: transparent;
+		background: transparent;
 	}
-	
+
 	.navbar-custom .navbar-brand.logo-text {
-		color: #f9f9fb;
+		color: #213737;
 	}
 
 	.navbar-custom .navbar-nav {
@@ -990,7 +992,7 @@ input[type='checkbox'] {
 	.navbar-custom .nav-item .nav-link {
 		padding: 0.25rem 0.75rem 0.125rem 0.75rem;
 	}
-	
+
 	.navbar-custom .nav-item .nav-link:hover,
 	.navbar-custom .nav-item .nav-link.active {
 		color: #E45032;
@@ -999,17 +1001,17 @@ input[type='checkbox'] {
 	.navbar-custom.top-nav-collapse {
         padding: 0.5rem 1.5rem 0.5rem 2rem;
 		box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.2);
-		background-color: #1b1b1b;
+		background-color: #f9f5f0;
 	}
 
 	.navbar-custom.top-nav-collapse .navbar-brand.logo-text {
-		color: #f9f9fb;
+		color: #213737;
 	}
 
 	.navbar-custom.top-nav-collapse .nav-item .nav-link {
-		color: #f9f9fb;
+		color: #213737;
 	}
-	
+
 	.navbar-custom.top-nav-collapse .nav-item .nav-link:hover,
 	.navbar-custom.top-nav-collapse .nav-item .nav-link.active {
 		color: #E45032;
@@ -1044,12 +1046,12 @@ input[type='checkbox'] {
 	}
 
 	.header h1 {
-		font: 700 4.75rem/5.25rem "Raleway", sans-serif;
+		font: 700 4.75rem/5.25rem "Mukta", sans-serif;
 	}
 	/* end of header */
 
 
-	
+
 
 	/* Duration */
 	.basic-2 .duration-pane {
@@ -1102,7 +1104,7 @@ input[type='checkbox'] {
 
 /* Min-width width 992px */
 @media (min-width: 992px) {
-	
+
 	/* General Styles */
 	.p-heading {
 		width: 65%;
@@ -1120,19 +1122,19 @@ input[type='checkbox'] {
 		margin-left: 0.375rem;
 		font-size: 0.75rem;
 	}
-	
+
 	.navbar-custom .fa-stack-2x {
 		color: #E45032;
 		transition: all 0.2s ease;
 	}
-	
+
 	.navbar-custom .fa-stack-1x {
-		color: #f9f9fb;
+		color: #213737;
 		transition: all 0.2s ease;
 	}
 
 	.navbar-custom .fa-stack:hover .fa-stack-2x {
-		color: #f9f9fb;
+		color: #213737;
 	}
 
 	.navbar-custom .fa-stack:hover .fa-stack-1x {
@@ -1142,15 +1144,15 @@ input[type='checkbox'] {
 	.navbar-custom.top-nav-collapse .fa-stack-2x {
 		color: #E45032;
 	}
-	
+
 	.navbar-custom.top-nav-collapse .fa-stack-1x {
-		color: #f9f9fb;
+		color: #213737;
 	}
 
 	.navbar-custom.top-nav-collapse .fa-stack:hover .fa-stack-2x {
-		color: #f9f9fb;
+		color: #213737;
 	}
-	
+
 	.navbar-custom.top-nav-collapse .fa-stack:hover .fa-stack-1x {
 		color: #E45032;
 	}
@@ -1212,7 +1214,7 @@ input[type='checkbox'] {
 
 /* Min-width width 1200px */
 @media (min-width: 1200px) {
-	
+
 	/* Navigation */
 	.navbar-custom {
 		padding: 2.125rem 5rem 2.125rem 5rem;
@@ -1223,11 +1225,11 @@ input[type='checkbox'] {
 	}
 	/* end of navigation */
 
-	
+
 	/* Header */
 	.header {
 		background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../images/banner.jpeg') center center no-repeat;
-		background-size: cover; 
+		background-size: cover;
 	}
 
 	.header .header-content {
@@ -1256,7 +1258,7 @@ input[type='checkbox'] {
 	.form-1 .text-container {
 		margin: 0;
 	}
-	
+
 	.form-1 form {
 		margin-right: 1.5rem;
 		margin-left: 1.5rem;
@@ -1305,3 +1307,237 @@ input[type='checkbox'] {
 	/* end of extra pages */
 }
 /* end of min-width width 1200px */
+
+/**************************/
+/*     Portfólio          */
+/**************************/
+.cards-1 {
+	padding-top: 6.5rem;
+	padding-bottom: 2.75rem;
+	text-align: center;
+	background-color: #f9f5f0;
+}
+
+.cards-1 .h2-heading {
+	margin-top: 3.75rem;
+	margin-bottom: 4.75rem;
+}
+
+.cards-1 .card {
+	margin-bottom: 4rem;
+	border: 0;
+	background-color: #f9f5f0;
+}
+
+.cards-1 .card-image {
+	width: 12.5rem;
+	height: 12.5rem;
+	margin-right: auto;
+	margin-bottom: 1.75rem;
+	margin-left: auto;
+	border-radius: 50%;
+	background-color: #E45032;
+}
+
+.cards-1 .card-image .fas {
+	color: #213737;
+	font-size: 4.5rem;
+	line-height: 12.5rem;
+}
+
+.cards-1 .card-body {
+	padding: 0;
+}
+
+.cards-1 .card-title {
+	margin-bottom: 0.5rem;
+}
+
+/* Portfolio */
+.cards-1 .card {
+	display: inline-block;
+	width: 18rem;
+	vertical-align: top;
+}
+
+.cards-1 .card:nth-of-type(3n+2) {
+	margin-right: 1.75rem;
+	margin-left: 1.75rem;
+}
+/* end of Portfolio */
+
+/* Portfolio */
+.cards-1 .card {
+	width: 20rem;
+}
+
+.cards-1 .card:nth-of-type(3n+2) {
+	margin-right: 4.375rem;
+	margin-left: 4.375rem;
+}
+/* end of Portfolio */
+
+/************************/
+/*     12. Projects     */
+/************************/
+.filter {
+	padding-top: 6.5rem;
+	padding-bottom: 7rem;
+	background-color: #f9f5f0;
+}
+
+.filter .section-title {
+	margin-bottom: 0.5rem;
+}
+
+.filter h2,
+.filter .section-title {
+	text-align: center;
+}
+
+.filter h2 {
+	margin-bottom: 3.25rem;
+}
+
+.filter .button-group {
+	text-align: center;
+}
+
+.filter .button-group a {
+	display: inline-block;
+	margin-right: 0.1875rem;
+	margin-bottom: 0.5rem;
+	margin-left: 0.1875rem;
+	padding: 0.3125rem 1.375rem 0.25rem 1.375rem;
+	border-radius: 0.25rem;
+	background-color: #e2cac6;
+	color: #7b7e85;
+	font: 700 0.75rem/1.25rem "Montserrat", sans-serif;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+
+.filter .button-group a:hover {
+	background-color: #E45032;
+	color: #fff;
+}
+
+.filter .button-group a.button.is-checked {
+	background-color: #E45032;
+	color: #fff;
+}
+
+.filter .grid {
+	margin-top: 1.25rem;
+	border-radius: 0.375rem;
+}
+
+/* Hover Animation */
+.filter .element-item {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	width: 50%;
+	background-color: #000; /* to hide 1px white margin in IE */
+}
+
+.filter .element-item img {
+	max-width: 100%;
+	margin: 0;
+	transition: all 0.3s;
+}
+
+.filter .element-item:hover img {
+	-moz-transform: scale(1.15);
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+}
+/* end of hover animation */
+
+.filter .element-item .element-item-overlay {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	opacity: 1;
+	text-align: center;
+	transition: all 0.3s;
+}
+
+.filter .element-item .element-item-overlay span {
+	position: absolute;
+	z-index: 3;
+	top: 42%;
+	right: 0;
+	left: 0;
+	color: #fff;
+	font: 700 1.125rem/1.625rem "Montserrat", sans-serif;
+}
+
+
+	/* Projects */
+	.filter .element-item {
+		width: 17.3125rem; /* to eliminate grid overflow problem on hard refresh */
+		height: 16.875rem;
+	}
+
+	.filter .element-item .element-item-overlay span {
+		top: 45%;
+	}
+	/* end of projects */
+
+/*********************/
+/*     Detalhes     */
+/*********************/
+.basic-3 {
+	padding-top: 2rem;
+	padding-bottom: 4rem;
+}
+
+.basic-3 h2 {
+	margin-bottom: 1.5rem;
+}
+
+.basic-3 .text-container {
+	margin-bottom: 3rem;
+}
+
+
+.basic-3 .list-unstyled .media-body {
+	margin-left: 0.5rem;
+}
+
+.basic-3 .btn-solid-reg {
+	margin-top: 1rem;
+}
+
+	/* Detalhes */
+	.basic-3 .text-container {
+		margin-bottom: 0;
+	}
+	/* end of detalhes*/
+
+		/* Detalhes*/
+		.basic-3 {
+			overflow: hidden;
+			padding-bottom: 11rem;
+			background-color: #f9f5f0;
+		}
+
+		.basic-3 .text-container {
+			margin-top: 6rem;
+			margin-right: 5rem;
+		}
+
+		.basic-3 .image-container {
+			position: absolute;
+			width: 62.5rem;
+		}
+		.img-fluid {
+			max-width: 100%;
+			height: auto;
+		  }
+		/* end of detalhes */

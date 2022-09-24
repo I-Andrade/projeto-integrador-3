@@ -22,8 +22,7 @@
     <title>@yield('title')</title>
 
     <!-- Styles -->
-    <link href="../css.css?family=Raleway:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css\bootstrap.css" >
     <link rel="stylesheet" href="css\fontawesome-all.css" >
     <link rel="stylesheet" href="css\swiper.css" >
@@ -35,18 +34,13 @@
 </head>
 
 <body data-spy="scroll" data-target=".fixed-top">
-    <!-- Preloader -->
 
-
-  @include('layouts.preloader')
-    <!-- end of preloader -->
 
     <!-- Navigation -->
     @include('layouts.navbar')
     <!-- end of navbar -->
 
-    <!-- Header -->
-    @include('layouts.header')
+
 
     <!-- end of header -->
     <!-- end of navigation -->
@@ -55,7 +49,10 @@
 
 
 
-    @include('layouts.about')
+
+
+
+
     @include('layouts.footer')
     @include('layouts.scripts')
 
