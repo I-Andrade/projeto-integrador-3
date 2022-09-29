@@ -1,0 +1,178 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Wallpaper API (PI3 Univesp)",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/wallpapers": {
+            "get": {
+                "summary": "List wallpapers",
+                "operationId": "getAllWallpapers",
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/api/wallpaper/{Id}": {
+            "get": {
+                "summary": "List Wallpaper by ID",
+                "operationId": "getWallpaper",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "Target Wallpaper.",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete Wallpaper by ID",
+                "operationId": "deleteWallpaper",
+                "parameters": [
+                    {
+                        "name": "Id",
+                        "in": "path",
+                        "description": "Target Wallpaper.",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/api/wallpaper/": {
+            "post": {
+                "summary": "Create Wallpaper",
+                "operationId": "createWallpaper",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Name",
+                        "required": true
+                    },
+                    {
+                        "name": "image",
+                        "in": "query",
+                        "description": "Image",
+                        "required": true
+                    },
+                    {
+                        "name": "category",
+                        "in": "query",
+                        "description": "Category",
+                        "required": true
+                    },
+                    {
+                        "name": "author",
+                        "in": "query",
+                        "description": "Author",
+                        "required": true
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "description": "Description",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        },
+        "/api/wallpaper/{id}": {
+            "put": {
+                "summary": "Update Wallpaper",
+                "operationId": "updateWallpaper",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Name",
+                        "required": false
+                    },
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "description": "Name",
+                        "required": false
+                    },
+                    {
+                        "name": "image",
+                        "in": "query",
+                        "description": "Image",
+                        "required": false
+                    },
+                    {
+                        "name": "category",
+                        "in": "query",
+                        "description": "Category",
+                        "required": false
+                    },
+                    {
+                        "name": "author",
+                        "in": "query",
+                        "description": "Author",
+                        "required": false
+                    },
+                    {
+                        "name": "description",
+                        "in": "query",
+                        "description": "Description",
+                        "required": false
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    },
+                    "406": {
+                        "description": "not acceptable"
+                    },
+                    "500": {
+                        "description": "internal server error"
+                    }
+                }
+            }
+        }
+    }
+}
