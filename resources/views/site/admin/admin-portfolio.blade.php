@@ -28,7 +28,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <input type="text" class="form-control-input" id="cdata" required="">
-                                <label class="label-control" for="cname">Data:</label>
+                                <label class="label-control" for="cname">Subtitulo:</label>
                                 <div class="help-block with-errors"></div>
                             </div>
 

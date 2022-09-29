@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
 
     <!-- Image Logo -->
-    <a class="navbar-brand logo-image" href="index.html"><img src="\images\logo-designer.jpeg" alt="alternative"></a>
+    <a class="navbar-brand logo-image" href="/"><img src="\images\logo-designer.jpeg" alt="alternative"></a>
 
     <!-- Mobile Menu Toggle Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -23,15 +23,15 @@
                 <a class="nav-link dropdown-toggle page-scroll" href="portfolio" id="navbarDropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Portfólio</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="privacy-policy"><span class="item-text">Identidade Visual</span></a>
+                    <a class="dropdown-item" href="portIdentidadeVisual"><span class="item-text">Identidade Visual</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="portEmbalagens"><span class="item-text">Embalagem</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="terms-conditions"><span class="item-text">Mídias Sociais</span></a>
+                    <a class="dropdown-item" href="portMidias"><span class="item-text">Mídias Sociais</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="terms-conditions"><span class="item-text">Sites</span></a>
+                    <a class="dropdown-item" href="portSites"><span class="item-text">Sites</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="terms-conditions"><span class="item-text">Campanhas</span></a>
+                    <a class="dropdown-item" href="portCampanhas"><span class="item-text">Campanhas</span></a>
 
                 </div>
             </li>
@@ -59,13 +59,14 @@
                 <a class="nav-link dropdown-toggle page-scroll" href="admin" id="navbarDropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Admin</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="login"><span class="item-text">Login</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
+
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="admin-blog"><span class="item-text">Admin Blog</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="admin-portfolio"><span class="item-text">Admin Portifólio</span></a>
+                    <div class="dropdown-items-divide-hr"></div>
+                    <a class="dropdown-item" href="admin-api"><span class="item-text">Admin API</span></a>
                 </div>
             </li>
 

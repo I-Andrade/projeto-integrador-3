@@ -1,11 +1,9 @@
 @extends('layouts.main')
-<!-- Preloader -->
-@include('layouts.preloader')
-<!-- end of preloader -->
-<!-- Header -->
-@include('layouts.navbarPort')
 
-   @section('title', 'Fernanda Carrijo')
+<!-- Header -->
+
+
+   @section('title', 'Identidade Visual')
 
    @section('content')
 
@@ -14,19 +12,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Projetos teste</h2>
+                <h2>Portifólio - Identidade Visual</h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">
             <div class="col-lg-12">
-                <!-- Filter -->
-                <div class="button-group filters-button-group">
-                    <a class="button" href="paginadetalhe" data-filter=".identidade"><span>IDENTIDADE VISUAL</span></a>
-                    <a class="button" href="embalagens.html" data-filter=".embalagens"><span>EMBALAGENS</span></a>
-                    <a class="button" href="sites.html"data-filter=".sites"><span>SITES</span></a>
-                    <a class="button" href="campanhas.html"data-filter=".campanhas"><span>CAMPANHAS</span></a>
-                    <a class="button" href="midias-sociais.html"data-filter=".midias"><span>MÍDIAS SOCIAIS</span></a>
-                </div> <!-- end of button group -->
+                @include('layouts.navbarPort')
                 <div class="grid">
                     <div class="element-item embalagens">
                         <a  href="paginadetalhe"><div class="element-item-overlay"><span>Cliente 1</span></div><img src="images\portifolio\img91.jpg" alt="alternative"></a>
