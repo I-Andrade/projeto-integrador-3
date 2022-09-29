@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 
-@include('layouts.navbarPort')
+
 
 
 @section('title', 'Fernanda Carrijo')
@@ -24,6 +24,7 @@
     <!-- Detalhe -->
     <div class="basic-3">
         <div class="container">
+            @include('layouts.navbarPort')
             <div class="row">
 
                 <div class="col-lg-5">

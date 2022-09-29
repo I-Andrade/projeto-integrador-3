@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    
-    $response = Http::get('https://graph.instagram.com/me/media?fields=id,media_url,username,timestamp&access_token=IGQVJYcHpFV1dyS0pNbmZAMUkxhaEtvaFQ0aTdmUzNpbXBoczA4NVNXbWVEQlhIQXpKR2dVWnJvTTR3N3ltVUlJM2ZAKaHNnUHJzb2NVM0xtQm9kWmM5UEhqOWhGNHpnOEFyMmtMTzhUaWJXU1RMWWdiYUNJTjJWNDlCLVdj');
-    return view('welcome')->with(['fotos' => $response->json('data')]);
+
+   // $response = Http::get('https://graph.instagram.com/me/media?fields=id,media_url,username,timestamp&access_token=IGQVJYcHpFV1dyS0pNbmZAMUkxhaEtvaFQ0aTdmUzNpbXBoczA4NVNXbWVEQlhIQXpKR2dVWnJvTTR3N3ltVUlJM2ZAKaHNnUHJzb2NVM0xtQm9kWmM5UEhqOWhGNHpnOEFyMmtMTzhUaWJXU1RMWWdiYUNJTjJWNDlCLVdj');
+   return view('welcome');// ->with(['fotos' => $response->json('data')]);
 });
 
 Route::get('blog', function () {
@@ -27,10 +27,22 @@ Route::get('contato', function () {
     return view('/site/contato');
 });
 Route::get('portfolio', function () {
-    return view('/site/portifolio/portfolio');
+    return view('/site/portifolio/categorias');
 });
 Route::get('portEmbalagens', function () {
     return view('/site/portifolio/embalagens');
+});
+Route::get('portCampanhas', function () {
+    return view('/site/portifolio/campanhas');
+});
+Route::get('portIdentidadeVisual', function () {
+    return view('/site/portifolio/identidadevisual');
+});
+Route::get('portMidias', function () {
+    return view('/site/portifolio/midias');
+});
+Route::get('portSites', function () {
+    return view('/site/portifolio/sites');
 });
 Route::get('paginadetalhe', function () {
     return view('/site/portifolio/paginadetalhe');
@@ -49,4 +61,7 @@ Route::get('admin-portfolio', function () {
 });
 Route::get('admin-blog', function () {
     return view('/site/admin/admin-blog');
+});
+Route::get('admin-api', function () {
+    return view('/site/admin/admin-api');
 });

@@ -3,7 +3,7 @@
 <!-- Header -->
 
 
-   @section('title', 'Embalagens')
+   @section('title', 'Sites')
 
    @section('content')
 
@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Portifólio  - Embalagens</h2>
+                <h2>Portifólio - Sites</h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">
@@ -52,4 +52,3 @@
 </div> <!-- end of filter -->
 <!-- end of projects -->
 @endsection
-
