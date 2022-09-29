@@ -1,0 +1,16 @@
+name: CI
+on: push
+
+jobs:
+  build:
+    name: Laravel Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Composer
+      uses: ./.github/actions/composer
+    - name: Laravel Configuration
+      uses: ./.github/actions/config-laravel
+    - name: Tests
+      run: |
+        php artisan test
