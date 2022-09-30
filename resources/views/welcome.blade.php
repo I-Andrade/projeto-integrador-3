@@ -53,7 +53,7 @@
               </div> <!-- end of container -->
 
 
-              {{-- @include('layouts.carrossel') --}}
+              @include('layouts.carrossel')
           </div> <!-- end of form-1 -->
 
 
