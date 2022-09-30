@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\InstagramApiController;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
+   $fotos = (new InstagramApiController())->getMedia();
    // $response = Http::get('https://graph.instagram.com/me/media?fields=id,media_url,username,timestamp&access_token=IGQVJYcHpFV1dyS0pNbmZAMUkxhaEtvaFQ0aTdmUzNpbXBoczA4NVNXbWVEQlhIQXpKR2dVWnJvTTR3N3ltVUlJM2ZAKaHNnUHJzb2NVM0xtQm9kWmM5UEhqOWhGNHpnOEFyMmtMTzhUaWJXU1RMWWdiYUNJTjJWNDlCLVdj');
-   return view('welcome');// ->with(['fotos' => $response->json('data')]);
+   return view('welcome')->with(['fotos' => $fotos]);
 });
 
 Route::get('blog', function () {
@@ -65,3 +66,10 @@ Route::get('admin-blog', function () {
 Route::get('admin-api', function () {
     return view('/site/admin/admin-api');
 });
+
+// API INSTAGRAM
+Route::get('insta-new-code', [InstagramApiController::class, 'getNewCode']);
+Route::get('insta-new-token', [InstagramApiController::class, 'getNewToken']);
+//Route::get('admin-instagram', function () {
+//    return view('/site/admin/admin-instagram');
+//});
