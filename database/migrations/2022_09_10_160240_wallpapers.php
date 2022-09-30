@@ -31,6 +31,6 @@ class Wallpapers extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('wallpapers');
     }
 }
