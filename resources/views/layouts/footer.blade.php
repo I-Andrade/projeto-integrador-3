@@ -7,7 +7,7 @@
                 <div class="col-md-4">
                     <div class="footer-col">
                         <h4>Fernanda Carrijo</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+                        <p>Sou designer gráfico, trabalho na área há 10 anos e amo os desafios que minha profissão me traz.</p>
                     </div> <!-- end of footer-col -->
                 </div> <!-- end of col -->
                 <div class="col-md-4">

@@ -31,6 +31,7 @@
                     <div class="text-container">
                         <h2>GREKO
                             CHEESECAKE</h2>
+                        <h3> Lorem Ipsum</h3>
                         <p>Desenvolvimento de identidade visual da marca (logotipo, papelaria,
                             PDV), fotografia e toda parte de comunicação: criação de posts (arte),
                             publicações nas rede sociais, criação de campanhas sazonais com

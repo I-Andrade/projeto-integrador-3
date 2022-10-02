@@ -1205,6 +1205,7 @@ pre code {
     -ms-flex: 0 0 41.666667%;
     flex: 0 0 41.666667%;
     max-width: 41.666667%;
+    margin-top: 2.5rem;
   }
   .col-lg-6 {
     -ms-flex: 0 0 50%;
@@ -1240,6 +1241,7 @@ pre code {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
+    margin-top: 3rem;
   }
   .order-lg-first {
     -ms-flex-order: -1;
