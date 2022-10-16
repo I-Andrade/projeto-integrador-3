@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-auto d-none d-lg-block">
 
-                        <img class="about-image" width="200" height="250" src="images\portifolio\img36.jpg"
+                        <img class="about-image"  id="col-auto-img" width="200" height="250" src="images\portifolio\img36.jpg"
                             role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
                             focusable="false">
                         <title>Placeholder</title>
@@ -85,7 +85,7 @@
                         <a href="#" class="stretched-link">Continue reading</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <img class="about-image" width="200" height="250" src="images\portifolio\img47.jpg" width="200" height="250"
+                        <img class="about-image"  id="col-auto-img" width="200" height="250" src="images\portifolio\img47.jpg" width="200" height="250"
                             role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
                             focusable="false">
                             <title>Placeholder</title>
@@ -192,7 +192,7 @@
                 <div class="position-sticky" style="top: 2rem;">
                     <div class="p-4 mb-3 bg-light rounded">
                         <div class="about-image">
-                            <img src="images\Designer.png">
+                            <img src="images\foto-fer_home.png">
                         </div>
                         <h2>Fernanda</h2>
                         <h3>Moreira Carrijo Andrade</h3>
@@ -208,7 +208,7 @@
 
                     <div class="p-4">
                         <h4 class="fst-italic">Arquivo</h4>
-                        <ol class="list-unstyled mb-0">
+                        <ol class="list-unstyled2 mb-0">
                             <li><a href="#">March 2021</a></li>
                             <li><a href="#">February 2021</a></li>
                             <li><a href="#">January 2021</a></li>

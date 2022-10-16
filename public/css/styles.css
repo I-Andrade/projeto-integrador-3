@@ -1,4 +1,13 @@
-
+/*****************************************
+Colors:
+- Backgrounds, navbar - dark gray #2e3543
+- Backgrounds, footer - black #1e232e
+- Nav links, links, statistics - green #18dc7a
+- Buttons, icons - green #12b664
+- Input fields, tabs - gray #41495a
+- Headings text - white #f9f9fb
+- Body text - light gray #f3f6f9
+******************************************/
 
 
 /******************************/
@@ -39,7 +48,7 @@ h2 {
 }
 
 h3 {
-	color: #E45032;
+	color: #213737;
 	font: 700 1.75rem/2.25rem "Vollkorn", sans-serif;
 }
 
@@ -683,7 +692,7 @@ input[type='checkbox'] {
 .form-1 {
 	position: relative;
 	padding-top: 3rem;
-	padding-bottom: 3rem;
+	padding-bottom: 6rem;
 	padding-left: 0%;
 	background-color: #f9f5f0;
 }
@@ -734,8 +743,7 @@ input[type='checkbox'] {
 .about-image img{
 	float: left;
 	height: 400px;
-	width: 350px;
-	margin-right: 5rem;
+	width: 400px;
 }
 
 
@@ -1531,7 +1539,4 @@ input[type='checkbox'] {
 		.img-fluid {
 			max-width: 100%;
 			height: auto;
-			margin-top: 4.5rem;
-			margin-bottom: 2.5rem;
-		  }
-		/* end of detalhes */
+        }
