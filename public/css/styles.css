@@ -1,13 +1,4 @@
-/*****************************************
-Colors:
-- Backgrounds, navbar - dark gray #2e3543
-- Backgrounds, footer - black #1e232e
-- Nav links, links, statistics - green #18dc7a
-- Buttons, icons - green #12b664
-- Input fields, tabs - gray #41495a
-- Headings text - white #f9f9fb
-- Body text - light gray #f3f6f9
-******************************************/
+
 
 
 /******************************/
@@ -78,7 +69,7 @@ a:hover {
 }
 
 a.green {
-	color: #E45032;
+	color: #213737;
 }
 
 .li-space-lg li {
@@ -692,14 +683,14 @@ input[type='checkbox'] {
 .form-1 {
 	position: relative;
 	padding-top: 3rem;
-	padding-bottom: 6rem;
+	padding-bottom: 3rem;
 	padding-left: 0%;
 	background-color: #f9f5f0;
 }
 
 .form-1 .text-container {
 	margin-bottom: 3rem;
-	padding-right: 10rem;
+	padding-right: 6rem;
 }
 
 .form-1 h2 {
@@ -743,7 +734,8 @@ input[type='checkbox'] {
 .about-image img{
 	float: left;
 	height: 400px;
-	width: 400px;
+	width: 350px;
+	margin-right: 6rem;
 }
 
 
@@ -810,25 +802,28 @@ input[type='checkbox'] {
 .footer {
 	padding-top: 5rem;
 	margin-top: -3rem;
-	background-color: #f9f5f0;
+	background-color: #E45032;
 }
 
 .footer .footer-col {
 	margin-bottom: 2.25rem;
+	color: #f3f6f9;
 }
 
 .footer h4 {
 	margin-bottom: 1rem;
+	color: #f3f6f9;
 }
 
 .footer .list-unstyled .fas {
-	color: #E45032;
+	color: #213737;
 	font-size: 0.5rem;
 	line-height: 1.5rem;
 }
 
 .footer .list-unstyled .media-body {
 	margin-left: 0.625rem;
+	color: #f3f6f9;
 }
 
 .footer .fa-stack {
@@ -867,7 +862,7 @@ input[type='checkbox'] {
 .copyright {
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
-	background-color: #f9f5f0;
+	background-color: #E45032;
 	text-align: center;
 }
 
@@ -1162,7 +1157,7 @@ input[type='checkbox'] {
 	/* Header */
 	.header {
 		position: relative;
-		height: 30rem;
+		height: 45rem;
 	}
 
 	.header .header-content {
@@ -1539,4 +1534,6 @@ input[type='checkbox'] {
 		.img-fluid {
 			max-width: 100%;
 			height: auto;
+			display: block;
+			margin-top: 6rem;
         }

@@ -35,29 +35,28 @@
 
 <body data-spy="scroll" data-target=".fixed-top">
 
-
     <!-- Navigation -->
     @include('layouts.navbar')
     <!-- end of navbar -->
-
-
 
     <!-- end of header -->
     <!-- end of navigation -->
 
     @yield('content')
 
-
-
-
-
-
-
     @include('layouts.footer')
     @include('layouts.scripts')
 
-
-
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
 </body>
 

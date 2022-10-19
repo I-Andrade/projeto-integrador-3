@@ -7,7 +7,7 @@
                 <div class="col-md-4">
                     <div class="footer-col">
                         <h4>Fernanda Carrijo</h4>
-                        <p>Sou designer gráfico, trabalho na área há 10 anos e amo os desafios que minha profissão me traz.</p>
+                        <div class='media-body'>Sou designer gráfico, trabalho na área há 10 anos e amo os desafios que minha profissão me traz.</div>
                     </div> <!-- end of footer-col -->
                 </div> <!-- end of col -->
                 <div class="col-md-4">

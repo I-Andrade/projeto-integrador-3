@@ -10,16 +10,18 @@
 
     <!-- Features -->
     <div id="features" class="filter">
+        <br> <br> <br> <br> 
+    @include('layouts.navbarPort')
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h2>GREKO
                         CHEESECAKE</h2>
-                    <h2> Lorem Ipsum</h2>
+                    <h3> Lorem Ipsum</h3>
 
                 </div> <!-- end of col -->
 
-            </div> <!-- end of row -->@include('layouts.navbarPort')
+            </div> <!-- end of row -->
             <div class="row">
 
                 <div class="basic-3">
@@ -50,8 +52,8 @@
 
                                 </div> <!-- end of text-container -->
                             </div> <!-- end of col -->
+                            <br>
                             <div class="col-lg-7">
-                                <br> <br>
                                 <div class="image-container">
                                     <img class="img-fluid" src="images/details-2.png" alt="alternative">
                                 </div> <!-- end of image-container -->
