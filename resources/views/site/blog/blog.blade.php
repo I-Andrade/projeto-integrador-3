@@ -12,7 +12,7 @@
 <div class="container">
     <header class="blog-header py-3">
       <div class="row flex-nowrap align-items-center">
-        <h1 class="display-4 fst-italic">BLOG</h1>
+        <h1 class="display-4 fst-italic" >BLOG</h1>
       </div>
     </header>
 
@@ -49,7 +49,7 @@
                             tradicional: cores dourado, vermelho e verde,
                             fundo que simula um pano xadrez e o efeito
                             granulado, trazendo a ideia do vintage.</p>
-                        <a href="#" class="stretched-link">Continue reading</a>
+                        <a href="detalhesblog" class="stretched-link">Continue reading</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
 
