@@ -26,9 +26,29 @@
                                 <label class="label-control" for="cname">Titulo</label>
                                 <div class="help-block with-errors"></div>
                             </div>
+                            <div class="col-lg-4"><input type="tex" class="form-control-input" id="cBigImagem"
+                                required="">
+                                <label class="label-control" for="cemail"> Nome Imagem:</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-lg-4"><input type="tex" class="form-control-input" id="cBigImagem"
+                                required="">
+                                <label class="label-control" for="cemail"> Link imagem:</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
                             <div class="col-lg-4">
                                 <input type="text" class="form-control-input" id="cdata" required="">
-                                <label class="label-control" for="cname">Subtitulo</label>
+                                <label class="label-control" for="cname">Texto Anterior ao Link</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control-input" id="clink" required="">
+                                <label class="label-control" for="clink">Link</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
@@ -37,22 +57,10 @@
                                     <option value="">Design</option>
                                     <option value="">Mercado</option>
                                     <option value="">Curiosidades</option>
+                                    <option value="">Nova Categoria</option>
                                 </select>
                             </div>
 
-
-                        </div>
-                        <div class="row">
-                            <div  class="col-lg-4"><input type="tex" class="form-control-input" id="cBigImagem" required="">
-                            <label class="label-control" for="cemail"> Nome Imagem:</label>
-                            <div class="help-block with-errors"></div>
-                                </div>
-                                <div  class="col-lg-4"> <input type="file" class="form-control-input" id="cBigImagem" required=""></div>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control-input" id="clink" required="">
-                                    <label class="label-control" for="clink">Link</label>
-                                    <div class="help-block with-errors"></div>
-                                </div>
 
                         </div>
 

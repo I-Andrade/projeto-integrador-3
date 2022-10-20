@@ -26,11 +26,7 @@
                                 <label class="label-control" for="cname">Titulo</label>
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="col-lg-4">
-                                <input type="text" class="form-control-input" id="cdata" required="">
-                                <label class="label-control" for="cname">Subtitulo:</label>
-                                <div class="help-block with-errors"></div>
-                            </div>
+
 
                             <div class="col-lg-4">
                                 <label for="country" class="form-label">Categoria: </label>
@@ -38,7 +34,8 @@
                                     <option value="">Identidade Visual</option>
                                     <option value="">Embalagens</option>
                                     <option value="">Midias Sociais</option>
-                                    <option>Campanhas</option>
+                                    <option value="">Sites</option>
+                                    <option value="">Campanhas</option>
                                 </select>
 
 
@@ -47,26 +44,45 @@
 
                         </div>
                         <div class="row">
-                            <div class="col-lg-6"><input type="tex" class="form-control-input" id="cBigImagem"
+
+                            <div class="col-lg-4"><input type="tex" class="form-control-input" id="cBigImagem"
                                     required="">
-                                <label class="label-control" for="cemail">Imagem Maior</label>
+                                <label class="label-control" for="cemail">Link Imagem Capa</label>
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="col-lg-6"> <input type="file" class="form-control-input" id="cBigImagem"
-                                    required=""></div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control-input" id="cSmallImagem" required="">
+                                <label class="label-control" for="cemail">Links Imagens Menores</label>
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-lg-2">
+                                <button>Add links menores</button>
+                            </div>
 
                         </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <input type="text" class="form-control-input" id="cSmallImagem" required="">
-                                <label class="label-control" for="cemail">Imagem Menor</label>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                            <div class="col-lg-6">
-                                <input type="file" class="form-control-input" id="cSmallImagem" required="">
 
+                        <div class="table">
+
+                            <div class="col-lg-10">
+
+                                <table  class="table" border="1">
+
+                                    <thead>
+                                        <th>Endereços</td>
+                                    <th colspan="2">Ações</td>
+                                    </thead>
+                                    <tbody>
+                                        <th>
+                                            www.link.com.br
+                                        </th>
+                                        <th><i>edit</i></th>
+                                        <th><i>del</i></th>
+                                    </tbody>
+
+                                </table>
 
                             </div>
+
 
                         </div>
 
