@@ -1537,3 +1537,21 @@ input[type='checkbox'] {
 			display: block;
 			margin-top: 6rem;
         }
+        table{
+            width: 100%;
+            border: 1px solid gray;
+            margin: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px gray;
+        }
+        th{
+            width: 350px;
+            border-bottom: 1px solid gray;
+            border-right: 1px solid gray;
+        }
+        td{
+            width: 350px;
+            border-bottom: 1px solid gray;
+            border-right: 1px solid gray;
+        }

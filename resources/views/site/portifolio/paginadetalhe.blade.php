@@ -24,10 +24,15 @@
 
             </div> <!-- end of row -->
             <div class="row">
+                <div class="image-container">
+                    <img src="https://drive.google.com/file/d/1R8_ghCIFGOS_901czGJ_IjvWuBfc-RCd/view" style="width:auto; max-width: 100%; height: auto"
+                    title="Click for the larger version." />
+                </div> <
 
 
                 <div class="row">
                     <div class="col-lg-10">
+
                         <br>
 
                         <div class="image-container">

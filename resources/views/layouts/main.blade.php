@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css\swiper.css" >
     <link rel="stylesheet" href="css\magnific-popup.css" >
     <link rel="stylesheet" href="css\styles.css" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <!-- Favicon  -->
     <link rel="icon" href="favicon.png">
