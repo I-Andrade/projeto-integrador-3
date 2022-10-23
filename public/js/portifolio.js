@@ -36,16 +36,17 @@ class IdImagens {
             td_id.classList.add('center');
 
 
-            let imgEdit = document.createElement('span');
-            imgEdit.classList.add('material-symbols-outlined');
-            var textEdit = document.createTextNode('edit');
-            imgEdit.appendChild(textEdit);
+            let imgEdit = document.createElement('i');
+            imgEdit.classList.add('fas');
+            imgEdit.classList.add('fa-edit');
+
+
             imgEdit.setAttribute("onclick", "idImagem.preparaEdicao(" + JSON.stringify(this.arrayIDs[i]) + ")");
 
-            let imgDelete = document.createElement('span');
-            imgDelete.classList.add('material-symbols-outlined');
-            var textDelete = document.createTextNode('delete');
-            imgDelete.appendChild(textDelete);
+            let imgDelete = document.createElement('i');
+            imgDelete.classList.add('fas');
+            imgDelete.classList.add('fa-trash');
+
             imgDelete.setAttribute("onclick", "idImagem.deletar(" + this.arrayIDs[i].id + ")");
 
             td_acoesEdit.appendChild(imgEdit);
