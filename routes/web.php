@@ -70,6 +70,12 @@ Route::get('admin-api', function () {
     return view('/site/admin/admin-api');
 });
 
+Route::view('admin/modal/get-form', 'modal.modalCadCadastro');
+
+Route::get('view/{id}', [modalController::class, 'show_modal'])
+                ->name('show_modal');
+
+
 // API INSTAGRAM
 Route::get('insta-new-code', [InstagramApiController::class, 'getNewCode']);
 Route::get('insta-new-token', [InstagramApiController::class, 'getNewToken']);

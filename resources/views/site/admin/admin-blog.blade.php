@@ -57,7 +57,7 @@
                                     <option value="">Mercado</option>
                                     <option value="">Curiosidades</option>
                                 </select>
-                                <button type="button" class="button" data-toggle="modal" data-target="#exampleModal">
+                                <button type="button" id="btn-cadCategoria" class="button" data-toggle="modal" data-target="#exampleModal">
                                     Cadastrar Categoria
                                 </button>
 
@@ -97,25 +97,5 @@
 
     <script src="\js\blog.js"></script>
 
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Cadastra Nova Categoria</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <input type="text" class="form-control-input" id="cadCategoria">
-                <label class="label-control" for="cadCategoria">Nova Categoria</label>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary">Salvar</button>
-            </div>
-          </div>
-        </div>
-      </div>
+
 @endsection
