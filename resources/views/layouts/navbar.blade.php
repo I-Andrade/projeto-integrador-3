@@ -60,9 +60,10 @@
                     aria-haspopup="true" aria-expanded="false">Admin</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="login"><span class="item-text">Login</span></a>
-
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="admin-blog"><span class="item-text">Admin Blog</span></a>
+                    <div class="dropdown-items-divide-hr"></div>
+                    <a class="dropdown-item" href="admin-cadCategoria"><span class="item-text">Cadastra Nova Categoria - Blog</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="admin-portfolio"><span class="item-text">Admin Portifólio</span></a>
                     <div class="dropdown-items-divide-hr"></div>

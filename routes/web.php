@@ -66,14 +66,13 @@ Route::get('admin-portfolio', function () {
 Route::get('admin-blog', function () {
     return view('/site/admin/admin-blog');
 });
+Route::get('admin-cadCategoria', function () {
+    return view('\site\admin\admin-cadCategoria');
+});
 Route::get('admin-api', function () {
     return view('/site/admin/admin-api');
 });
 
-Route::view('admin/modal/get-form', 'modal.modalCadCadastro');
-
-Route::get('view/{id}', [modalController::class, 'show_modal'])
-                ->name('show_modal');
 
 
 // API INSTAGRAM
