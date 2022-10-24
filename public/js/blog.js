@@ -1,4 +1,4 @@
-$('#btn-cadCategoria').click(e){e.preventdefault();
+/* $('#btn-cadCategoria').click(e){e.preventdefault();
 
 
 	fetch($(this).attr('href'))
@@ -7,4 +7,4 @@ $('#btn-cadCategoria').click(e){e.preventdefault();
 		$('body').append(html);
 		$('#modalCadCategoria-internal').modal('show');
 	})
-};
+}; */

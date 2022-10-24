@@ -9,34 +9,13 @@
 @section('title', 'Fernanda Carrijo')
 
 @section('content')
-<div class="container">
-    <header class="blog-header py-3">
-      <div class="row flex-nowrap align-items-center">
-        <h1 class="display-4 fst-italic" >BLOG</h1>
-      </div>
-    </header>
-
-    <div class="nav-scroller py-1 mb-2 fst-italic">
-      <nav class="nav d-flex justify-content-between">
-        <a class="p-2 link-secondary" href="#"><h4>Design</h4></a>
-        <a class="p-2 link-secondary" href="#"><h4>Mercado</h4></a>
-        <a class="p-2 link-secondary" href="#"><h4>Curiosidades</h4></a>
-      </nav>
-    </div>
-  </div>
-
-    <main class="container">
-
-
-        <div class="row mb-2">
-            <div class="col-md-6">
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-primary">PROJETO NATAL </strong>
-                        <h3 class="mb-0">“GREKOTONE” CHOTOCONE
-                            RECHEADO COM CHEESECAKE</h3>
-                        <div class="mb-1 text-muted">Nov 12</div>
-                        <p class="card-text mb-auto">“Diga adeus ao panetone de frutinha!”
+@php
+$categorias = ['Design', 'Mercado', 'Curiosidades', 'Mídias' ];
+$materiasDestaques = [
+    [ 'titulo' => ' PROJETO NATAL - “GREKOTONE” CHOTOCONE
+                            RECHEADO COM CHEESECAKE',
+        'data' => 'Nov 12',
+        'descricao' => '“Diga adeus ao panetone de frutinha!”
                             “Vem ano, vai ano e não dá mais pra continuar
                             na mesmice”.
                             O objetivo é trazer um produto tradicional,
@@ -48,53 +27,84 @@
                             O layout traz características de um natal
                             tradicional: cores dourado, vermelho e verde,
                             fundo que simula um pano xadrez e o efeito
-                            granulado, trazendo a ideia do vintage.</p>
-                        <a href="detalhesblog" class="stretched-link">Continue reading</a>
-                    </div>
-                    <div class="col-auto d-none d-lg-block">
+                            granulado, trazendo a ideia do vintage.',
+        'textoAntesLink' => 'Continue reading',
+        'link' => 'blablabla',
+        'idImagem' => 'images\portifolio\img36.jpg'
 
-                        <img class="about-image"  id="col-auto-img" width="200" height="250" src="images\portifolio\img36.jpg"
-                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                            focusable="false">
-                        <title>Placeholder</title>
+],
+    [ 'titulo' => ' PROJETO NATAL - “GREKOTONE” CHOTOCONE
+                                RECHEADO COM CHEESECAKE',
+            'data' => 'Nov 12',
+            'descricao' => '“Diga adeus ao panetone de frutinha!”
+                                “Vem ano, vai ano e não dá mais pra continuar
+                                na mesmice”.
+                                O objetivo é trazer um produto tradicional,
+                                já bem conhecido, porém com um toque a
+                                mais: recheado de cheesecake! O cliente fica
+                                instigado a comprar por ser algo diferente e
+                                sazonal, e claro, a comunicação com um tom
+                                humorado para trazer a leveza da marca.
+                                O layout traz características de um natal
+                                tradicional: cores dourado, vermelho e verde,
+                                fundo que simula um pano xadrez e o efeito
+                                granulado, trazendo a ideia do vintage.',
+            'textoAntesLink' => 'Continue reading',
+            'link' => 'blablabla',
+            'idImagem' => 'images\portifolio\img47.jpg'
+
+        ]
+];
+@endphp
+<div class="container">
+    <header class="blog-header py-3">
+      <div class="row flex-nowrap align-items-center">
+        <h1 class="display-4 fst-italic" >BLOG</h1>
+      </div>
+    </header>
+
+    <div class="nav-scroller py-1 mb-2 fst-italic">
+      <nav class="nav d-flex justify-content-between">
+        @foreach($categorias as $categoria)
+        <a class="p-2 link-secondary" href="#"><h4>{{$categoria}}</h4></a>
+        @endforeach
+      </nav>
+    </div>
+  </div>
+
+    <main class="container">
 
 
-                    </div>
-                </div>
-            </div>
+        <div class="row mb-2">
+            @foreach($materiasDestaques as $materia)
             <div class="col-md-6">
+
                 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+
                     <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-success">PROJETO HALLOWEEN</strong>
-                        <h3 class="mb-0">“AS IGUARIAS DO SUBMUNDO”
-                        </h3>
-                        <div class="mb-1 text-muted">Nov 11</div>
-                        <p class="mb-auto">“Que tal garantir o seu doce sem precisar de
-                            travessura?”
-                            Já ouvimos falar que quem não é visto não é
-                            lembrado, não é mesmo? O objetivo dessa campanha
-                            é movimentar a marca, fazer com que seja
-                            comentada por trazer uma ação cômica e inesperada,
-                            bem estilo Burguer King®
-                            .
-                            Trabalhamos com sabores que já havia em nosso
-                            catálogo, porém “fantasiados”, com a redação
-                            “aproveite! A edição é limitada”, o desejo de consumo
-                            é despertado, porquê para o ser humano não
-                            podemos ficar de fora.</p>
-                        <a href="#" class="stretched-link">Continue reading</a>
+
+
+
+                        <h3 class="mb-0">{{$materia['titulo']}}</h3>
+                        <div class="mb-1 text-muted">{{$materia['data']}}</div>
+                        <p class="card-text mb-auto">{{$materia['descricao']}}</p>
+                        <p>{{$materia['textoAntesLink']}}</p>
+                        <a href="detalhesblog" class="stretched-link">{{$materia['link']}}</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <img class="about-image"  id="col-auto-img" width="200" height="250" src="images\portifolio\img47.jpg" width="200" height="250"
+
+                        <img class="about-image"  id="col-auto-img" width="200" height="250" src="{{$materia['idImagem']}}"
                             role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
                             focusable="false">
-                            <title>Placeholder</title>
 
 
 
                     </div>
+
                 </div>
+
             </div>
+ @endforeach
         </div>
 
         <div class="row g-5">
