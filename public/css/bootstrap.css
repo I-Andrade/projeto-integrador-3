@@ -1056,6 +1056,7 @@ pre code {
     -ms-flex: 0 0 50%;
     flex: 0 0 50%;
     max-width: 50%;
+    padding-right: 2rem;
   }
   .col-md-7 {
     -ms-flex: 0 0 58.333333%;
@@ -10061,3 +10062,9 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.img-blog img{
+	float: left;
+	height: 400px;
+	width: 350px;
+	margin-right: 1rem;
+}

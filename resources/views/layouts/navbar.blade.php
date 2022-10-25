@@ -74,15 +74,15 @@
         </ul>
         <span class="nav-item social-icons">
             <span class="fa-stack">
-                <a href="#your-link">
+                <a target="_blank" href="https://www.instagram.com/fcarrijo.design/">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                    <i class="fab fa-instagram fa-stack-1x"></i>
                 </a>
             </span>
             <span class="fa-stack">
-                <a href="#your-link">
+                <a target="_blank"  href="https://www.linkedin.com/in/fernandamcarrijo/">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x"></i>
+                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
                 </a>
             </span>
         </span>

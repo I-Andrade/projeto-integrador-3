@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-auto d-none d-lg-block">
 
-                        <img class="about-image"  id="col-auto-img" width="200" height="250" src="images\portifolio\img36.jpg"
+                        <img class="img-blog"  id="col-auto-img" width="200" height="200" src="images\portifolio\img36.jpg"
                             role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
                             focusable="false">
                         <title>Placeholder</title>
