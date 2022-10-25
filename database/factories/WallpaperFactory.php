@@ -19,7 +19,7 @@ class WallpaperFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'image' => $this->faker->imageUrl(),
-            'category' => $this->faker->word(),
+            'id_category' => $this->faker->random_int(),
             'author' => $this->faker->name(),
             'description' => $this->faker->text(),
         ];
