@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\categoria;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -19,7 +20,7 @@ class WallpaperFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'image' => $this->faker->imageUrl(),
-            'id_category' => $this->faker->numberBetween(1, 10),
+            'id_category' => categoria::factory(),
             'author' => $this->faker->name(),
             'description' => $this->faker->text(),
         ];
