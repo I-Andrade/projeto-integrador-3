@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 
-class categoriaFactory extends Factory
+class CategoriaFactory extends Factory
 {
      /**
      * Define the model's default state.
