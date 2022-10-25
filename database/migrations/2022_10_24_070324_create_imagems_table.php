@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Wallpapers extends Migration
+class CreateImagemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class Wallpapers extends Migration
      */
     public function up()
     {
-        Schema::create('wallpapers', function (Blueprint $table) {
+        Schema::create('imagems', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('image');
-            $table->foreignId('id_category')->constrained('categorias');
-            $table->string('author');
-            $table->string('description');
+            $table->foreignId('id_portifolio')->constrained('portifolios');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class Wallpapers extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('wallpapers');
+        Schema::dropIfExists('imagems');
     }
 }

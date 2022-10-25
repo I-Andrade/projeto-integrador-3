@@ -9,5 +9,5 @@ class Wallpaper extends Model
 {
     use HasFactory;
     protected $table = 'wallpapers';
-    protected $fillable = ['name', 'image', 'category', 'author', 'description'];
+    protected $fillable = ['name', 'image', 'id_category', 'author', 'description'];
 }
