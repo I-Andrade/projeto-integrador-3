@@ -1418,6 +1418,7 @@ input[type='checkbox'] {
 			height: auto;
 			display: block;
 			margin-top: 6rem;
+			margin-left: 4rem;
         }
         table{
             width: 100%;
@@ -1592,6 +1593,7 @@ input[type='checkbox'] {
 	/* Header */
 	.header {
 		padding-top: 0rem;
+		margin-top: -12rem;
 	}
 
 	.header h1 {
