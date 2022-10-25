@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+
 use App\Models\Wallpaper;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
