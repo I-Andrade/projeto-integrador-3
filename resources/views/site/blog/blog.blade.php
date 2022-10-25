@@ -190,7 +190,7 @@ Quer que seu negócio comece com o pé direito? Eu posso te ajudar ;)',
     </div>
 
     <main class="container">
-        <div class="row mb-2">
+        <div class="col-lg-12">
             @foreach ($materiasDestaques as $materiaDestaque)
                 <div class="col-md-6">
 
