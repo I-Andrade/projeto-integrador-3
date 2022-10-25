@@ -13,7 +13,7 @@ class Wallpaper extends Model
 
     public function categoria()
     {
-        return $this->hasOne('App\Models\categoria', 'id');
+        return $this->hasOne(categoria::class, 'id');
     }
 
 
