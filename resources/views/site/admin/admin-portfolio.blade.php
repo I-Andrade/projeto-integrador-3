@@ -51,12 +51,13 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control-input" id="cSmallImagem" required="">
-                                <label class="label-control" for="cemail">Links Imagens Menores</label>
+                                <input type="text" class="form-control-input" id="descImagens" required="">
+                                <label class="label-control" for="cemail">IDs outras Imagens</label>
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <div class="col-lg-2">
-                                <button>Add links menores</button>
+                            <div class="row">
+                                <button type="button" id="btn1"  onclick="idImagem.salvar()">Adicionar</button>
+                                <button type="button"  onclick="idImagem.cancelar()">Cancelar</button>
                             </div>
 
                         </div>
@@ -65,18 +66,16 @@
 
                             <div class="col-lg-10">
 
-                                <table  class="table" border="1">
-
+                                <table  class="table">
                                     <thead>
-                                        <th>Endereços</td>
-                                    <th colspan="2">Ações</td>
+                                        <tr>
+                                            <th>Item</td>
+                                            <th>Ids das Imagens</td>
+                                            <th colspan="2">Ações</td>
+                                        </tr>
                                     </thead>
-                                    <tbody>
-                                        <th>
-                                            www.link.com.br
-                                        </th>
-                                        <th><i>edit</i></th>
-                                        <th><i>del</i></th>
+                                    <tbody id="tbody">
+
                                     </tbody>
 
                                 </table>
@@ -107,4 +106,6 @@
         </div> <!-- end of container -->
     </div> <!-- end of form-2 -->
     <!-- end of contact -->
+
+    <script src="\js\portifolio.js"></script>
 @endsection
