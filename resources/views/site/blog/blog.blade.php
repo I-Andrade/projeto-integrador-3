@@ -170,22 +170,11 @@ Quer que seu negócio comece com o pé direito? Eu posso te ajudar ;)',
             ],
         ];
 
-<<<<<<< HEAD
-                        <img class="img-blog"  id="col-auto-img" width="200" height="200" src="images\portifolio\img36.jpg"
-                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                            focusable="false">
-                        <title>Placeholder</title>
-
-
-                    </div>
-                </div>
-=======
     @endphp
     <div class="container">
         <header class="blog-header py-3">
             <div class="row flex-nowrap align-items-center">
                 <h1 class="display-4 fst-italic">BLOG</h1>
->>>>>>> d0ea337155260270e20d38dac345ba6ae2ca67c2
             </div>
         </header>
 
@@ -201,7 +190,7 @@ Quer que seu negócio comece com o pé direito? Eu posso te ajudar ;)',
     </div>
 
     <main class="container">
-        <div class="col-lg-12">
+        <div class="row mb-2">
             @foreach ($materiasDestaques as $materiaDestaque)
                 <div class="col-md-6">
 
@@ -213,7 +202,7 @@ Quer que seu negócio comece com o pé direito? Eu posso te ajudar ;)',
                             <p class="card-text mb-auto">{{ $materiaDestaque['descricao'] }}</p>
                             <p>{{ $materiaDestaque['textoAntesLink'] }}</p>
                             <a href="detalhesblog" class="stretched-link">{{ $materiaDestaque['link'] }}</a>
-                            <img class="about-image" id="col" width="100%" height="300px"
+                            <img class="about-image" id="col" width="400px" height="300px"
                                 src="{{ $materiaDestaque['idImagem'] }}">
                         </div>
                         <div></div>
