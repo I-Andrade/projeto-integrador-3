@@ -1,7 +1,5 @@
 @extends('layouts.main')
-<!-- Preloader -->
-@include('layouts.preloader')
-<!-- end of preloader -->
+
 <!-- Header -->
 @include('layouts.header')
 
@@ -287,8 +285,6 @@ Quer que seu negócio comece com o pé direito? Eu posso te ajudar ;)',
                             <li><a href="#">April 2020</a></li>
                         </ol>
                     </div>
-
-
                 </div>
             </div>
         </div>
