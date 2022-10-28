@@ -1,13 +1,4 @@
-/*****************************************
-Colors:
-- Backgrounds, navbar - dark gray #2e3543
-- Backgrounds, footer - black #1e232e
-- Nav links, links, statistics - green #18dc7a
-- Buttons, icons - green #12b664
-- Input fields, tabs - gray #41495a
-- Headings text - white #f9f9fb
-- Body text - light gray #f3f6f9
-******************************************/
+
 
 
 /******************************/
@@ -39,17 +30,21 @@ body, p {
 
 h1 {
 	color: #213737;
-	font: 700 2.75rem/3.375rem "Vollkorn", sans-serif;
+	font: 700 2.75rem/3.375rem "Vollkorn";
+	font-family: 'Vollkorn';
 }
 
 h2 {
 	color: #213737;
-	font: 700 2.25rem/2.75rem "Vollkorn", sans-serif;
+	font: 700 2.25rem/2.75rem "Vollkorn";
+	font-family: 'Vollkorn';
 }
 
 h3 {
 	color: #213737;
-	font: 700 1.75rem/2.25rem "Vollkorn", sans-serif;
+	font: 700 1.75rem/2.25rem "Vollkorn";
+	font-family: 'Vollkorn';
+	margin-bottom: 3rem;
 }
 
 h4 {
@@ -59,12 +54,12 @@ h4 {
 
 h5 {
 	color: #213737;
-	font: 700 1.125rem/1.5rem "Vollkorn", sans-serif;
+	font: 700 1.125rem/1.5rem "Mukta", sans-serif;
 }
 
 h6 {
 	color: #213737;
-	font: 700 1rem/1.375rem "Vollkorn", sans-serif;
+	font: 700 1rem/1.375rem "Mukta", sans-serif;
 }
 
 a {
@@ -78,7 +73,7 @@ a:hover {
 }
 
 a.green {
-	color: #E45032;
+	color: #213737;
 }
 
 .li-space-lg li {
@@ -235,7 +230,6 @@ a.green {
 	color: #213737;
 	font: 400 1rem/1.875rem "Mukta", sans-serif;
 	transition: all 0.2s;
-	-webkit-appearance: none; /* removes inner shadow on form inputs on ios safari */
 }
 
 .form-control-select {
@@ -618,72 +612,7 @@ input[type='checkbox'] {
 }
 
 
-/*********************/
-/*    04. Header     */
-/*********************/
-.header {
-	position: relative;
-	background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),  center center no-repeat;
-	background-size: cover;
-}
 
-.header .header-content {
-	padding-top: 9.25rem;
-	padding-bottom: 7.5rem;
-	text-align: center;
-}
-
-.header .countdown {
-	margin-bottom: 1.25rem;
-	color: #213737;
-	text-align: center;
-}
-
-.header .countdown #clock .counter-number {
-	display: inline-block;
-	width: 6.125rem;
-	height: 6.125rem;
-	margin-right: 0.5rem;
-	margin-bottom: 1.25rem;
-	margin-left: 0.5rem;
-	padding-top: 1.75rem;
-	border: 0.125rem solid #213737;
-	border-radius: 50%;
-	font-weight: 700;
-	font-size: 2rem;
-	line-height: 1.25rem;
-	text-align: center;
-}
-
-.header .countdown #clock .counter-number .timer-text {
-	font: 400 0.75rem/1rem "Mukta", sans-serif;
-	text-align: center;
-}
-
-.header h1 {
-	margin-bottom: 1rem;
-}
-
-.header p {
-	margin-bottom: 2rem;
-}
-
-.header .frame-container {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	height: 3.125rem;
-	width: 100%;
-}
-
-.header .top-frame-angle {
-	position: absolute;
-	top: 10%;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	vertical-align: bottom;
-}
 
 
 /***********************/
@@ -692,14 +621,14 @@ input[type='checkbox'] {
 .form-1 {
 	position: relative;
 	padding-top: 3rem;
-	padding-bottom: 6rem;
+	padding-bottom: 3rem;
 	padding-left: 0%;
 	background-color: #f9f5f0;
 }
 
 .form-1 .text-container {
 	margin-bottom: 3rem;
-	padding-right: 10rem;
+	padding-right: 6rem;
 }
 
 .form-1 h2 {
@@ -743,7 +672,8 @@ input[type='checkbox'] {
 .about-image img{
 	float: left;
 	height: 400px;
-	width: 400px;
+	width: 350px;
+	margin-right: 6rem;
 }
 
 
@@ -810,25 +740,28 @@ input[type='checkbox'] {
 .footer {
 	padding-top: 5rem;
 	margin-top: -3rem;
-	background-color: #f9f5f0;
+	background-color: #E45032;
 }
 
 .footer .footer-col {
 	margin-bottom: 2.25rem;
+	color: #f3f6f9;
 }
 
 .footer h4 {
 	margin-bottom: 1rem;
+	color: #f3f6f9;
 }
 
 .footer .list-unstyled .fas {
-	color: #E45032;
+	color: #213737;
 	font-size: 0.5rem;
 	line-height: 1.5rem;
 }
 
 .footer .list-unstyled .media-body {
 	margin-left: 0.625rem;
+	color: #f3f6f9;
 }
 
 .footer .fa-stack {
@@ -867,7 +800,7 @@ input[type='checkbox'] {
 .copyright {
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
-	background-color: #f9f5f0;
+	background-color: #E45032;
 	text-align: center;
 }
 
@@ -1159,37 +1092,6 @@ input[type='checkbox'] {
 	/* end of navigation */
 
 
-	/* Header */
-	.header {
-		position: relative;
-		height: 30rem;
-	}
-
-	.header .header-content {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		height: 55rem;
-		padding-top: 0;
-		padding-bottom: 0;
-	}
-
-	.header p {
-		width: 60%;
-		margin-right: auto;
-		margin-left: auto;
-	}
-
-	.header .countdown #clock .counter-number {
-		margin-right: 0.5rem;
-		margin-left: 0;
-	}
-	/* end of header */
-
-
-
-
-
 	/* Contact */
 	.form-2 .map-responsive {
 		margin-bottom: 0;
@@ -1226,32 +1128,7 @@ input[type='checkbox'] {
 	/* end of navigation */
 
 
-	/* Header */
-	.header {
-		background: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../images/banner.jpeg') center center no-repeat;
-		background-size: cover;
-	}
 
-	.header .header-content {
-		text-align: left;
-	}
-
-	.header .text-container {
-		margin-top: 1.5rem;
-	}
-
-	.header .countdown {
-		text-align: left;
-	}
-
-	.header .countdown #clock .counter-number {
-		margin-right: 0.75rem;
-	}
-
-	.header p {
-		width: 100%;
-	}
-	/* end of header */
 
 
 	/* Sign Up */
@@ -1539,5 +1416,206 @@ input[type='checkbox'] {
 		.img-fluid {
 			max-width: 100%;
 			height: auto;
-		  }
-		/* end of detalhes */
+			display: block;
+			margin-top: 6rem;
+			margin-left: 4rem;
+        }
+        table{
+            width: 100%;
+            border: 1px solid gray;
+            margin: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px gray;
+        }
+        th{
+            width: 350px;
+            border-bottom: 1px solid gray;
+            border-right: 1px solid gray;
+        }
+        td{
+            width: 350px;
+            border-bottom: 1px solid gray;
+            border-right: 1px solid gray;
+        }
+
+/*********************/
+/*    04. Header     */
+/*********************/
+.header {
+	position: relative;
+	padding-top: 8rem;
+	padding-bottom: 40%;
+	text-align: center;
+}
+
+.header .countdown {
+	margin-bottom: 0.5rem;
+	color: #fff;
+	text-align: center;
+}
+
+.header .countdown #clock .counter-number {
+	display: inline-block;
+	width: 6.5rem;
+	height: 6.5rem;
+	margin-right: 0.5rem;
+	margin-bottom: 1.25rem;
+	margin-left: 0.5rem;
+	padding-top: 2rem;
+	border: 0.125rem solid #fff;
+	border-radius: 50%;
+	font-weight: 400;
+	font-size: 2.25rem;
+	line-height: 1.25rem;
+	text-align: center;
+}
+
+.header .countdown #clock .counter-number .timer-text {
+	font-size: 0.75rem;
+	line-height: 1rem;
+	text-align: center;
+}
+
+.header h1 {
+	margin-bottom: 0.75rem;
+	color: #eee;
+}
+
+.header .p-large {
+	margin-bottom: 1.75rem;
+	color: #ddd;
+}
+
+.header .btn-solid-lg {
+	margin-right: 0.5rem;
+	margin-bottom: 1.125rem;
+	margin-left: 0.5rem;
+}
+
+.header .btn-solid-lg:hover {
+	border: 0.125rem solid #ffbd50;
+	color: #ffbd50;
+}
+
+.header .btn-outline-lg {
+	border: 0.125rem solid #fff;
+	color: #fff;
+}
+
+.header .btn-outline-lg:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+.header .outer-container {
+	position: absolute;
+	right: 0;
+	bottom: -2rem;
+	left: 0;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+}
+
+.header .slider-container {
+	position: relative;
+}
+
+.header .swiper-container {
+	position: static;
+	width: 80%;
+	border-radius: 0.75rem;
+}
+
+.header .swiper-container img {
+	border-radius: 0.75rem;
+}
+
+.header .swiper-button-prev:focus,
+.header .swiper-button-next:focus {
+	/* even if you can't see it chrome you can see it on mobile device */
+	outline: none;
+}
+
+.header .swiper-button-prev {
+	left: 0.25rem;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2028%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+	background-size: 1.125rem 1.75rem;
+}
+
+.header .swiper-button-next {
+	right: 0.25rem;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2028%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
+	background-size: 1.125rem 1.75rem;
+}
+
+	/* Header */
+	.header {
+		padding-bottom: 3rem;
+	}
+
+	.header .outer-container {
+		width: 69.375rem;
+		bottom: -6rem;
+	}
+
+	.header .swiper-container {
+		width: 100%;
+	}
+
+	.header .swiper-button-prev {
+		left: -2.25rem;
+	}
+	
+	.header .swiper-button-next {
+		right: -2.25rem;
+	}
+	/* end of header */
+
+		/* Header */
+		.header h1,
+		.header .p-large {
+			width: 37rem;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	
+		.header .swiper-button-prev {
+			left: 3rem;
+		}
+		
+		.header .swiper-button-next {
+			right: 3rem;
+		}
+		/* end of header */
+
+	/* Header */
+	.header {
+		padding-top: 0rem;
+		margin-top: -12rem;
+	}
+
+	.header h1 {
+		font-size: 4rem;
+		line-height: 4.875rem;
+		letter-spacing: -0.3px;
+	}
+
+	.header .btn-solid-lg {
+		margin-bottom: 0;
+		margin-left: 0;
+	}
+
+	.header .outer-container {
+		bottom: -4rem;
+	}
+
+	.header .swiper-button-prev {
+		left: 1.5rem;
+	}
+	
+	.header .swiper-button-next {
+		right: 1.5rem;
+	}
+	/* end of header */

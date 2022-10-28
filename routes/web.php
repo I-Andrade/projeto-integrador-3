@@ -22,7 +22,10 @@ Route::get('/', function () {
 });
 
 Route::get('blog', function () {
-    return view('/site/blog');
+    return view('/site/blog/blog');
+});
+Route::get('detalhesblog', function () {
+    return view('/site/blog/paginadetalhe');
 });
 Route::get('contato', function () {
     return view('/site/contato');
@@ -63,9 +66,14 @@ Route::get('admin-portfolio', function () {
 Route::get('admin-blog', function () {
     return view('/site/admin/admin-blog');
 });
+Route::get('admin-cadCategoria', function () {
+    return view('\site\admin\admin-cadCategoria');
+});
 Route::get('admin-api', function () {
     return view('/site/admin/admin-api');
 });
+
+
 
 // API INSTAGRAM
 Route::get('insta-new-code', [InstagramApiController::class, 'getNewCode']);
