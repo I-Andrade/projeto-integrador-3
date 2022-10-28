@@ -20,7 +20,7 @@ class WallpaperTest extends TestCase
     {
         $qtde = 20;
         Wallpaper::factory()->count($qtde)->create();
-        
+        // ajustar esse teste
         $wallpapers = Wallpaper::all();
         $this->assertCount($qtde,$wallpapers);
         $this->assertNotEmpty($wallpapers->first->name);
