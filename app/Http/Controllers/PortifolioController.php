@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\portifolio;
 
 class PortifolioController extends Controller
 {
     public function getAllPortifolios()
     {
         $portifolios = portifolio::all();
-        return view('portifolio', ['portifolios' => $portifolios]);
+        return view('site/portifolio/campanhas', ['portifolios' => $portifolios]);
     }
 
     public function getPortifolio($id)

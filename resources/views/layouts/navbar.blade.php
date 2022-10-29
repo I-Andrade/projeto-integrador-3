@@ -20,7 +20,7 @@
 
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="portfolio" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle page-scroll" href="portifolios" id="navbarDropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Portfólio</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="portIdentidadeVisual"><span class="item-text">Identidade Visual</span></a>
@@ -43,7 +43,7 @@
 
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="api/blogs" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle page-scroll" href="blogs" id="navbarDropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Blog</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="blog"><span class="item-text">Design</span></a>
