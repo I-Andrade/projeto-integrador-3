@@ -43,7 +43,7 @@
 
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="blog" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle page-scroll" href="api/blogs" id="navbarDropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Blog</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="blog"><span class="item-text">Design</span></a>

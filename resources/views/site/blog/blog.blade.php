@@ -77,7 +77,7 @@ $blogsDestaques = $blogs;
 
 
                     <div class="col d-none d-lg-block">
-                        <img class="about-image" width="600px" height="400px" src="<?php $blog->image ?>" width="200" height="250"
+                        <img class="about-image" width="600px" height="400px" src="<?php echo($blog->image) ?>" width="200" height="250"
                             role="img"
                             focusable="false">
 
