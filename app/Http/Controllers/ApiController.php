@@ -59,7 +59,7 @@ class ApiController extends Controller
    
     /**
      * @OA\Post(
-     *   path="/api/wallpaper/",
+     *   path="/api/wallpaper",
      *   summary="Create Wallpaper",
      *   operationId="createWallpaper",
      *   @OA\Parameter(
