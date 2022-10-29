@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\categoria;
 
 use Illuminate\Http\Request;
 
@@ -9,13 +10,13 @@ class CategoriaController extends Controller
     public function getAllCategorias()
     {
         $categorias = categoria::all();
-        return view('categoria', ['categorias' => $categorias]);
+        return $categorias;
     }
 
     public function getCategoria($id)
     {
         $categoria = categoria::find($id);
-        return view('categoria', ['categoria' => $categoria]);
+        return $categoria->description;
     }
 
     public function createCategoria(Request $request)
@@ -38,5 +39,11 @@ class CategoriaController extends Controller
         $categoria = categoria::find($id);
         $categoria->delete();
         return redirect('/');
+    }
+
+    public function getCategoriasByType($type)
+    {
+        $categorias = categoria::where('type', $type)->get();
+        return $categorias;
     }
 }

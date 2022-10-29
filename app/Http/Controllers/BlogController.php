@@ -3,19 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\blog;
+use App\Models\categoria;
 class BlogController extends Controller
 {
     public function getAllBlogs()
     {
         $blogs = blog::all();
-        return view('blog', ['blogs' => $blogs]);
+        $categorias = categoria::where('type', 1)->get();
+        $blogs->categorias = $categorias;
+        return view('site/blog/blog', ['blogs' => $blogs], ['categorias' => $categorias]);
     }
 
     public function getBlog($id)
     {
         $blog = blog::find($id);
-        return view('blog', ['blog' => $blog]);
+        $blog = json($blog);
+        return view('site/blog', $blog);
     }
 
     public function createBlog(Request $request)

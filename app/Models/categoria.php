@@ -15,4 +15,10 @@ class categoria extends Model
     {
         return $this->belongsTo(Wallpaper::class,'id_category');
     }
+
+    public function blogs()
+    {
+        return $this->belongsTo(Blog::class,'id_category');
+    }
+
 }
