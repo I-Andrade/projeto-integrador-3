@@ -60,9 +60,10 @@
                     aria-haspopup="true" aria-expanded="false">Admin</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="login"><span class="item-text">Login</span></a>
-
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="admin-blog"><span class="item-text">Admin Blog</span></a>
+                    <div class="dropdown-items-divide-hr"></div>
+                    <a class="dropdown-item" href="admin-cadCategoria"><span class="item-text">Cadastra Nova Categoria - Blog</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="admin-portfolio"><span class="item-text">Admin Portifólio</span></a>
                     <div class="dropdown-items-divide-hr"></div>
@@ -74,15 +75,15 @@
         </ul>
         <span class="nav-item social-icons">
             <span class="fa-stack">
-                <a href="#your-link">
+                <a target="_blank" href="https://www.instagram.com/fcarrijo.design/">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                    <i class="fab fa-instagram fa-stack-1x"></i>
                 </a>
             </span>
             <span class="fa-stack">
-                <a href="#your-link">
+                <a target="_blank"  href="https://www.linkedin.com/in/fernandamcarrijo/">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x"></i>
+                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
                 </a>
             </span>
         </span>
