@@ -1,3 +1,17 @@
+<?php
+    if ($categoria == 'sites') {
+        $titulo = 'Sites';
+    } else if ($categoria == 'identidade') {
+        $titulo = 'Identidade Visual';
+    } else if ($categoria == 'embalagem') {
+        $titulo = 'Embalagens';
+    } else if ($categoria == 'midia') {
+        $titulo = 'Mídias Sociais';
+    } else if ($categoria == 'campanha') {
+        $titulo = 'Campanhas';
+    }
+?>
+
 @extends('layouts.main')
 
 <!-- Header -->
@@ -6,29 +20,23 @@
    @section('title', 'Sites')
 
    @section('content')
-   @php
-   $sites = [[ 'titulo' => 'Café Terreiro',
-                'idImagem' => '1l8sY-66kIWDTrQe9wFjHoSUXTDe-jlMG'],
-                ['titulo' => 'Café Terreiro2',
-                'idImagem' => '1jr7q0jXorPV8_HYAajSXahLiF6Rv3XFl']
-            ];
-   @endphp
 
 <!-- Projects -->
 <div id="projects" class="filter">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Portifólio - Sites</h2>
+                <h2>Portifólio - {{$titulo}}</h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">
             <div class="col-lg-12">
                 @include('layouts.navbarPort')
                 <div class="grid">
-                    @foreach($sites as $site)
+                    @foreach($portifolios as $portifolio)
                     <div class="element-item embalagens">
-                        <a  href="paginadetalhe"><div class="element-item-overlay"><span>{{$site['titulo']}}</span></div><img src="https://drive.google.com/uc?export=view&id={{$site['idImagem']}}" alt="alternative"></a>
+                        <h1>{{$portifolio->id}}</h1>
+                        <a  href="/portifolio/<?php echo($portifolio->id) ?>"><div class="element-item-overlay"><span>{{$portifolio->title}}</span></div><img src="<?php $portifolio->image ?>" alt="alternative"></a>
                     </div>
                     @endforeach
 

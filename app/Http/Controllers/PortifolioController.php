@@ -4,19 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\portifolio;
+use App\Models\imagem;
 
 class PortifolioController extends Controller
 {
     public function getAllPortifolios()
     {
         $portifolios = portifolio::all();
-        return view('site/portifolio/campanhas', ['portifolios' => $portifolios]);
+        return view('site/portifolio/categorias', ['portifolios' => $portifolios]);
     }
 
     public function getPortifolio($id)
     {
         $portifolio = portifolio::find($id);
-        return view('portifolio', ['portifolio' => $portifolio]);
+        $imagens = imagem::where('id_portifolio', $id)->get();
+        return view('site/portifolio/paginadetalhe', ['portifolio' => $portifolio], ['imagens' => $imagens]);
+    }
+
+    public function getPortifolioBYCategoria($categoria)
+    {
+        $portifolios = portifolio::where('category', $categoria)->get();
+        return view('site/portifolio/sites', ['portifolios' => $portifolios], ['categoria' => $categoria]);
     }
 
     public function createPortifolio(Request $request)

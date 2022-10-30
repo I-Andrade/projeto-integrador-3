@@ -97,6 +97,7 @@ Route::get('/categorias/{type}', 'App\Http\Controllers\CategoriaController@getCa
 
 Route::get('/portifolios', 'App\Http\Controllers\PortifolioController@getAllPortifolios');
 Route::get('/portifolio/{id}', 'App\Http\Controllers\PortifolioController@getPortifolio');
+Route::get('/portifolios/{categoria}', 'App\Http\Controllers\PortifolioController@getPortifolioBYCategoria');
 Route::post('/portifolio', 'App\Http\Controllers\PortifolioController@createPortifolio');
 Route::put('/portifolio/{id}', 'App\Http\Controllers\PortifolioController@updatePortifolio');
 Route::delete('/portifolio/{id}', 'App\Http\Controllers\PortifolioController@deletePortifolio');
