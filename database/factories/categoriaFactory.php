@@ -3,8 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
-
 
 class categoriaFactory extends Factory
 {
@@ -15,9 +13,8 @@ class categoriaFactory extends Factory
      */
     public function definition()
     {
-
         return [
-            'type' => $this->faker->randomElement(['wallpaper','blog']),
+            'type' => $this->faker->randomElement(['1', '2']),
             'description' => $this->faker->name()
         ];
     }

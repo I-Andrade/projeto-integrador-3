@@ -35,9 +35,8 @@
                 <div class="grid">
                     @foreach($portifolios as $portifolio)
                     <div class="element-item embalagens">
-                        <h1>{{$portifolio->id}}</h1>
-                        <a  href="/portifolio/<?php echo($portifolio->id) ?>"><div class="element-item-overlay"><span>{{$portifolio->title}}</span></div><img src="<?php $portifolio->image ?>" alt="alternative"></a>
-                    </div>
+                        <a  href="/portifolio/<?php echo($portifolio->id) ?>"><div class="element-item-overlay"><span>{{$portifolio->title}}</span></div><img src="<?php $portifolio->image ?>" alt=""></a>
+                    </div>"
                     @endforeach
 
                 </div> <!-- end of grid -->
