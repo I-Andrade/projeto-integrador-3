@@ -27,11 +27,11 @@
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="/portifolios/embalagem"><span class="item-text">Embalagem</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="/portifolios/midias"><span class="item-text">Mídias Sociais</span></a>
+                    <a class="dropdown-item" href="/portifolios/midia"><span class="item-text">Mídias Sociais</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="/portifolios/sites"><span class="item-text">Sites</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="/portifolios/campanhas"><span class="item-text">Campanhas</span></a>
+                    <a class="dropdown-item" href="/portifolios/campanha"><span class="item-text">Campanhas</span></a>
 
                 </div>
             </li>

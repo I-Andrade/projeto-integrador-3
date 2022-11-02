@@ -26,7 +26,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Portifólio - {{$titulo}}</h2>
+                <h2>Portifólio - <?php echo($titulo) ?></h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">
@@ -36,7 +36,7 @@
                     @foreach($portifolios as $portifolio)
                     <div class="element-item embalagens">
                         <a  href="/portifolio/<?php echo($portifolio->id) ?>"><div class="element-item-overlay"><span>{{$portifolio->title}}</span></div><img src="<?php $portifolio->image ?>" alt=""></a>
-                    </div>"
+                    </div>
                     @endforeach
 
                 </div> <!-- end of grid -->
