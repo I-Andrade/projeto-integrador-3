@@ -31,7 +31,7 @@ class PortifolioController extends Controller
     {
         $portifolio = portifolio::create($request->all());
         $portifolio->save();
-        return redirect('/portfolioo');
+        return redirect('/portfolio');
     }
 
     public function updatePortifolio(Request $request, $id)
@@ -39,7 +39,7 @@ class PortifolioController extends Controller
         $portifolio = portifolio::find($id);
         $portifolio->update($request->all());
         $portifolio->save();
-        return redirect('/portfolioo');
+        return redirect('/portfolio');
     }
 
     public function deletePortifolio($id)
