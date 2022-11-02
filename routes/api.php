@@ -18,8 +18,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/wallpapers', 'App\Http\Controllers\BlogController@getAllWallpapers');
-Route::get('/wallpaper/{id}', 'App\Http\Controllers\BlogController@getWallpaper');
-Route::post('/wallpaper', 'App\Http\Controllers\BlogController@createWallpaper');
-Route::put('/wallpaper/{id}', 'App\Http\Controllers\BlogController@updateWallpaper');
-Route::delete('/wallpaper/{id}', 'App\Http\Controllers\BlogController@deleteWallpaper');
+Route::get('/wallpapers', 'App\Http\Controllers\ApiController@getAllWallpapers');
+Route::get('/wallpaper/{id}', 'App\Http\Controllers\ApiController@getWallpaper');
+Route::post('/wallpaper', 'App\Http\Controllers\ApiController@createWallpaper');
+Route::put('/wallpaper/{id}', 'App\Http\Controllers\ApiController@updateWallpaper');
+Route::delete('/wallpaper/{id}', 'App\Http\Controllers\ApiController@deleteWallpaper');
