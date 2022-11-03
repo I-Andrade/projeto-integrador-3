@@ -68,19 +68,42 @@ class InstagramApiController extends Controller
                         ]
                     )->object();
         
-        $instagram->access_token = $response->access_token;
+        $shortLivedToken = $response->access_token;
+        
+        /* 
+           Após AppReview 
+        */
+        //$longLivedToken = $this->getLongLivedToken($shortLivedToken,$instagram->client_secret);
+        //$instagram->access_token = $longLivedToken;
+
+        $instagram->access_token = $shortLivedToken;
+        
         $instagram->user_id = $response->user_id;
         $instagram->username = $this->returnUsername($response->access_token);
         $instagram->save();
 
         return redirect('/');
+    } 
+
+    private function getLongLivedToken($access_token, $client_secret)
+    {        
+        $response = Http::asForm()
+                ->post('https://graph.instagram.com/access_token', [
+                         'grant_type'       => 'ig_exchange_token'
+                        ,'client_secret'    =>  $client_secret
+                        ,'access_token'     =>  $access_token
+                        ]
+                    )->object();
+        
+        return $response->access_token;
     }
 
-        private function returnUsername($access_token)
+    private function returnUsername($access_token)
     {
         $response = Http::get('https://graph.instagram.com/me/?'
                                 . 'fields=username'
-                                . '&access_token=' . $access_token)->object();
+                                . '&access_token=' . $access_token
+                            )->object();
         
         return $response->username;
     }
