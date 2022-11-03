@@ -22,8 +22,11 @@
 
                 <!-- Card -->
                 <div class="card">
-                    <div class="card-image">
-                        <i class="fas fa-code"></i>
+                    <nav> 
+                        <a href="portIdentidadeVisual">
+                    </nav>
+                    <div class="card-image" >
+                    <i class="fas fa-book"></i>
                     </div>
 
                     <div class="card-body">
@@ -37,8 +40,11 @@
 
                 <!-- Card -->
                 <div class="card">
+                <nav> 
+                        <a href="portEmbalagens">
+                    </nav>
                     <div class="card-image">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-coffee"></i>
                     </div>
                     <div class="card-body">
                         <a class="card-title" href="portEmbalagens"><span style="color: black">Embalagem</span></a>
@@ -48,8 +54,11 @@
 
                 <!-- Card -->
                 <div class="card">
+                    <nav> 
+                        <a href="portMidias">
+                    </nav>
                     <div class="card-image">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-comment"></i>
                     </div>
                     <div class="card-body">
                         <a class="card-title" href="portMidias"> <span style="color: black">Mídias Sociais</span></a>
@@ -59,8 +68,11 @@
 
                 <!-- Card -->
                 <div class="card">
+                    <nav> 
+                        <a href="portSites">
+                    </nav>
                     <div class="card-image">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-globe"></i>
                     </div>
                     <div class="card-body">
                         <a class="card-title" href="portSites"> <span style="color: black">Sites</span></a>
@@ -70,8 +82,11 @@
 
                 <!-- Card -->
                 <div class="card">
+                    <nav> 
+                        <a href="portCampanhas">
+                    </nav>
                     <div class="card-image">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-calendar"></i>
                     </div>
                     <div class="card-body">
                         <a class="card-title" href="portCampanhas"> <span style="color: black">Campanhas</span></a>
