@@ -38,7 +38,7 @@
             <!-- end of dropdown menu -->
 
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="contato">Contato</a>
+                <a class="nav-link page-scroll" href="/contato">Contato</a>
             </li>
 
             <!-- Dropdown Menu -->

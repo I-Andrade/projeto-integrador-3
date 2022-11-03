@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\categoria;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class blogFactory extends Factory
@@ -12,10 +13,10 @@ class blogFactory extends Factory
      * @return array
      */
     public function definition()
-    {
+    {      
         return [
             'title' => $this->faker->name(),
-            'id_category' => '1',
+            'id_category' => categoria::whereType(1)->get()->random()->id,
             'image' => $this->faker->imageUrl(),
             'image_name' => $this->faker->name(),
             'link_text' => $this->faker->name(),

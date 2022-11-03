@@ -8,7 +8,7 @@
 
 @section('content')
 @php
-$blogsDestaques = $blogs; 
+$blogsDestaques = $blogs->take(2); 
 @endphp
 <div class="container">
     <header class="blog-header py-3">
