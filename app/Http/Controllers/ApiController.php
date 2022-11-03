@@ -20,6 +20,7 @@ class ApiController extends Controller
     /**
     * @OA\Get(
     *   path="/api/wallpapers",
+    *   tags={"Consumo"},
     *   summary="List wallpapers",
     *   operationId="getAllWallpapers",
     *   @OA\Response(response=200, description="successful operation"),
@@ -37,6 +38,7 @@ class ApiController extends Controller
     /**
      * @OA\Get(
      *   path="/api/wallpaper/{Id}",
+     *   tags={"Consumo"},
      *   summary="List Wallpaper by ID",
      *   operationId="getWallpaper",
      *   @OA\Parameter(
@@ -60,6 +62,7 @@ class ApiController extends Controller
     /**
      * @OA\Post(
      *   path="/api/wallpaper",
+     *   tags={"Manipulação"},
      *   summary="Create Wallpaper",
      *   operationId="createWallpaper",
      *   @OA\Parameter(
@@ -75,9 +78,9 @@ class ApiController extends Controller
      *   required=true
      *   ),
      *   @OA\Parameter(
-     *   name="category",
+     *   name="id_category",
      *   in="query",
-     *   description="Category",
+     *   description="Id_Category",
      *   required=true
      *   ),
      *   @OA\Parameter(
@@ -107,6 +110,7 @@ class ApiController extends Controller
 
     /** @OA\Put(
     *   path="/api/wallpaper/{id}",
+    *   tags={"Manipulação"},
     *   summary="Update Wallpaper",
     *   operationId="updateWallpaper",
     *   @OA\Parameter(
@@ -128,9 +132,9 @@ class ApiController extends Controller
     *   required=false
     *   ),
     *   @OA\Parameter(
-    *   name="category",
+    *   name="id_category",
     *   in="query",
-    *   description="Category",
+    *   description="Id_Category",
     *   required=false
     *   ),
     *   @OA\Parameter(
@@ -161,6 +165,7 @@ class ApiController extends Controller
     /**
      * @OA\Delete(
      *   path="/api/wallpaper/{Id}",
+     *   tags={"Manipulação"},
      *   summary="Delete Wallpaper by ID",
      *   operationId="deleteWallpaper",
      *   @OA\Parameter(

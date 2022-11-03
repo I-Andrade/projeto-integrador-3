@@ -15,11 +15,10 @@ class WallpaperFactory extends Factory
      */
     public function definition()
     {
-
         return [
             'name' => $this->faker->name(),
             'image' => $this->faker->imageUrl(),
-            'category' => $this->faker->word(),
+            'id_category' => '2',
             'author' => $this->faker->name(),
             'description' => $this->faker->text(),
         ];

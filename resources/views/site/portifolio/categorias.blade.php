@@ -23,7 +23,7 @@
                 <!-- Card -->
                 <div class="card">
                     <nav> 
-                        <a href="portIdentidadeVisual">
+                        <a href="portifolios/identidade">
                     </nav>
                     <div class="card-image" >
                     <i class="fas fa-book"></i>
@@ -31,7 +31,7 @@
 
                     <div class="card-body">
                         <nav>
-                            <a class="card-title" href="portIdentidadeVisual"><span style="color: black">Identidade Visual</span></a>
+                            <a class="card-title" href="portifolios/identidade"><span style="color: black">Identidade Visual</span></a>
                         </nav>
 
                     </div>
@@ -41,13 +41,13 @@
                 <!-- Card -->
                 <div class="card">
                 <nav> 
-                        <a href="portEmbalagens">
+                        <a href="portifolios/embalagem">
                     </nav>
                     <div class="card-image">
                         <i class="fas fa-coffee"></i>
                     </div>
                     <div class="card-body">
-                        <a class="card-title" href="portEmbalagens"><span style="color: black">Embalagem</span></a>
+                        <a class="card-title" href="portifolios/embalagem"><span style="color: black">Embalagem</span></a>
                     </div>
                 </div>
                 <!-- end of card -->
@@ -55,13 +55,13 @@
                 <!-- Card -->
                 <div class="card">
                     <nav> 
-                        <a href="portMidias">
+                        <a href="portifolios/midias">
                     </nav>
                     <div class="card-image">
                         <i class="fas fa-comment"></i>
                     </div>
                     <div class="card-body">
-                        <a class="card-title" href="portMidias"> <span style="color: black">Mídias Sociais</span></a>
+                        <a class="card-title" href="portifolios/midias"> <span style="color: black">Mídias Sociais</span></a>
                     </div>
                 </div>
                 <!-- end of card -->
@@ -69,13 +69,13 @@
                 <!-- Card -->
                 <div class="card">
                     <nav> 
-                        <a href="portSites">
+                        <a href="portifolios/sites">
                     </nav>
                     <div class="card-image">
                         <i class="fas fa-globe"></i>
                     </div>
                     <div class="card-body">
-                        <a class="card-title" href="portSites"> <span style="color: black">Sites</span></a>
+                        <a class="card-title" href="portifolios/sites"> <span style="color: black">Sites</span></a>
                     </div>
                 </div>
                 <!-- end of card -->
@@ -83,13 +83,13 @@
                 <!-- Card -->
                 <div class="card">
                     <nav> 
-                        <a href="portCampanhas">
+                        <a href="portifolios/campanhas">
                     </nav>
                     <div class="card-image">
                         <i class="fas fa-calendar"></i>
                     </div>
                     <div class="card-body">
-                        <a class="card-title" href="portCampanhas"> <span style="color: black">Campanhas</span></a>
+                        <a class="card-title" href="portifolios/campanhas"> <span style="color: black">Campanhas</span></a>
                     </div>
                 </div>
                 <!-- end of card -->

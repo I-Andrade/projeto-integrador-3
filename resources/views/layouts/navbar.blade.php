@@ -20,18 +20,18 @@
 
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="portfolio" id="navbarDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">Portfólio</a>
+                <a class="nav-link dropdown-toggle page-scroll" href="/portifolios" id="navbarDropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false">Portifólio</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="portIdentidadeVisual"><span class="item-text">Identidade Visual</span></a>
+                    <a class="dropdown-item" href="/portifolios/identidade"><span class="item-text">Identidade Visual</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="portEmbalagens"><span class="item-text">Embalagem</span></a>
+                    <a class="dropdown-item" href="/portifolios/embalagem"><span class="item-text">Embalagem</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="portMidias"><span class="item-text">Mídias Sociais</span></a>
+                    <a class="dropdown-item" href="/portifolios/midia"><span class="item-text">Mídias Sociais</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="portSites"><span class="item-text">Sites</span></a>
+                    <a class="dropdown-item" href="/portifolios/sites"><span class="item-text">Sites</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="portCampanhas"><span class="item-text">Campanhas</span></a>
+                    <a class="dropdown-item" href="/portifolios/campanha"><span class="item-text">Campanhas</span></a>
 
                 </div>
             </li>
@@ -43,7 +43,7 @@
 
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="blog" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle page-scroll" href="/blogs" id="navbarDropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Blog</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="blog"><span class="item-text">Design</span></a>

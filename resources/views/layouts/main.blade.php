@@ -22,13 +22,13 @@
     <title>@yield('title')</title>
 
     <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css\bootstrap.css" >
-    <link rel="stylesheet" href="css\fontawesome-all.css" >
-    <link rel="stylesheet" href="css\swiper.css" >
-    <link rel="stylesheet" href="css\magnific-popup.css" >
-    <link rel="stylesheet" href="css\styles.css" >
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="{{URL::asset('https://fonts.googleapis.com/css?family=Roboto&display=swap')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{URL::asset('css\bootstrap.css')}}" >
+    <link rel="stylesheet" href="{{URL::asset('css\fontawesome-all.css')}}" >
+    <link rel="stylesheet" href="{{URL::asset('css\swiper.css')}}" >
+    <link rel="stylesheet" href="{{URL::asset('css\magnific-popup.css')}}" >
+    <link rel="stylesheet" href="{{URL::asset('css\styles.css')}}" >
+    <link rel="stylesheet" href="{{URL::asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}">
 
     <!-- Favicon  -->
     <link rel="icon" href="favicon.png">
