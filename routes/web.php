@@ -21,9 +21,9 @@ Route::get('/', function () {
    return view('welcome')->with(['fotos' => $fotos]);
 });
 
-Route::get('blog', function () {
-    return view('/site/blog/blog');
-});
+// Route::get('blog', function () {
+//     return view('/site/blog/blog');
+// });
 Route::get('detalhesblog', function () {
     return view('/site/blog/paginadetalhe');
 });
@@ -63,7 +63,7 @@ Route::get('login', function () {
 Route::get('admin-portfolio', function () {
     return view('/site/admin/admin-portfolio');
 });
-Route::get('admin-blog', function () {
+Route::get('admin-blog', 'App\Http\Controllers\CategoriaController@getCategoriasByType',function () {
     return view('/site/admin/admin-blog');
 });
 Route::get('admin-cadCategoria', function () {

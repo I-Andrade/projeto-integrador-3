@@ -26,7 +26,7 @@ class BlogController extends Controller
     {
         $blog = blog::create($request->all());
         $blog->save();
-        return redirect('/blog');
+        return response()->json(["message" => "Blog created successfully"], 201);
     }
 
     public function updateBlog(Request $request, $id)
@@ -34,13 +34,13 @@ class BlogController extends Controller
         $blog = blog::find($id);
         $blog->update($request->all());
         $blog->save();
-        return redirect('/blog');
+        return redirect('/blogs');
     }
 
     public function deleteBlog($id)
     {
         $blog = blog::find($id);
         $blog->delete();
-        return redirect('/blog');
+        return redirect('/blogs');
     }
 }
