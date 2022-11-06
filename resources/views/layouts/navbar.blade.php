@@ -56,7 +56,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="/admin" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle page-scroll" href="#" id="navbarDropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Admin</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/login"><span class="item-text">Login</span></a>
