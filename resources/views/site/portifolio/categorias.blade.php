@@ -83,13 +83,13 @@
                 <!-- Card -->
                 <div class="card">
                     <nav> 
-                        <a href="portifolios/campanhas">
+                        <a href="portifolios/campanha">
                     </nav>
                     <div class="card-image">
                         <i class="fas fa-calendar"></i>
                     </div>
                     <div class="card-body">
-                        <a class="card-title" href="portifolios/campanhas"> <span style="color: black">Campanhas</span></a>
+                        <a class="card-title" href="portifolios/campanha"> <span style="color: black">Campanhas</span></a>
                     </div>
                 </div>
                 <!-- end of card -->

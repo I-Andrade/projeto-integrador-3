@@ -5,7 +5,7 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class ExampleTest extends TestCase
+class RoutesTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -14,7 +14,7 @@ class ExampleTest extends TestCase
      *
      * @return void
      */
-    public function test_example()
+    public function test_root_route()
     {
         $response = $this->get('/');
 
