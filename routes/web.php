@@ -24,9 +24,6 @@ Route::get('/', function () {
    return view('welcome')->with(['fotos' => $fotos]);
 })->name('dashboard');
 
-// Route::get('blog', function () {
-//     return view('/site/blog/blog');
-// });
 Route::get('detalhesblog', function () {
     return view('/site/blog/paginadetalhe');
 });

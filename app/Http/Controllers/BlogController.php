@@ -17,16 +17,17 @@ class BlogController extends Controller
 
     public function getBlog($id)
     {
-        $blog = blog::find($id);
-        $blog = json($blog);
-        return view('site/blog', $blog);
+        $blogs = blog::where('id_category',$id)->get();
+        $categorias = categoria::where('type', 1)->get();
+        $blogs->categorias = $categorias;
+        return view('site/blog/blog', ['blogs' => $blogs], ['categorias' => $categorias]);
     }
 
     public function createBlog(Request $request)
     {
         $blog = blog::create($request->all());
         $blog->save();
-        return response()->json(["message" => "Blog created successfully"], 201);
+        return redirect("/blog/$blog->id_category");
     }
 
     public function updateBlog(Request $request, $id)

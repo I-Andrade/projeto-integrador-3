@@ -63,30 +63,33 @@
 
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
-                @php $categorias = App\Http\Controllers\CategoriaController::getCategoriasByType(1) @endphp
-                <a class="nav-link dropdown-toggle page-scroll" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                @php 
+                    $categorias = App\Http\Controllers\CategoriaController::getCategoriasByType(1);
+                @endphp
+                <a class="nav-link dropdown-toggle page-scroll" href="/blogs" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     @foreach($categorias as $categoria)
-                    <a class="dropdown-item" href="blogs/<?php echo($categoria->type) ?>"><span class="item-text"><?php echo($categoria->description) ?></span></a>
+                    <a class="dropdown-item" href="/blog/{{$categoria->id}}"><span class="item-text">{{$categoria->description}}</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     @endforeach
                 </div>
             </li>
             @auth
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle page-scroll" href="#" id="navbarDropdown" role="button"
+                  <a class="nav-link dropdown-toggle page-scroll" id="navbarDropdown" role="button"
                       aria-haspopup="true" aria-expanded="false">Admin</a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="/login"><span class="item-text">Login</span></a>
+                      <a class="dropdown-item" href="/admin-cadCategoria"><span class="item-text">Categorias</span></a>
                       <div class="dropdown-items-divide-hr"></div>
-                      <a class="dropdown-item" href="/admin-blog"><span class="item-text">Admin Blog</span></a>
-                      <a class="dropdown-item" href="/admin-cadCategoria"><span class="item-text">Cadastra Nova Categoria - Blog</span></a>
-                      <a class="dropdown-item" href="/listablog"><span class="item-text">Postagens - Blog</span></a>
+                      <a class="dropdown-item" href="/listaportfolio"><span class="item-text">Portifólio - Trabalhos</span></a>
+                      <a class="dropdown-item" href="/admin-portfolio"><span class="item-text">Portifólio - Novo trabalho</span></a>
                       <div class="dropdown-items-divide-hr"></div>
-                      <a class="dropdown-item" href="/admin-portfolio"><span class="item-text">Admin Portifólio</span></a>
-                      <a class="dropdown-item" href="/listaportfolio"><span class="item-text">Postagens - Portifólio</span></a>
+                      <a class="dropdown-item" href="/listablog"><span class="item-text">Blog - Postagens</span></a>
+                      <a class="dropdown-item" href="/admin-blog"><span class="item-text">Blog - Nova postagem</span></a>
                       <div class="dropdown-items-divide-hr"></div>
-                      <a class="dropdown-item" href="/admin-api"><span class="item-text">Admin API</span></a>
+                      <a class="dropdown-item" href="/admin-api"><span class="item-text">Wallpaper</span></a>
+                      <div class="dropdown-items-divide-hr"></div>
+                      <a class="dropdown-item" href="/admin-insta"><span class="item-text">Instagram</span></a>
                   </div>
               </li>
             @endauth
