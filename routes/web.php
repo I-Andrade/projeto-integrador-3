@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\InstagramApiController;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,11 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/welcome', function () {
+    return view('welcome');
+});
+
 Route::get('/', function () {
    $fotos = (new InstagramApiController())->getMedia();
 
    return view('welcome')->with(['fotos' => $fotos]);
-});
+})->name('dashboard');
 
 Route::get('blog', function () {
     return view('/site/blog/blog');
@@ -57,21 +60,27 @@ Route::get('privacy-policy', function () {
 Route::get('terms-conditions', function () {
     return view('/site/terms-conditions');
 });
-Route::get('login', function () {
+
+
+Route::get('souFernanda', function () {
     return view('/site/admin/login');
-});
-Route::get('admin-portfolio', function () {
+})->name('login')->middleware('guest');
+
+Route::middleware('auth')->group(function () {
+    Route::get('admin-portfolio', function () {
     return view('/site/admin/admin-portfolio');
+    });
+    Route::get('admin-blog', function () {
+        return view('/site/admin/admin-blog');
+    });
+    Route::get('admin-cadCategoria', function () {
+        return view('\site\admin\admin-cadCategoria');
+    });
+    Route::get('admin-api', function () {
+        return view('/site/admin/admin-api');
+    });
 });
-Route::get('admin-blog', function () {
-    return view('/site/admin/admin-blog');
-});
-Route::get('admin-cadCategoria', function () {
-    return view('\site\admin\admin-cadCategoria');
-});
-Route::get('admin-api', function () {
-    return view('/site/admin/admin-api');
-});
+
 
 
 
@@ -101,3 +110,9 @@ Route::get('/portifolios/{categoria}', 'App\Http\Controllers\PortifolioControlle
 Route::post('/portifolio', 'App\Http\Controllers\PortifolioController@createPortifolio');
 Route::put('/portifolio/{id}', 'App\Http\Controllers\PortifolioController@updatePortifolio');
 Route::delete('/portifolio/{id}', 'App\Http\Controllers\PortifolioController@deletePortifolio');
+
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

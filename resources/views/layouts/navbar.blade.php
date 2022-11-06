@@ -46,30 +46,32 @@
                 <a class="nav-link dropdown-toggle page-scroll" href="/blogs" id="navbarDropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Blog</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="blog"><span class="item-text">Design</span></a>
+                    <a class="dropdown-item" href="/blogs"><span class="item-text">Design</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="blog"><span class="item-text">Mercado</span></a>
+                    <a class="dropdown-item" href="/blogs"><span class="item-text">Mercado</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="blog"><span class="item-text">Curiosidades</span></a>
+                    <a class="dropdown-item" href="/blogs"><span class="item-text">Curiosidades</span></a>
 
 
                 </div>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="/admin" id="navbarDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">Admin</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/login"><span class="item-text">Login</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="/admin-blog"><span class="item-text">Admin Blog</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="/admin-cadCategoria"><span class="item-text">Cadastra Nova Categoria - Blog</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="/admin-portfolio"><span class="item-text">Admin Portifólio</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="/admin-api"><span class="item-text">Admin API</span></a>
-                </div>
-            </li>
+            @auth
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="/admin" id="navbarDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">Admin</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/login"><span class="item-text">Login</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="/admin-blog"><span class="item-text">Admin Blog</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="/admin-cadCategoria"><span class="item-text">Cadastra Nova Categoria - Blog</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="/admin-portfolio"><span class="item-text">Admin Portifólio</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="/admin-api"><span class="item-text">Admin API</span></a>
+                    </div>
+                </li>
+            @endauth
 
             <!-- end of dropdown menu -->
         </ul>
@@ -87,6 +89,19 @@
                 </a>
             </span>
         </span>
+        @auth
+            <span class="nav-item social-icons">
+
+                {{ strtoupper(Auth::user()->name) }}
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <button type="submit">
+                        Sair
+                    </button>
+                </form>
+            </span>
+        @endauth
     </div>
 </nav>
 <!-- end of navbar -->
