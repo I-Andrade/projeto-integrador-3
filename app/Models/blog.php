@@ -10,4 +10,9 @@ class blog extends Model
     use HasFactory;
     protected $table = 'blogs';
     protected $fillable = ['title', 'id_category', 'image', 'image_name', 'link_text', 'link_url', 'text'];
+
+    public function categoria()
+    {
+        return $this->hasOne(categoria::class,'id','id_category');
+    }
 }

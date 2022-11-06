@@ -70,7 +70,7 @@
                 <a class="nav-link dropdown-toggle page-scroll" href="/blogs" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     @foreach($categorias as $categoria)
-                    <a class="dropdown-item" href="/blog/{{$categoria->id}}"><span class="item-text">{{$categoria->description}}</span></a>
+                    <a class="dropdown-item" href="/blog/categoria/{{$categoria->id}}"><span class="item-text">{{$categoria->description}}</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     @endforeach
                 </div>
@@ -88,7 +88,7 @@
                       <a class="dropdown-item" href="/listablog"><span class="item-text">Blog - Postagens</span></a>
                       <a class="dropdown-item" href="/admin-blog"><span class="item-text">Blog - Nova postagem</span></a>
                       <div class="dropdown-items-divide-hr"></div>
-                      <a class="dropdown-item" href="/admin-api"><span class="item-text">Wallpaper</span></a>
+                      <a class="dropdown-item" href="/admin-wallpaper"><span class="item-text">Wallpaper</span></a>
                       <div class="dropdown-items-divide-hr"></div>
                       <a class="dropdown-item" href="/admin-insta"><span class="item-text">Instagram</span></a>
                   </div>

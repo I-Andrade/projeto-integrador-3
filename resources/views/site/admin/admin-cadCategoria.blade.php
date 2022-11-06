@@ -19,6 +19,10 @@
                                 <input type="text" class="form-control-input" id="cadCategoria">
                                 <label class="label-control" for="cadCategoria">Nova Categoria</label>
                             </div>
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control-input" id="tipoCategoria">
+                                <label class="label-control" for="cadCategoria">Tipo (Blog ou Wallpaper)</label>
+                            </div>
                         </div>
                         <div class="col-lg-12">
                             <button type="button" class="form-control-submit-button">Salvar</button>

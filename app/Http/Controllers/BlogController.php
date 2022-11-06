@@ -12,15 +12,24 @@ class BlogController extends Controller
         $blogs = blog::all();
         $categorias = categoria::where('type', 1)->get();
         $blogs->categorias = $categorias;
-        return view('site/blog/blog', ['blogs' => $blogs], ['categorias' => $categorias]);
+        $blogsDestaques = $blogs->take(2);
+        return view('site/blog/blog', ['blogs' => $blogs, 'blogsDestaques' => $blogsDestaques,'categorias' => $categorias, 'categoriaFiltrada' => 0]);
+    }
+
+    public function getBlogByCategoria($idCategoria)
+    {
+        $blogs = blog::where('id_category',$idCategoria)->get();
+        $categorias = categoria::where('type', 1)->get();
+        $blogs->categorias = $categorias;
+        $blogsDestaques = $blogs->take(2); 
+        return view('site/blog/blog', ['blogs' => $blogs, 'blogsDestaques' => $blogsDestaques,'categorias' => $categorias, 'categoriaFiltrada' => $idCategoria]);
     }
 
     public function getBlog($id)
     {
-        $blogs = blog::where('id_category',$id)->get();
+        $blog = blog::whereId($id)->get();
         $categorias = categoria::where('type', 1)->get();
-        $blogs->categorias = $categorias;
-        return view('site/blog/blog', ['blogs' => $blogs], ['categorias' => $categorias]);
+        return view('site/blog/paginadetalhe', ['materias' => $blog, 'categorias' => $categorias]);
     }
 
     public function createBlog(Request $request)
@@ -42,6 +51,13 @@ class BlogController extends Controller
     {
         $blog = blog::find($id);
         $blog->delete();
-        return redirect('/blogs');
+
+        return redirect('listablog');
+    }
+
+        public function getAdminAllBlogs()
+    {
+        $blogs = blog::with('categoria')->orderBy('id_category')->get();
+        return view('/site/admin/listablog', ['blogs' => $blogs]);
     }
 }

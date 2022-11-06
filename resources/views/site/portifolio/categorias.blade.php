@@ -55,13 +55,13 @@
                 <!-- Card -->
                 <div class="card">
                     <nav> 
-                        <a href="portifolios/midias">
+                        <a href="portifolios/midia">
                     </nav>
                     <div class="card-image">
                         <i class="fas fa-comment"></i>
                     </div>
                     <div class="card-body">
-                        <a class="card-title" href="portifolios/midias"> <span style="color: black">Mídias Sociais</span></a>
+                        <a class="card-title" href="portifolios/midia"> <span style="color: black">Mídias Sociais</span></a>
                     </div>
                 </div>
                 <!-- end of card -->

@@ -44,8 +44,16 @@ class PortifolioController extends Controller
 
     public function deletePortifolio($id)
     {
-        $portifolio = portifolio::find($id);
+        $portifolio = portifolio::with('imagems')->find($id);
+        $portifolio->imagems()->delete();
         $portifolio->delete();
-        return redirect('/portfolio');
+
+        return redirect('listaportfolio');
+    }
+
+    public function getAdminAllPortifolios()
+    {
+        $portifolios = portifolio::all()->sortBy('category');
+        return view('/site/admin/listaportifolio', ['portifolios' => $portifolios]);
     }
 }

@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Cadastro API</h2>
+                    <h2>Cadastro Wallpaper</h2>
                     <img class="decorative-line" src="images/decorative-line.svg" alt="decorative line">
 
                 </div> <!-- end of col -->
