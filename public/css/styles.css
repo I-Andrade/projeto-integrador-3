@@ -799,9 +799,10 @@ input[type='checkbox'] {
 /*************************/
 .copyright {
 	padding-top: 1rem;
-	padding-bottom: 0.5rem;
+	padding-bottom: 2rem;
 	background-color: #E45032;
 	text-align: center;
+    margin-bottom: 20px;
 }
 
 .copyright .p-small {
@@ -1567,7 +1568,7 @@ input[type='checkbox'] {
 	.header .swiper-button-prev {
 		left: -2.25rem;
 	}
-	
+
 	.header .swiper-button-next {
 		right: -2.25rem;
 	}
@@ -1580,11 +1581,11 @@ input[type='checkbox'] {
 			margin-right: auto;
 			margin-left: auto;
 		}
-	
+
 		.header .swiper-button-prev {
 			left: 3rem;
 		}
-		
+
 		.header .swiper-button-next {
 			right: 3rem;
 		}
@@ -1614,7 +1615,7 @@ input[type='checkbox'] {
 	.header .swiper-button-prev {
 		left: 1.5rem;
 	}
-	
+
 	.header .swiper-button-next {
 		right: 1.5rem;
 	}

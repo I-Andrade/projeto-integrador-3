@@ -62,10 +62,11 @@
                     <a class="dropdown-item" href="/login"><span class="item-text">Login</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="/categorias/1"><span class="item-text">Admin Blog</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="/admin-cadCategoria"><span class="item-text">Cadastra Nova Categoria - Blog</span></a>
+                    <a class="dropdown-item" href="/listablog"><span class="item-text">Postagens - Blog</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="/admin-portfolio"><span class="item-text">Admin Portifólio</span></a>
+                    <a class="dropdown-item" href="/listaportfolio"><span class="item-text">Postagens - Portifólio</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="/admin-api"><span class="item-text">Admin API</span></a>
                 </div>
