@@ -63,9 +63,8 @@ Route::get('login', function () {
 Route::get('admin-portfolio', function () {
     return view('/site/admin/admin-portfolio');
 });
-Route::get('admin-blog', 'App\Http\Controllers\CategoriaController@getCategoriasByType',function () {
-    return view('/site/admin/admin-blog');
-});
+Route::get('/admin-blog/{type}', 'App\Http\Controllers\CategoriaController@getCategoriasByType');
+
 Route::get('admin-cadCategoria', function () {
     return view('\site\admin\admin-cadCategoria');
 });

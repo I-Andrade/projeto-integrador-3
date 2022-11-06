@@ -56,12 +56,12 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="/admin" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle page-scroll" href="#" id="navbarDropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Admin</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/login"><span class="item-text">Login</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="/categorias/1"><span class="item-text">Admin Blog</span></a>
+                    <a class="dropdown-item" href="/admin-blog/1"><span class="item-text">Admin Blog</span></a>
                     <div class="dropdown-items-divide-hr"></div>
                     <a class="dropdown-item" href="/admin-cadCategoria"><span class="item-text">Cadastra Nova Categoria - Blog</span></a>
                     <div class="dropdown-items-divide-hr"></div>
