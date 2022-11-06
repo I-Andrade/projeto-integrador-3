@@ -43,16 +43,13 @@
 
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="/blogs" id="navbarDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">Blog</a>
+                @php $categorias = App\Http\Controllers\CategoriaController::getCategoriasByType(1) @endphp
+                <a class="nav-link dropdown-toggle page-scroll" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="blog"><span class="item-text">Design</span></a>
+                    @foreach($categorias as $categoria)
+                    <a class="dropdown-item" href="blogs/<?php echo($categoria->type) ?>"><span class="item-text"><?php echo($categoria->description) ?></span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="blog"><span class="item-text">Mercado</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="blog"><span class="item-text">Curiosidades</span></a>
-
-
+                    @endforeach
                 </div>
             </li>
             <li class="nav-item dropdown">
@@ -61,7 +58,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/login"><span class="item-text">Login</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="/categorias/1"><span class="item-text">Admin Blog</span></a>
+                    <a class="dropdown-item" href="/admin-blog"><span class="item-text">Admin Blog</span></a>
                     <a class="dropdown-item" href="/admin-cadCategoria"><span class="item-text">Cadastra Nova Categoria - Blog</span></a>
                     <a class="dropdown-item" href="/listablog"><span class="item-text">Postagens - Blog</span></a>
                     <div class="dropdown-items-divide-hr"></div>

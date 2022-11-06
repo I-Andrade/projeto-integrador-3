@@ -44,11 +44,12 @@ class CategoriaController extends Controller
     public function getCategoriasByType($type)
     {
         $categorias = categoria::where('type', $type)->get();
-        if ($type == 1) {
-            return view('/site/admin/admin-blog', ['categorias' => $categorias]);
-        } else {
-            return ['categorias' => $categorias];
-        }
-        return $categorias;
+            return $categorias;
+    }
+
+    public function getCategoriasBlog()
+    {
+        $categorias = $this->getCategoriasByType(1);
+        return view('/site/admin/admin-blog', ['categorias' => $categorias]);
     }
 }
