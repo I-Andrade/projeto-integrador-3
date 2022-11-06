@@ -20,21 +20,22 @@
                 <div class="col-lg-12">
 
                     <!-- Contact Form -->
-                    <form action= "" method="POST" id="contactForm" data-toggle="validator" data-focus="false">
+                    <form action= /blog/ method="POST">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-4">
                                 <label class="label-control" for="title">Titulo</label>
-                                <input type="text" class="form-control-input" id="title">
+                                <input type="text" class="form-control-input" name="title" id="title">
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
                                 <label class="label-control" for="image_name"> Nome Imagem:</label>
-                                <input type="text" class="form-control-input" id="image_name">
+                                <input type="text" class="form-control-input" name="image_name" id="image_name">
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
                                 <label class="label-control" for="image"> Link imagem:</label>
-                                <input type="tex" class="form-control-input" id="image">
+                                <input type="tex" class="form-control-input" name="image" id="image">
                                 <div class="help-block with-errors"></div>
                             </div>
 
@@ -43,20 +44,20 @@
                         <div class="row">
                             <div class="col-lg-4">
                                 <label class="label-control" for="link_text">Texto Anterior ao Link</label>
-                                <input type="text" class="form-control-input" id="link_text">
+                                <input type="text" class="form-control-input" name="link_text" id="link_text">
                                 <div class="help-block with-errors"></div>
                             </div>
 
                             <div class="col-lg-4">
                                 <label class="label-control" for="link_url">Link</label>
-                                <input type="text" class="form-control-input" id="link_url">
+                                <input type="text" class="form-control-input" name="link_url" id="link_url">
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
                                 <label for="id_category" class="form-label">Categoria: </label>
-                                <select class="form-select" id="id_categoria">
-                                    @foreach ($categorias as $categoria) 
-                                        <option value="<?php echo $categoria->id ?>"><?php echo $categoria->description ?></option>
+                                <select class="form-select"  name="id_category" id="id_category">
+                                    @foreach ($categorias as $categoria)
+                                        <option value="<?php echo($categoria->id)?>" name="id_category"><?php echo ($categoria->description) ?></option>
                                     @endforeach
                                 </select>
                             </div>
@@ -64,7 +65,7 @@
                         </div>
 
                         <div class="form-group">
-                            <textarea class="form-control-textarea" id="text"></textarea>
+                            <textarea class="form-control-textarea" name="text" id="text"></textarea>
                             <label class="label-control" for="text">Descrição</label>
                             <div class="help-block with-errors"></div>
                         </div>
