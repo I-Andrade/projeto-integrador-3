@@ -23,7 +23,7 @@ class CategoriaController extends Controller
     {
         $categoria = categoria::create($request->all());
         $categoria->save();
-        return redirect('/');
+        return redirect('/blogs');
     }
 
     public function updateCategoria(Request $request, $id)
@@ -44,6 +44,12 @@ class CategoriaController extends Controller
     public function getCategoriasByType($type)
     {
         $categorias = categoria::where('type', $type)->get();
-        return $categorias;
+            return $categorias;
+    }
+
+    public function getCategoriasBlog()
+    {
+        $categorias = $this->getCategoriasByType(1);
+        return view('/site/admin/admin-blog', ['categorias' => $categorias]);
     }
 }

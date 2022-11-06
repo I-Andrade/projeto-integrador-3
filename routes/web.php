@@ -24,9 +24,9 @@ Route::get('/', function () {
    return view('welcome')->with(['fotos' => $fotos]);
 })->name('dashboard');
 
-Route::get('blog', function () {
-    return view('/site/blog/blog');
-});
+// Route::get('blog', function () {
+//     return view('/site/blog/blog');
+// });
 Route::get('detalhesblog', function () {
     return view('/site/blog/paginadetalhe');
 });
@@ -70,12 +70,21 @@ Route::middleware('auth')->group(function () {
     Route::get('admin-portfolio', function () {
     return view('/site/admin/admin-portfolio');
     });
-    Route::get('admin-blog', function () {
-        return view('/site/admin/admin-blog');
+    
+    Route::get('listaportfolio', function () {
+        return view('/site/admin/listaportifolio');
     });
+    
+    Route::get('listablog', function () {
+        return view('/site/admin/listablog');
+    });
+    
+    Route::get('admin-blog', 'App\Http\Controllers\CategoriaController@getCategoriasBlog');
+
     Route::get('admin-cadCategoria', function () {
         return view('\site\admin\admin-cadCategoria');
     });
+    
     Route::get('admin-api', function () {
         return view('/site/admin/admin-api');
     });
@@ -83,9 +92,6 @@ Route::middleware('auth')->group(function () {
         return view('/site/admin/admin-instagram');
     });
 });
-
-
-
 
 // API INSTAGRAM
 Route::get('insta-new-code', [InstagramApiController::class, 'getNewCode']);
