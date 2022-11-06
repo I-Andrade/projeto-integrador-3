@@ -3,7 +3,27 @@
 
     <!-- Image Logo -->
     <a class="navbar-brand logo-image" href="/"><img src="\images\logo-designer.jpeg" alt="alternative"></a>
-
+ @auth
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                {{ strtoupper(Auth::user()->name) }}
+            </li>
+            <li class="nav-item"> 
+                        <span class="nav-item social-icons"> 
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit">
+                                    Sair
+                                </button>
+                            </form>
+                        </span>
+                    
+            </li>
+        </ul> 
+    </div>
+@endauth
+     
     <!-- Mobile Menu Toggle Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
         aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,18 +77,20 @@
             </li>
             @auth
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle page-scroll" href="/admin" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle page-scroll" id="navbarDropdown" role="button"
                         aria-haspopup="true" aria-expanded="false">Admin</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="/login"><span class="item-text">Login</span></a>
+                        {{-- <a class="dropdown-item" href="/souFernanda"><span class="item-text">Login</span></a>
+                        <div class="dropdown-items-divide-hr"></div> --}}
+                        <a class="dropdown-item" href="/admin-cadCategoria"><span class="item-text">Categorias</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="/admin-blog"><span class="item-text">Admin Blog</span></a>
+                        <a class="dropdown-item" href="/admin-portfolio"><span class="item-text">Portifólio</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="/admin-cadCategoria"><span class="item-text">Cadastra Nova Categoria - Blog</span></a>
+                        <a class="dropdown-item" href="/admin-blog"><span class="item-text">Blog</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="/admin-portfolio"><span class="item-text">Admin Portifólio</span></a>
+                        <a class="dropdown-item" href="/admin-api"><span class="item-text">Wallpapers</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="/admin-api"><span class="item-text">Admin API</span></a>
+                        <a class="dropdown-item" href="/admin-insta"><span class="item-text">Instagram</span></a>
                     </div>
                 </li>
             @endauth
@@ -89,19 +111,7 @@
                 </a>
             </span>
         </span>
-        @auth
-            <span class="nav-item social-icons">
-
-                {{ strtoupper(Auth::user()->name) }}
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <button type="submit">
-                        Sair
-                    </button>
-                </form>
-            </span>
-        @endauth
+       
     </div>
 </nav>
 <!-- end of navbar -->

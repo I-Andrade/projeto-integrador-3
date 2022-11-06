@@ -54,8 +54,8 @@ Route::get('portSites', function () {
 Route::get('paginadetalhe', function () {
     return view('/site/portifolio/paginadetalhe');
 });
-Route::get('privacy-policy', function () {
-    return view('/site/privacy-policy');
+Route::get('politica-privacidade', function () {
+    return view('/site/politica-privacidade');
 });
 Route::get('terms-conditions', function () {
     return view('/site/terms-conditions');
@@ -78,6 +78,9 @@ Route::middleware('auth')->group(function () {
     });
     Route::get('admin-api', function () {
         return view('/site/admin/admin-api');
+    });
+    Route::get('admin-insta', function () {
+        return view('/site/admin/admin-instagram');
     });
 });
 
