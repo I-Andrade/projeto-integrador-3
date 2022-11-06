@@ -7,6 +7,9 @@
     "paths": {
         "/api/wallpapers": {
             "get": {
+                "tags": [
+                    "Consumo"
+                ],
                 "summary": "List wallpapers",
                 "operationId": "getAllWallpapers",
                 "responses": {
@@ -24,6 +27,9 @@
         },
         "/api/wallpaper/{Id}": {
             "get": {
+                "tags": [
+                    "Consumo"
+                ],
                 "summary": "List Wallpaper by ID",
                 "operationId": "getWallpaper",
                 "parameters": [
@@ -47,6 +53,9 @@
                 }
             },
             "delete": {
+                "tags": [
+                    "Manipulação"
+                ],
                 "summary": "Delete Wallpaper by ID",
                 "operationId": "deleteWallpaper",
                 "parameters": [
@@ -72,6 +81,9 @@
         },
         "/api/wallpaper": {
             "post": {
+                "tags": [
+                    "Manipulação"
+                ],
                 "summary": "Create Wallpaper",
                 "operationId": "createWallpaper",
                 "parameters": [
@@ -88,9 +100,9 @@
                         "required": true
                     },
                     {
-                        "name": "category",
+                        "name": "id_category",
                         "in": "query",
-                        "description": "Category",
+                        "description": "Id_Category",
                         "required": true
                     },
                     {
@@ -121,6 +133,9 @@
         },
         "/api/wallpaper/{id}": {
             "put": {
+                "tags": [
+                    "Manipulação"
+                ],
                 "summary": "Update Wallpaper",
                 "operationId": "updateWallpaper",
                 "parameters": [
@@ -143,9 +158,9 @@
                         "required": false
                     },
                     {
-                        "name": "category",
+                        "name": "id_category",
                         "in": "query",
-                        "description": "Category",
+                        "description": "Id_Category",
                         "required": false
                     },
                     {

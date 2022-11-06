@@ -3,7 +3,27 @@
 
     <!-- Image Logo -->
     <a class="navbar-brand logo-image" href="/"><img src="\images\logo-designer.jpeg" alt="alternative"></a>
-
+ @auth
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                {{ strtoupper(Auth::user()->name) }}
+            </li>
+            <li class="nav-item"> 
+                        <span class="nav-item social-icons"> 
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit">
+                                    Sair
+                                </button>
+                            </form>
+                        </span>
+                    
+            </li>
+        </ul> 
+    </div>
+@endauth
+     
     <!-- Mobile Menu Toggle Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
         aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,72 +40,77 @@
 
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="portfolio" id="navbarDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">Portfólio</a>
+                <a class="nav-link dropdown-toggle page-scroll" href="/portifolios" id="navbarDropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false">Portifólio</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="portIdentidadeVisual"><span class="item-text">Identidade Visual</span></a>
+                    <a class="dropdown-item" href="/portifolios/identidade"><span class="item-text">Identidade Visual</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="portEmbalagens"><span class="item-text">Embalagem</span></a>
+                    <a class="dropdown-item" href="/portifolios/embalagem"><span class="item-text">Embalagem</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="portMidias"><span class="item-text">Mídias Sociais</span></a>
+                    <a class="dropdown-item" href="/portifolios/midia"><span class="item-text">Mídias Sociais</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="portSites"><span class="item-text">Sites</span></a>
+                    <a class="dropdown-item" href="/portifolios/sites"><span class="item-text">Sites</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="portCampanhas"><span class="item-text">Campanhas</span></a>
+                    <a class="dropdown-item" href="/portifolios/campanha"><span class="item-text">Campanhas</span></a>
 
                 </div>
             </li>
             <!-- end of dropdown menu -->
 
             <li class="nav-item">
-                <a class="nav-link page-scroll" href="contato">Contato</a>
+                <a class="nav-link page-scroll" href="/contato">Contato</a>
             </li>
 
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="blog" id="navbarDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">Blog</a>
+                @php 
+                    $categorias = App\Http\Controllers\CategoriaController::getCategoriasByType(1);
+                @endphp
+                <a class="nav-link dropdown-toggle page-scroll" href="/blogs" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="blog"><span class="item-text">Design</span></a>
+                    @foreach($categorias as $categoria)
+                    <a class="dropdown-item" href="/blog/{{$categoria->id}}"><span class="item-text">{{$categoria->description}}</span></a>
                     <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="blog"><span class="item-text">Mercado</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="blog"><span class="item-text">Curiosidades</span></a>
-
-
+                    @endforeach
                 </div>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle page-scroll" href="admin" id="navbarDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">Admin</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="login"><span class="item-text">Login</span></a>
-
-                    <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="admin-blog"><span class="item-text">Admin Blog</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="admin-portfolio"><span class="item-text">Admin Portifólio</span></a>
-                    <div class="dropdown-items-divide-hr"></div>
-                    <a class="dropdown-item" href="admin-api"><span class="item-text">Admin API</span></a>
-                </div>
-            </li>
+            @auth
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle page-scroll" id="navbarDropdown" role="button"
+                      aria-haspopup="true" aria-expanded="false">Admin</a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="/admin-cadCategoria"><span class="item-text">Categorias</span></a>
+                      <div class="dropdown-items-divide-hr"></div>
+                      <a class="dropdown-item" href="/listaportfolio"><span class="item-text">Portifólio - Trabalhos</span></a>
+                      <a class="dropdown-item" href="/admin-portfolio"><span class="item-text">Portifólio - Novo trabalho</span></a>
+                      <div class="dropdown-items-divide-hr"></div>
+                      <a class="dropdown-item" href="/listablog"><span class="item-text">Blog - Postagens</span></a>
+                      <a class="dropdown-item" href="/admin-blog"><span class="item-text">Blog - Nova postagem</span></a>
+                      <div class="dropdown-items-divide-hr"></div>
+                      <a class="dropdown-item" href="/admin-api"><span class="item-text">Wallpaper</span></a>
+                      <div class="dropdown-items-divide-hr"></div>
+                      <a class="dropdown-item" href="/admin-insta"><span class="item-text">Instagram</span></a>
+                  </div>
+              </li>
+            @endauth
 
             <!-- end of dropdown menu -->
         </ul>
         <span class="nav-item social-icons">
             <span class="fa-stack">
-                <a href="#your-link">
+                <a target="_blank" href="https://www.instagram.com/fcarrijo.design/">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                    <i class="fab fa-instagram fa-stack-1x"></i>
                 </a>
             </span>
             <span class="fa-stack">
-                <a href="#your-link">
+                <a target="_blank"  href="https://www.linkedin.com/in/fernandamcarrijo/">
                     <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fab fa-twitter fa-stack-1x"></i>
+                    <i class="fab fa-linkedin-in fa-stack-1x"></i>
                 </a>
             </span>
         </span>
+       
     </div>
 </nav>
 <!-- end of navbar -->

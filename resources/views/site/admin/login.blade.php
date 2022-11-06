@@ -16,29 +16,57 @@
                 </div>
             </div>
             <div class="row">
+                
+
+
+                       
+                
+                
+                
+                
+                
+                
+                
+                
                 <div class="col-lg-6">
+                    <form method="POST" action="{{ route('login') }}">
+                    @csrf
 
-
-
+                    <!-- Email Address -->
                     <div class="form-floating">
-
-                        <input type="email" class="form-control" id="floatingInput" placeholder="nome@examplo.com.br">
+                        <input id="email" class="form-control" type="email" name="email" value="{{old('email')}}" required autofocus placeholder="nome@examplo.com.br">
                         <label for="floatingInput">E-mail</label>
                     </div>
+
+                    <!-- Password -->
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="senha">
+                        <input id="password" class="form-control" type="password" name="password" placeholder="senha" required>
                         <label for="floatingPassword">Senha</label>
                     </div>
 
-                    <div class="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Esqueci a senha / Primeiro Acesso
+                    <!-- Remember Me -->
+                     <div class="checkbox mb-3">
+                        <label for="remember_me">
+                            <input id="remember_me" type="checkbox" value="remember-me" name="remember"> Manter logado
                         </label>
                     </div>
+
+                    <div class="form-floating">
+                        @if (Route::has('password.request'))
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                                {{ __('Forgot your password?') }}
+                            </a>
+                        @endif
+                    </div>
+
                     <div class="form-group">
-                    <button type="submit" class="form-control-submit-button">Avançar</button>
+                        <button type="submit" class="form-control-submit-button">Avançar</button>
+                    </div>
+
+                     </form>
                 </div>
-            </div>
+                
+                
                 <div class="copyright">
                     <div class="container">
                         <div class="row">

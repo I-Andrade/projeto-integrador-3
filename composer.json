@@ -6,12 +6,13 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "darkaonline/l5-swagger": "^8.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "laravel/breeze": "1.9.2",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5",
-        "darkaonline/l5-swagger": "^8.0"
+        "laravel/tinker": "^2.5"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -55,6 +56,9 @@
         }
     },
     "config": {
+            "platform": {
+        "php": "8.1.0"
+     },
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true

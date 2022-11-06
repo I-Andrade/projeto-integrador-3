@@ -16,14 +16,23 @@
                 <div class="col-lg-12">
                     <h2>Contato</h2>
                     <ul class="list-unstyled li-space-lg">
-                        <li class="address">Teste bla bla bla mensagem</li>
-                        <li><i class="fas fa-map-marker-alt"></i>Um lugar qualquer - SP</li>
-                        <li><i class="fas fa-phone"></i><a class="green" href="tel:003024630820">+81 720 2212</a></li>
-                        <li><i class="fas fa-envelope"></i><a class="green" href="mailto:office@argo.com">office@argo.com</a></li>
+                        <li class="address">Entre em contato e tire suas dúvidas</li>
+                        <li><i class="fas fa-map-marker-alt"></i>Franca - SP</li>
+                        <li><i class="fas fa-phone"></i><a class="green" href="tel:16992780943">(16) 992780943</a></li>
+                        <li><i class="fas fa-envelope"></i><a class="green" href="mailto:feer.carrijoo@gmail.com">feer.carrijoo@gmail.com</a></li>
                     </ul>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
+
+                    <div class="col-lg-5">
+                    <div class="text-container">
+                        <h3>Lorem Ipsum</h3>
+                        <p>Teeeeeeeeeeeeeeeeeeeeeeeeeeste.</p>
+
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+
 
                 <div class="col-lg-6">
 

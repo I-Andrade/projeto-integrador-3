@@ -1,3 +1,17 @@
+<?php
+    if ($categoria == 'sites') {
+        $titulo = 'Sites';
+    } else if ($categoria == 'identidade') {
+        $titulo = 'Identidade Visual';
+    } else if ($categoria == 'embalagem') {
+        $titulo = 'Embalagens';
+    } else if ($categoria == 'midia') {
+        $titulo = 'Mídias Sociais';
+    } else if ($categoria == 'campanha') {
+        $titulo = 'Campanhas';
+    }
+?>
+
 @extends('layouts.main')
 
 <!-- Header -->
@@ -12,37 +26,19 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Portifólio - Sites</h2>
+                <h2>Portifólio - <?php echo($titulo) ?></h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">
             <div class="col-lg-12">
                 @include('layouts.navbarPort')
                 <div class="grid">
+                    @foreach($portifolios as $portifolio)
                     <div class="element-item embalagens">
-                        <a  href="paginadetalhe"><div class="element-item-overlay"><span>Cliente 1</span></div><img src="images\portifolio\img91.jpg" alt="alternative"></a>
+                        <a  href="/portifolio/<?php echo($portifolio->id) ?>"><div class="element-item-overlay"><span>{{$portifolio->title}}</span></div><img src="{{$portifolio->image}}" alt=""></a>
                     </div>
-                    <div class="element-item embalagens">
-                        <a href="#project-2"><div class="element-item-overlay"><span>Cliente 2</span></div><img src="images\portifolio\img31.jpg" alt="alternative"></a>
-                    </div>
-                    <div class="element-item identidade embalagens sites">
-                        <a href="#project-3"><div class="element-item-overlay"><span>Cliente 3</span></div><img src="images\portifolio\img105.jpg" alt="alternative"></a>
-                    </div>
-                    <div class="element-item identidade embalagens sites">
-                        <a href="#project-4"><div class="element-item-overlay"><span>Cliente 4</span></div><img src="images\portifolio\img89.jpg" alt="alternative"></a>
-                    </div>
-                    <div class="element-item identidade embalagens sites campanhas">
-                        <a href="#project-5"><div class="element-item-overlay"><span>Cliente 5</span></div><img src="images\portifolio\img80.jpg" alt="alternative"></a>
-                    </div>
-                    <div class="element-item sites campanhas identidade">
-                        <a href="#project-6"><div class="element-item-overlay"><span>Cliente 6</span></div><img src="images\portifolio\img52.jpg" alt="alternative"></a>
-                    </div>
-                    <div class="element-item identidade embalagens">
-                        <a href="#project-7"><div class="element-item-overlay"><span>Cliente 7</span></div><img src="images\portifolio\img97.jpg" alt="alternative"></a>
-                    </div>
-                    <div class="element-item identidade embalagens">
-                        <a href="#project-8"><div class="element-item-overlay"><span>Cliente 8</span></div><img src="images\portifolio\img54.jpg" alt="alternative"></a>
-                    </div>
+                    @endforeach
+
                 </div> <!-- end of grid -->
                 <!-- end of filter -->
 

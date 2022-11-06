@@ -3,6 +3,7 @@
 @section('title', 'Blog - Administrativo')
 
 @section('content')
+<link rel="stylesheet" href="css/blog.css">
 
     <!-- Contact -->
     <div id="contact" class="form-2">
@@ -19,47 +20,53 @@
                 <div class="col-lg-12">
 
                     <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
+                    <form action= /blog/ method="POST">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control-input" id="cname" required="">
-                                <label class="label-control" for="cname">Titulo</label>
+                                <label class="label-control" for="title">Titulo</label>
+                                <input type="text" class="form-control-input" name="title" id="title">
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control-input" id="cdata" required="">
-                                <label class="label-control" for="cname">Subtitulo</label>
+                                <label class="label-control" for="image_name"> Nome Imagem:</label>
+                                <input type="text" class="form-control-input" name="image_name" id="image_name">
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
-                                <label for="country" class="form-label">Categoria: </label>
-                                <select class="form-select" id="categoria" required="">
-                                    <option value="">Design</option>
-                                    <option value="">Mercado</option>
-                                    <option value="">Curiosidades</option>
+                                <label class="label-control" for="image"> Link imagem:</label>
+                                <input type="tex" class="form-control-input" name="image" id="image">
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <label class="label-control" for="link_text">Texto Anterior ao Link</label>
+                                <input type="text" class="form-control-input" name="link_text" id="link_text">
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <label class="label-control" for="link_url">Link</label>
+                                <input type="text" class="form-control-input" name="link_url" id="link_url">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                            <div class="col-lg-4">
+                                <label for="id_category" class="form-label">Categoria: </label>
+                                <select class="form-select"  name="id_category" id="id_category">
+                                    @foreach ($categorias as $categoria)
+                                        <option value="<?php echo($categoria->id)?>" name="id_category"><?php echo ($categoria->description) ?></option>
+                                    @endforeach
                                 </select>
                             </div>
 
-
                         </div>
-                        <div class="row">
-                            <div  class="col-lg-4"><input type="tex" class="form-control-input" id="cBigImagem" required="">
-                            <label class="label-control" for="cemail"> Nome Imagem:</label>
-                            <div class="help-block with-errors"></div>
-                                </div>
-                                <div  class="col-lg-4"> <input type="file" class="form-control-input" id="cBigImagem" required=""></div>
-                                <div class="col-lg-4">
-                                    <input type="text" class="form-control-input" id="clink" required="">
-                                    <label class="label-control" for="clink">Link</label>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-
-                        </div>
-
 
                         <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required=""></textarea>
-                            <label class="label-control" for="cmessage">Descrição</label>
+                            <textarea class="form-control-textarea" name="text" id="text"></textarea>
+                            <label class="label-control" for="text">Descrição</label>
                             <div class="help-block with-errors"></div>
                         </div>
 
@@ -70,12 +77,19 @@
                         <div class="form-message">
                             <div id="cmsgSubmit" class="h3 text-center hidden"></div>
                         </div>
+
                     </form>
-                    <!-- end of contact form -->
+                    <!-- end of blog form -->
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of form-2 -->
     <!-- end of contact -->
+
+
+
+    <script src="\js\blog.js"></script>
+
+
 @endsection

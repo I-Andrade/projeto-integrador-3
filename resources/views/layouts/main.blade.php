@@ -22,12 +22,13 @@
     <title>@yield('title')</title>
 
     <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css\bootstrap.css" >
-    <link rel="stylesheet" href="css\fontawesome-all.css" >
-    <link rel="stylesheet" href="css\swiper.css" >
-    <link rel="stylesheet" href="css\magnific-popup.css" >
-    <link rel="stylesheet" href="css\styles.css" >
+    <link href="{{URL::asset('https://fonts.googleapis.com/css?family=Roboto&display=swap')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{URL::asset('css\bootstrap.css')}}" >
+    <link rel="stylesheet" href="{{URL::asset('css\fontawesome-all.css')}}" >
+    <link rel="stylesheet" href="{{URL::asset('css\swiper.css')}}" >
+    <link rel="stylesheet" href="{{URL::asset('css\magnific-popup.css')}}" >
+    <link rel="stylesheet" href="{{URL::asset('css\styles.css')}}" >
+    <link rel="stylesheet" href="{{URL::asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}">
 
     <!-- Favicon  -->
     <link rel="icon" href="favicon.png">
@@ -35,29 +36,66 @@
 
 <body data-spy="scroll" data-target=".fixed-top">
 
-
     <!-- Navigation -->
     @include('layouts.navbar')
     <!-- end of navbar -->
 
 
 
+            <!-- Image Slider -->
+            <div class="outer-container">
+            <div class="slider-container">
+                <div class="swiper-container image-slider-1">
+                    <div class="swiper-wrapper">
+
+                        <!-- Slide -->
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="https://drive.google.com/uc?export=view&id=1Z7-4HnestMX2V73aFvyWXDbKYwii8wzq" alt="alternative">
+                        </div>
+                        <!-- end of slide -->
+
+                        <!-- Slide -->
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="https://drive.google.com/uc?export=view&id=1Ew2EX6XtJZXJmtOa8arKCofAWN1uzurf" alt="alternative">
+                        </div>
+                        <!-- end of slide -->
+                        <!-- Slide -->
+                        <div class="swiper-slide">
+                            <img class="img-fluid" src="https://drive.google.com/uc?export=view&id=1bucAew8L9r8ochVxGTXtFKWby5i5KX8S" alt="alternative">
+                        </div>
+                        <!-- end of slide -->
+
+
+                    </div> <!-- end of swiper-wrapper -->
+
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- end of add arrows -->
+
+                </div> <!-- end of swiper-container -->
+            </div> <!-- end of slider-container -->
+        </div> <!-- end of outer-container -->
+        <!-- end of image slider -->
+
     <!-- end of header -->
     <!-- end of navigation -->
 
     @yield('content')
 
-
-
-
-
-
-
     @include('layouts.footer')
     @include('layouts.scripts')
 
-
-
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
 </body>
 

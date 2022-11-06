@@ -2,6 +2,7 @@
 
 namespace Tests\Unit;
 
+use App\Models\categoria;
 use App\Models\Wallpaper;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -19,8 +20,8 @@ class WallpaperTest extends TestCase
     public function test_database_create_wallpapers()
     {
         $qtde = 20;
+        categoria::factory()->count($qtde)->create();
         Wallpaper::factory()->count($qtde)->create();
-        
         $wallpapers = Wallpaper::all();
         $this->assertCount($qtde,$wallpapers);
         $this->assertNotEmpty($wallpapers->first->name);
