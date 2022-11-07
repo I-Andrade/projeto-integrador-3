@@ -4,6 +4,7 @@
 
 
    @section('title', 'Categorias')
+   @include('layouts.banner')
 
    @section('content')
 
@@ -22,7 +23,7 @@
 
                 <!-- Card -->
                 <div class="card">
-                    <nav> 
+                    <nav>
                         <a href="portifolios/identidade">
                     </nav>
                     <div class="card-image" >
@@ -40,7 +41,7 @@
 
                 <!-- Card -->
                 <div class="card">
-                <nav> 
+                <nav>
                         <a href="portifolios/embalagem">
                     </nav>
                     <div class="card-image">
@@ -54,7 +55,7 @@
 
                 <!-- Card -->
                 <div class="card">
-                    <nav> 
+                    <nav>
                         <a href="portifolios/midia">
                     </nav>
                     <div class="card-image">
@@ -68,7 +69,7 @@
 
                 <!-- Card -->
                 <div class="card">
-                    <nav> 
+                    <nav>
                         <a href="portifolios/sites">
                     </nav>
                     <div class="card-image">
@@ -82,7 +83,7 @@
 
                 <!-- Card -->
                 <div class="card">
-                    <nav> 
+                    <nav>
                         <a href="portifolios/campanha">
                     </nav>
                     <div class="card-image">

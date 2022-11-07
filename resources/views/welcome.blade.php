@@ -1,6 +1,7 @@
       @extends('layouts.main')
    <!-- Preloader -->
 @include('layouts.preloader')
+@include('layouts.banner')
 <!-- end of preloader -->
 <!-- Header -->
 @include('layouts.header')

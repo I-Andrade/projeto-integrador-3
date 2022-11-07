@@ -15,6 +15,7 @@
 @extends('layouts.main')
 
 <!-- Header -->
+@include('layouts.banner')
 
 
    @section('title', 'Sites')

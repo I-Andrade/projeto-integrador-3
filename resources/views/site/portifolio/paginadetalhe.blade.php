@@ -2,7 +2,7 @@
 
 
 
-
+@include('layouts.banner')
 
 @section('title', 'Fernanda Carrijo')
 

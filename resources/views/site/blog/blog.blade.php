@@ -2,6 +2,7 @@
 
 <!-- Header -->
 @include('layouts.header')
+@include('layouts.banner')
 
 
 @section('title', 'Fernanda Carrijo')
@@ -89,7 +90,7 @@
                     <hr>
                 </article>
                 @endforeach
-                
+
                 <nav class="blog-pagination" aria-label="Pagination">
                     <a class="btn btn-outline-primary" href="#">Anterior</a>
                     <a class="btn btn-outline-secondary disabled">Próximo</a>
