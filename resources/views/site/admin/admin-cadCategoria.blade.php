@@ -12,8 +12,8 @@
                 <div class="col-lg-12">
                     <h2>Cadastra Nova Categoria - Blog</h2>
                     <img class="decorative-line" src="images/decorative-line.svg" alt="decorative line">
-                    <form class="form-group">
 
+                    <form class="form-group">
                         <div class="row">
                             <div class="col-lg-12">
                                 <input type="text" class="form-control-input" id="cadCategoria">

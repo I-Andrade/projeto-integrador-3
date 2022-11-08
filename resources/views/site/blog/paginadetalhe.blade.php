@@ -2,8 +2,7 @@
 
 
 
-
-@include('layouts.banner')
+<br><br><br><br><br>
 
 @section('title', 'Fernanda Carrijo')
 

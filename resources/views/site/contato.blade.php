@@ -2,11 +2,11 @@
 
 @section('title', 'Fernanda Carrijo - Contato')
 <!-- Preloader -->
-@include('layouts.preloader')
-@include('layouts.banner')
 <!-- end of preloader -->
 <!-- Header -->
 @include('layouts.header')
+
+<br><br><br><br><br>
 
 @section('content')
 

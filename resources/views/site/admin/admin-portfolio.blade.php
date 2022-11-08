@@ -22,8 +22,8 @@
                     <form id="contactForm" data-toggle="validator" data-focus="false">
                         <div class="row">
                             <div class="col-lg-4">
-                                <label class="label-control" for="cname">Titulo</label>
                                 <input type="text" class="form-control-input" id="cname" name="cname" >
+                                <label class="label-control" for="cname">Titulo</label>
                                 <div class="help-block with-errors"></div>
                             </div>
 
@@ -46,13 +46,13 @@
                         <div class="row">
 
                             <div class="col-lg-4">
-                                <label class="label-control" for="cBigImagem">Link Imagem Capa</label>
                                 <input type="tex" class="form-control-input" name="cBigImagem" id="cBigImagem">
+                                <label class="label-control" for="cBigImagem">Link Imagem Capa</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
-                                <label class="label-control" for="descImagens">IDs outras Imagens</label>
                                 <input type="text" class="form-control-input" name="descImagens" id="descImagens">
+                                <label class="label-control" for="descImagens">IDs outras Imagens</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="row">

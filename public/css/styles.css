@@ -1214,7 +1214,7 @@ input[type='checkbox'] {
 	margin-bottom: 1.75rem;
 	margin-left: auto;
 	border-radius: 50%;
-	background-color: #E45032;
+	background-color: #213737;
 }
 
 .cards-1 .card-image .fas {
@@ -1620,3 +1620,12 @@ input[type='checkbox'] {
 		right: 1.5rem;
 	}
 	/* end of header */
+
+	.img-icon {
+	width: 12.5rem;
+    height: 12.5rem;
+    margin-right: auto;
+    margin-bottom: 1.75rem;
+    margin-left: auto;
+    border-radius: 50%;
+	}

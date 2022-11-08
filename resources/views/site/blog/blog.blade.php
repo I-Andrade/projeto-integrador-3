@@ -2,13 +2,12 @@
 
 <!-- Header -->
 @include('layouts.header')
-@include('layouts.banner')
 
 
 @section('title', 'Fernanda Carrijo')
 
 @section('content')
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <div class="container">
     <header class="blog-header py-3">
       <div class="row flex-nowrap align-items-center">
@@ -91,21 +90,21 @@
                 </article>
                 @endforeach
 
+                <br>
                 <nav class="blog-pagination" aria-label="Pagination">
                     <a class="btn btn-outline-primary" href="#">Anterior</a>
                     <a class="btn btn-outline-secondary disabled">Próximo</a>
                 </nav>
-
+                <br><br><br>
             </div>
 
             <div class="col-md-4">
                 <div class="position-sticky" style="top: 2rem;">
                     <div class="p-4 mb-3 bg-light rounded">
-                        <div class="about-image">
-                            <img src="images\foto-fer_home.png">
+                        <div style = 'margin-left: 40px' class="about-image">
+                            <img style = 'height:250; width: 200; margin-bottom: 12px;'src="images\foto-fer_home.png">
                         </div>
-                        <h2>Fernanda</h2>
-                        <h3>Moreira Carrijo Andrade</h3>
+                        <h3>Fernanda Moreira Carrijo Andrade</h3>
                         <p>Sempre disposta a aprender e ensinar, sou uma pessoa bastante alegre, bem
                             humorada e muito honesta. Tenho bom relacionamento com os colegas com
                             quem trabalho ou já trabalhei, mesmo fora da empresa.</p>
@@ -124,6 +123,7 @@
                             @endforeach
                         </ol>
                     </div>
+                    <br><br><br>    
                 </div>
             </div>
         </div>
