@@ -3,6 +3,7 @@
 @section('title', 'Blog - Administrativo')
 
 @section('content')
+
 <link rel="stylesheet" href="css/blog.css">
 
     <!-- Contact -->
