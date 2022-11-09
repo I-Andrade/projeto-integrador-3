@@ -27,9 +27,12 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control-input" id="ccategoria" required="">
-                                <label class="label-control" for="ccategoria">Categoria:</label>
-                                <div class="help-block with-errors"></div>
+                                <label for="id_category" class="form-label">Categoria: </label>
+                                <select class="form-select"  name="id_category" id="id_category">
+                                    @foreach ($categorias as $categoria)
+                                        <option value="{{$categoria->id}}" name="id_category"><?php echo ($categoria->description) ?></option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="col-lg-4">
                                 <input type="text" class="form-control-input" id="cdimensoes" required="">

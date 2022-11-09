@@ -79,7 +79,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/categoria/{id}', 'App\Http\Controllers\CategoriaController@deleteCategoria');
 
     //API Wallpapers
-    Route::get('admin-wallpaper', function () { return view('/site/admin/admin-wallpaper'); });
+    Route::get('admin-wallpaper', 'App\Http\Controllers\CategoriaController@getCategoriasWallpaper');
     
     // API INSTAGRAM
     Route::get('admin-insta', function () { return view('/site/admin/admin-instagram'); });

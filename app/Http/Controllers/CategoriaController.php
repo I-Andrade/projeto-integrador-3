@@ -61,4 +61,10 @@ class CategoriaController extends Controller
         $categorias = $this->getCategoriasByType(1);
         return view('/site/admin/admin-blog', ['categorias' => $categorias]);
     }
+
+        public function getCategoriasWallpaper()
+    {
+        $categorias = $this->getCategoriasByType(2);
+        return view('/site/admin/admin-wallpaper', ['categorias' => $categorias]);
+    }
 }
