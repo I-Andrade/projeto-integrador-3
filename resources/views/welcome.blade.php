@@ -21,7 +21,13 @@
                           </div>
                           <h2>Olá!</h2>
                           <h3>Eu sou a Fernanda</h3>
-                          <p>Sou designer gráfico, trabalho na área há 10 anos e amo os desafios que minha profissão me traz.
+                          @php
+                            $origin = date_create('2013-06-01');
+                            $target = date_create(date('Y-m-d'));
+                            $interval = date_diff($origin, $target);
+                            $anos = $interval->format('%y');
+                          @endphp
+                          <p>Sou designer gráfico, trabalho na área há {{$anos}} anos e amo os desafios que minha profissão me traz.
 Gosto de pular de cabeça e me sentir parte de cada detalhe em cada projeto para que eu possa encontrar o problema, enxergar as necessidades, trilhar o caminho, desenhar a solução e apreciar os resultados.</p>
                           <p>Me realizo em saber que posso trazer à vida os mais diversos sonhos, seja na área de negócios em uma identidade visual, papelaria, em fotografias de produtos, divulgação no on e offline, seja em materiais para eventos como convites de casamento, aniversários, menu e etc.</p>
 

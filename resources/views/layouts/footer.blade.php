@@ -7,7 +7,13 @@
                 <div class="col-md-4">
                     <div class="footer-col">
                         <h4>Fernanda Carrijo</h4>
-                        <div class='media-body'>Sou designer gráfico, trabalho na área há 10 anos e amo os desafios que minha profissão me traz.</div>
+                        @php
+                            $origin = date_create('2013-06-01');
+                            $target = date_create(date('Y-m-d'));
+                            $interval = date_diff($origin, $target);
+                            $anos = $interval->format('%y');
+                          @endphp
+                        <div class='media-body'>Sou designer gráfico, trabalho na área há {{$anos}} anos e amo os desafios que minha profissão me traz.</div>
                     </div> <!-- end of footer-col -->
                 </div> <!-- end of col -->
                 <div class="col-md-4">
