@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\InstagramApiController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,9 +40,6 @@ Route::get('detalhesblog', function () { return view('/site/blog/paginadetalhe')
 //Categorias
 Route::get('/categorias', 'App\Http\Controllers\CategoriaController@getAllCategorias');
 Route::get('/categoria/{id}', 'App\Http\Controllers\CategoriaController@getCategoria');
-Route::post('/categoria', 'App\Http\Controllers\CategoriaController@createCategoria');
-Route::put('/categoria/{id}', 'App\Http\Controllers\CategoriaController@updateCategoria');
-Route::delete('/categoria/{id}', 'App\Http\Controllers\CategoriaController@deleteCategoria');
 Route::get('/categorias/{type}', 'App\Http\Controllers\CategoriaController@getCategoriasByType');
 
 
@@ -75,7 +73,10 @@ Route::middleware('auth')->group(function () {
 
 
     //Categorias
-    Route::get('admin-cadCategoria', function () { return view('\site\admin\admin-cadCategoria'); });
+    Route::get('admin-cadCategoria', 'App\Http\Controllers\CategoriaController@getAllCategorias');
+    Route::post('/categoria', 'App\Http\Controllers\CategoriaController@createCategoria');
+    Route::put('/categoria/{id}', 'App\Http\Controllers\CategoriaController@updateCategoria');
+    Route::delete('/categoria/{id}', 'App\Http\Controllers\CategoriaController@deleteCategoria');
 
     //API Wallpapers
     Route::get('admin-wallpaper', function () { return view('/site/admin/admin-wallpaper'); });
