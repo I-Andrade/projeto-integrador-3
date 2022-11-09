@@ -1,2 +1,2 @@
 #!/bin/sh
-composer install
+composer update --no-dev
