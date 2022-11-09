@@ -142,8 +142,8 @@
                     {
                         "name": "id",
                         "in": "path",
-                        "description": "Name",
-                        "required": false
+                        "description": "ID",
+                        "required": true
                     },
                     {
                         "name": "name",

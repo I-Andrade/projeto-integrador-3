@@ -116,8 +116,8 @@ class ApiController extends Controller
     *   @OA\Parameter(
     *   name="id",
     *   in="path",
-    *   description="Name",
-    *   required=false
+    *   description="ID",
+    *   required=true
     *   ),
     *   @OA\Parameter(
     *   name="name",

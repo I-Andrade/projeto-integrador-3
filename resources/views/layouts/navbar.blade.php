@@ -88,7 +88,7 @@
                         <span class="nav-item social-icons">
                             <form method="POST" action="{{ route('logout') }}">
                                 @csrf
-                                <button type="submit">
+                                <button type="submit" class="form-control-submit-button">
                                     Sair
                                 </button>
                             </form>
