@@ -71,7 +71,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <p class="p-small">Copyright © 2022 Turma 12 Polo Franca-SP - PI3 Univesp</p>
+                                <p class="p-small">Copyright ©{{date('Y')}} Turma 12 Polo Franca-SP - PI3 Univesp</p>
                             </div> <!-- end of col -->
                         </div> <!-- enf of row -->
                     </div> <!-- end of container -->
