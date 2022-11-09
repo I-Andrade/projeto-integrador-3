@@ -16,7 +16,7 @@
                       <div class="text-container">
                           <div id="about" class="form-1">
                               <div class="about-image">
-                                  <img src="images\foto-fer_home.png">
+                                  <img src="/images/foto-fer_home.png">
                               </div>
                           </div>
                           <h2>Olá!</h2>

@@ -102,9 +102,9 @@
                 <div class="position-sticky" style="top: 2rem;">
                     <div class="p-4 mb-3 bg-light rounded">
                         <div style = 'margin-left: 40px' class="about-image">
-                            <img style = 'height:250; width: 200; margin-bottom: 12px;'src="images\foto-fer_home.png">
+                            <img style = 'height:250; width: 200; margin-bottom: 12px;'src="/images/foto-fer_home.png">
                         </div>
-                        <h3>Fernanda Moreira Carrijo Andrade</h3>
+                        <h3>Fernanda Carrijo</h3>
                         <p>Sempre disposta a aprender e ensinar, sou uma pessoa bastante alegre, bem
                             humorada e muito honesta. Tenho bom relacionamento com os colegas com
                             quem trabalho ou já trabalhei, mesmo fora da empresa.</p>
