@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.mainAdmin')
 
 
 @section('title', 'Blog - Postagens')
@@ -54,9 +54,9 @@
                 </div>
 
                 <!-- end of card -->
-                <div class="row">               
-                    Total de {{$blogs->count()}} matérias postadas.    
-                    
+                <div class="row">
+                    Total de {{$blogs->count()}} matérias postadas.
+
                 </div>
 
                 <br><br><br><br><br>

@@ -44,7 +44,7 @@ p<!DOCTYPE html>
 
 
 
-    @include('layouts.banner')
+
 
     <!-- end of header -->
     <!-- end of navigation -->

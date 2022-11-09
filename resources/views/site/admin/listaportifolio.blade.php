@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.mainAdmin')
 
 
 
@@ -56,9 +56,9 @@
                 </div>
 
                 <!-- end of card -->
-                <div class="row">               
-                    Total de {{$portifolios->count()}} trabalhos postados.    
-                    
+                <div class="row">
+                    Total de {{$portifolios->count()}} trabalhos postados.
+
                 </div>
 
                 <br><br><br><br><br>
