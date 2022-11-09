@@ -18,7 +18,7 @@
         </div> <!-- end of row -->
         <div class="row">
             <div class="col-lg-12">
-                @include('layouts.navbarPort')
+                {{-- @include('layouts.navbarPort') --}}
 
                 <!-- Card -->
                 <div class="card">
