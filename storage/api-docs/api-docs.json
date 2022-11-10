@@ -1,7 +1,7 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Wallpaper API (PI3 Univesp)",
+        "title": "Wallpaper API - Turma 12 Polo Franca-SP - PI3 Univesp",
         "version": "1.0.0"
     },
     "paths": {
@@ -30,7 +30,7 @@
                 "tags": [
                     "Consumo"
                 ],
-                "summary": "List Wallpaper by ID",
+                "summary": "Get Wallpaper by ID",
                 "operationId": "getWallpaper",
                 "parameters": [
                     {
@@ -38,142 +38,6 @@
                         "in": "path",
                         "description": "Target Wallpaper.",
                         "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "successful operation"
-                    },
-                    "406": {
-                        "description": "not acceptable"
-                    },
-                    "500": {
-                        "description": "internal server error"
-                    }
-                }
-            },
-            "delete": {
-                "tags": [
-                    "Manipulação"
-                ],
-                "summary": "Delete Wallpaper by ID",
-                "operationId": "deleteWallpaper",
-                "parameters": [
-                    {
-                        "name": "Id",
-                        "in": "path",
-                        "description": "Target Wallpaper.",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "successful operation"
-                    },
-                    "406": {
-                        "description": "not acceptable"
-                    },
-                    "500": {
-                        "description": "internal server error"
-                    }
-                }
-            }
-        },
-        "/api/wallpaper": {
-            "post": {
-                "tags": [
-                    "Manipulação"
-                ],
-                "summary": "Create Wallpaper",
-                "operationId": "createWallpaper",
-                "parameters": [
-                    {
-                        "name": "name",
-                        "in": "query",
-                        "description": "Name",
-                        "required": true
-                    },
-                    {
-                        "name": "image",
-                        "in": "query",
-                        "description": "Image",
-                        "required": true
-                    },
-                    {
-                        "name": "id_category",
-                        "in": "query",
-                        "description": "Id_Category",
-                        "required": true
-                    },
-                    {
-                        "name": "author",
-                        "in": "query",
-                        "description": "Author",
-                        "required": true
-                    },
-                    {
-                        "name": "description",
-                        "in": "query",
-                        "description": "Description",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "successful operation"
-                    },
-                    "406": {
-                        "description": "not acceptable"
-                    },
-                    "500": {
-                        "description": "internal server error"
-                    }
-                }
-            }
-        },
-        "/api/wallpaper/{id}": {
-            "put": {
-                "tags": [
-                    "Manipulação"
-                ],
-                "summary": "Update Wallpaper",
-                "operationId": "updateWallpaper",
-                "parameters": [
-                    {
-                        "name": "id",
-                        "in": "path",
-                        "description": "ID",
-                        "required": true
-                    },
-                    {
-                        "name": "name",
-                        "in": "query",
-                        "description": "Name",
-                        "required": false
-                    },
-                    {
-                        "name": "image",
-                        "in": "query",
-                        "description": "Image",
-                        "required": false
-                    },
-                    {
-                        "name": "id_category",
-                        "in": "query",
-                        "description": "Id_Category",
-                        "required": false
-                    },
-                    {
-                        "name": "author",
-                        "in": "query",
-                        "description": "Author",
-                        "required": false
-                    },
-                    {
-                        "name": "description",
-                        "in": "query",
-                        "description": "Description",
-                        "required": false
                     }
                 ],
                 "responses": {
