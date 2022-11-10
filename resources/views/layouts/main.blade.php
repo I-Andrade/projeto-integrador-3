@@ -1,4 +1,4 @@
-p<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -31,7 +31,7 @@ p<!DOCTYPE html>
     <link rel="stylesheet" href="{{URL::asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}">
 
     <!-- Favicon  -->
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="/favicon.ico">
 
 </head>
 

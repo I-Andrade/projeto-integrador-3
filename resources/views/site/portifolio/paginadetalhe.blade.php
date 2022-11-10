@@ -31,7 +31,7 @@
                             <br>
 
                             <div class="image-container">
-                                <img src="<?php echo($portifolio->image) ?>"
+                                <img src="{{$portifolio->image}}"
                                     style="width:auto; max-width: 100%; height: auto"
                                     title="Click for the larger version." />
                             </div> <!-- end of image-container -->
@@ -61,7 +61,7 @@
 
             <div class="image-container">
                 @foreach ($imagens as $imagem)
-                    <img src="<?php echo($imagem->image) ?>"
+                    <img src="{{$imagem->image}}"
                         style="width: auto; max-width: 100%; height: auto" title="Click for the larger version." />
                 @endforeach
 

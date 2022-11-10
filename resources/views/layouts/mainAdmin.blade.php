@@ -31,7 +31,7 @@
     <link rel="stylesheet" href="{{URL::asset('https://fonts.googleapis.com/icon?family=Material+Icons')}}">
 
     <!-- Favicon  -->
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="/favicon.ico">
 
 </head>
 

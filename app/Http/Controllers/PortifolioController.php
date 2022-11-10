@@ -8,6 +8,8 @@ use App\Models\imagem;
 
 class PortifolioController extends Controller
 {
+    private $url = 'https://drive.google.com/uc?export=view&id=';
+
     public function getAllPortifolios()
     {
         $portifolios = portifolio::all();
@@ -29,9 +31,13 @@ class PortifolioController extends Controller
 
     public function createPortifolio(Request $request)
     {
-        $portifolio = portifolio::create($request->all());
-        $portifolio->save();
-        return redirect('/portfolio');
+        $dados = $request->all();
+        $dados['image'] = $this->url . $dados['image'];
+        $portifolio = portifolio::create($dados);     
+        foreach($request->input('imagens') as $imagem) {
+            imagem::create(['image' => $this->url . $imagem,'id_portifolio' => $portifolio->id]);
+        }
+        return redirect('listaportfolio');
     }
 
     public function updatePortifolio(Request $request, $id)
@@ -39,7 +45,7 @@ class PortifolioController extends Controller
         $portifolio = portifolio::find($id);
         $portifolio->update($request->all());
         $portifolio->save();
-        return redirect('/portfolio');
+        return redirect('listaportfolio');
     }
 
     public function deletePortifolio($id)
