@@ -2,7 +2,7 @@
         margin: 0;
         padding: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -10,14 +10,14 @@
 
     .slider {
         margin: 60 auto;
-        width: 80%;
-        height: 450px;
+        width: 90%;
+        height: 400px;
         overflow: hidden;
     }
 
     .slides {
         width: 100%;
-        height: 450px;
+        height: 400px;
         display:inline-flex;
     }
 
@@ -50,7 +50,7 @@
 
     .manual-navigation {
         position: absolute;
-        width: 80%;
+        width: 100%;
         display: flex;
         justify-content: center;
         margin-top: 380px;
@@ -97,7 +97,7 @@
     }
     .navigation-auto{
         position: absolute;
-        width: 80%;
+        width: 100%;
         margin-top: 380px;
         display: flex;
         justify-content: center;
