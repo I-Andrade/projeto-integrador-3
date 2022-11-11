@@ -11,18 +11,23 @@
     .slider {
         margin: 60 auto;
         width: 80%;
-        height: 550px;
+        height: 450px;
         overflow: hidden;
     }
 
     .slides {
         width: 100%;
-        height: 550px;
+        height: 450px;
         display:inline-flex;
     }
 
     .slides input {
         display: none;
+    }
+
+    .img {
+        width: 400px;
+        height: 400px;
     }
 
     .slide-first {
@@ -48,7 +53,7 @@
         width: 80%;
         display: flex;
         justify-content: center;
-        margin-top: 520px;
+        margin-top: 380px;
 
     }
 
@@ -93,7 +98,7 @@
     .navigation-auto{
         position: absolute;
         width: 80%;
-        margin-top: 520px;
+        margin-top: 380px;
         display: flex;
         justify-content: center;
     }

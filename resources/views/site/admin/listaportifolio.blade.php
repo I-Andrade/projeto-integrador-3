@@ -1,8 +1,5 @@
 @extends('layouts.mainAdmin')
 
-
-
-
 @section('title', 'Portifólio - Trabalhos')
 
 @section('content')

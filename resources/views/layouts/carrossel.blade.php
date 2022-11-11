@@ -12,7 +12,7 @@
             </div>
                     @foreach ($fotos as $foto)
                     <div class="slide-second">
-                        <img src="{{ $foto->media_url }}" >
+                        <img class="img" src="{{ $foto->media_url }}" >
                     </div>
 
                     @endforeach

@@ -1,8 +1,5 @@
 @extends('layouts.mainAdmin')
 
-
-
-
 @section('title', 'Wallpaper - Listagem')
 
 @section('content')
@@ -18,7 +15,7 @@
         </div> <!-- end of row -->
         <div class="row">
             <div class="col-lg-12">
-                
+
                 <!-- Card -->
                 <div class="col-lg-10">
 
