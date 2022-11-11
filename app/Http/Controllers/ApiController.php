@@ -66,10 +66,10 @@ class ApiController extends Controller
     //  *   summary="Create Wallpaper",
     //  *   operationId="createWallpaper",
     //  *   @OA\Parameter(
-    //  *     name="name",
-    //  *     in="query",
-    //  *     description="Name",
-    //  *     required=true
+    //  *   name="name",
+    //  *   in="query",
+    //  *   description="Name",
+    //  *   required=true
     //  *   ),
     //  *   @OA\Parameter(
     //  *   name="image",
@@ -105,7 +105,7 @@ class ApiController extends Controller
     {
         $wallpaper = Wallpaper::create($request->all());
         $wallpaper->save();
-        return response()->json(["message" => "Wallpaper created successfully"], 201);
+        return redirect('/');
     }
 
     // /** @OA\Put(
