@@ -42,11 +42,6 @@ Route::get('/categorias', 'App\Http\Controllers\CategoriaController@getAllCatego
 Route::get('/categoria/{id}', 'App\Http\Controllers\CategoriaController@getCategoria');
 Route::get('/categorias/{type}', 'App\Http\Controllers\CategoriaController@getCategoriasByType');
 
-//Wallpapers
-Route::post('/wallpaper', 'App\Http\Controllers\ApiController@createWallpaper');
-Route::put('/wallpaper/{id}', 'App\Http\Controllers\ApiController@updateWallpaper');
-Route::delete('/wallpaper/{id}', 'App\Http\Controllers\ApiController@deleteWallpaper');
-
 //Outros
 Route::get('politica-privacidade', function () { return view('/site/politica-privacidade'); });
 Route::get('terms-conditions', function () { return view('/site/terms-conditions'); });
@@ -85,6 +80,11 @@ Route::middleware('auth')->group(function () {
 
     //API Wallpapers
     Route::get('admin-wallpaper', 'App\Http\Controllers\CategoriaController@getCategoriasWallpaper');
+    Route::get('listawallpaper', 'App\Http\Controllers\ApiController@getAdminAllWallpapers');
+    Route::post('/wallpaper', 'App\Http\Controllers\ApiController@createWallpaper');
+    Route::put('/wallpaper/{id}', 'App\Http\Controllers\ApiController@updateWallpaper');
+    Route::delete('/wallpaper/{id}', 'App\Http\Controllers\ApiController@deleteWallpaper');
+
     
     // API INSTAGRAM
     Route::get('admin-insta', function () { return view('/site/admin/admin-instagram'); });

@@ -74,7 +74,8 @@
                         <a class="dropdown-item" href="/listablog"><span class="item-text">Blog - Postagens</span></a>
                         <a class="dropdown-item" href="/admin-blog"><span class="item-text">Blog - Nova postagem</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="/admin-wallpaper"><span class="item-text">Wallpaper</span></a>
+                        <a class="dropdown-item" href="/listawallpaper"><span class="item-text">Wallpaper - Listagem</span></a>
+                        <a class="dropdown-item" href="/admin-wallpaper"><span class="item-text">Wallpaper - Novo Wallpaper</span></a>
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="/admin-insta"><span class="item-text">Instagram</span></a>
                     </div>

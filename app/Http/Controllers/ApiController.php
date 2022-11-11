@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Wallpaper;
+use App\Models\categoria;
 
 /**
  * @OA\Swagger(
@@ -105,7 +106,7 @@ class ApiController extends Controller
     {
         $wallpaper = Wallpaper::create($request->all());
         $wallpaper->save();
-        return redirect('/');
+        return redirect('/admin-wallpaper');
     }
 
     // /** @OA\Put(
@@ -184,6 +185,12 @@ class ApiController extends Controller
     {
         $wallpaper = Wallpaper::find($id);
         $wallpaper->delete();
-        return response()->json('Deleted');
+        return redirect('listawallpaper');
+    }
+
+    public function getAdminAllWallpapers()
+    {
+        $wallpapers = Wallpaper::with('categoria')->get();
+        return view('/site/admin/listawallpaper', ['wallpapers' => $wallpapers]);
     }
 }

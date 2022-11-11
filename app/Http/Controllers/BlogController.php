@@ -55,7 +55,7 @@ class BlogController extends Controller
         return redirect('listablog');
     }
 
-        public function getAdminAllBlogs()
+    public function getAdminAllBlogs()
     {
         $blogs = blog::with('categoria')->orderBy('id_category')->get();
         return view('/site/admin/listablog', ['blogs' => $blogs]);
