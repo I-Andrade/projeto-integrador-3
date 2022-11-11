@@ -17,7 +17,6 @@
                 <div class="col-lg-12">
                     <h2>Contato</h2>
                     <ul class="list-unstyled li-space-lg">
-                        <li class="address">Entre em contato e tire suas dúvidas</li>
                         <li><i class="fas fa-map-marker-alt"></i>Franca - SP</li>
                         <li><i class="fas fa-phone"></i><a class="green" href="tel:16992780943">(16) 992780943</a></li>
                         <li><i class="fas fa-envelope"></i><a class="green" href="mailto:feer.carrijoo@gmail.com">feer.carrijoo@gmail.com</a></li>
@@ -28,8 +27,10 @@
 
                     <div class="col-lg-5">
                     <div class="text-container">
-                        <h3>Lorem Ipsum</h3>
-                        <p>Teeeeeeeeeeeeeeeeeeeeeeeeeeste.</p>
+                        <h3>Vamos conversar!</h3>
+                        <p>Está com dúvidas ou quer fazer solicitações?</p>
+                        <p>Mande uma mensagem <strong style="color:#E45032">;)</strong></p>
+
 
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
