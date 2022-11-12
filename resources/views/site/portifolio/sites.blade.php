@@ -12,7 +12,7 @@
     }
 ?>
 
-@extends('layouts.main')
+@extends('layouts.mainAdmin')
 
 <!-- Header -->
 

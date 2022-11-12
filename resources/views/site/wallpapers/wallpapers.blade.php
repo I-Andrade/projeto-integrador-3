@@ -1,5 +1,5 @@
 
-@extends('layouts.main')
+@extends('layouts.mainAdmin')
 
 <!-- Header -->
 
@@ -18,15 +18,15 @@
         </div> <!-- end of row -->
 
         <br><br><br>
-        
+
         <div class="row">
             <div class="col-lg-12">
-                
+
                 @include('site.wallpapers.navbar')
-                
-                
-                
-                @foreach ($wallpapers as $categoria)                
+
+
+
+                @foreach ($wallpapers as $categoria)
                     <div id="{{$categoria->first()->categoria->description}}"></div>
                     <br><br><br><br><br>
                     <h3>
@@ -34,8 +34,8 @@
                     </h3>
 
                     <div class="row">
-                        
-                        <div class="grid">                         
+
+                        <div class="grid">
                             @foreach($categoria as $wallpaper)
                                 <div class="element-item embalagens" >
                                     <div class="element-item-overlay">
@@ -51,15 +51,15 @@
                         </div> <!-- end of grid -->
                     </div>
                 @endforeach
-               
+
                 <!-- end of filter -->
 
-            
+
         </div> <!-- end of row -->
     </div> <!-- end of container -->
 </div> <!-- end of filter -->
 <!-- end of projects -->
-        <div id="API&#129300"></div>    
+        <div id="API&#129300"></div>
         <br><br><br><br>
         <div class="row">
             <div class="col-lg-12">
@@ -67,7 +67,7 @@
                 <p>Disponibilizo esses Wallpapers através de uma <b>API</b>...</p>
                 <p>Você pode utilizá-las gratuitamente... acesse a <a style="color: blue" href="/api/documentation">documentação</a>!</p>
                 <hr>
-            </div> <!-- end of col -->   
+            </div> <!-- end of col -->
         </div> <!-- end of row -->
 <br><br><br><br><br>
 @endsection

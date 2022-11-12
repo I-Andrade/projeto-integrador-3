@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.mainAdmin')
 
 <!-- Header -->
 <!-- @include('layouts.header') -->
@@ -123,7 +123,7 @@
                             @endforeach
                         </ol>
                     </div>
-                    <br><br><br>    
+                    <br><br><br>
                 </div>
             </div>
         </div>
