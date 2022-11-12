@@ -10,19 +10,19 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-lg-12">
-                    <div>
+                <div class="loginBox">
+                    <div class="loginBox">
 
-                        <h2>Loggin - Administrativo</h2>
-                        <a class="navbar-brand logo-image">
-                            <img src="\images\logo-designer.jpeg" style="border-radius: 100%;" alt="alternative">
-                        </a>
+                        <h2>Login</h2>
+
+
+
 
                         <img class="decorative-line" src="images/decorative-line.svg" alt="decorative line">
                     </div>
 
 
-                    <div class="col-lg-8">
+                    <div class="col">
                         <form class="form-group" method="POST" action="{{ route('login') }}">
                             @csrf
 
