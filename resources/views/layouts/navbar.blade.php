@@ -82,18 +82,24 @@
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="/admin-insta"><span class="item-text">Instagram</span></a>
                     </div>
+
                 </li>
-                <li class="nav-item">
-                    <span class="nav-link page-scroll" href="/">{{ strtoupper(Auth::user()->name) }}</span>
-                </li>
-                <li class="nav-item">
-                    <form class="nav-link page-scroll" method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit" class="btn btn-info">
-                            Sair
-                        </button>
-                    </form>
-                </li>
+                <div class="navbar-nav ml-auto" aria-labelledby="navbarDropdown">
+                    <li class="nav-item">
+                        {{ strtoupper(Auth::user()->name) }}
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-item social-icons">
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="form-control-submit-button">
+                                    Sair
+                                </button>
+                            </form>
+                        </span>
+
+                    </li>
+                </div>
             @endauth
 
             <!-- end of dropdown menu -->

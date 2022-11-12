@@ -1120,7 +1120,7 @@ input[type='checkbox'] {
 
 	/* Navigation */
 	.navbar-custom {
-		padding: 0.625rem 5rem 2.125rem 5rem;
+		padding: 2.125rem 5rem 2.125rem 5rem;
 	}
 
 	.navbar-custom.top-nav-collapse {

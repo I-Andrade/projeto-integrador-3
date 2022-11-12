@@ -5,7 +5,7 @@ return [
     'documentations' => [
         'default' => [
             'api' => [
-                'title' => 'API Wallpaper',
+                'title' => 'L5 Swagger UI',
             ],
 
             'routes' => [
