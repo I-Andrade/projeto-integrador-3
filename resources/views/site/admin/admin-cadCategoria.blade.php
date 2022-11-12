@@ -148,5 +148,5 @@
             </div> <!-- end of container -->
         </div> <!-- end of form-2 -->
         <!-- end of contact -->
-
+    </div>
     @endsection
