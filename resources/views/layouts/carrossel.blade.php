@@ -5,7 +5,7 @@
     <br><br><br>
         <div class="slider-container">
         <div class="swiper-container image-slider-2">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper" style="height: 50%;">
                 <input type="radio" name="radio-btn" id="radio1">
                 <input type="radio" name="radio-btn" id="radio2">
                 <input type="radio" name="radio-btn" id="radio3">
