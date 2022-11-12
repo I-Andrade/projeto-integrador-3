@@ -42,6 +42,9 @@ Route::get('/categorias', 'App\Http\Controllers\CategoriaController@getAllCatego
 Route::get('/categoria/{id}', 'App\Http\Controllers\CategoriaController@getCategoria');
 Route::get('/categorias/{type}', 'App\Http\Controllers\CategoriaController@getCategoriasByType');
 
+//Wallpapers
+Route::get('/wallpapers', 'App\Http\Controllers\ApiController@getSiteAllWallpapers');
+
 //Outros
 Route::get('politica-privacidade', function () { return view('/site/politica-privacidade'); });
 Route::get('terms-conditions', function () { return view('/site/terms-conditions'); });

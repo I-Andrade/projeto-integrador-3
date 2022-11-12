@@ -193,4 +193,10 @@ class ApiController extends Controller
         $wallpapers = Wallpaper::with('categoria')->get();
         return view('/site/admin/listawallpaper', ['wallpapers' => $wallpapers]);
     }
+
+    public function getSiteAllWallpapers()
+    {
+        $wallpapers = Wallpaper::with('categoria')->get()->groupBy('id_category');
+        return view('/site/wallpapers/wallpapers', ['wallpapers' => $wallpapers]);
+    }
 }

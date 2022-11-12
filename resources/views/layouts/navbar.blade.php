@@ -59,6 +59,9 @@
                     @endforeach
                 </div>
             </li>
+            <li class="nav-item">
+                <a class="nav-link page-scroll" href="/wallpapers">Wallpapers</a>
+            </li>
             @auth
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle page-scroll" id="navbarDropdown" role="button" aria-haspopup="true"

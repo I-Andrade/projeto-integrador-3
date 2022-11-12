@@ -13,7 +13,7 @@ class categoria extends Model
 
     public function wallpapers()
     {
-        return $this->hasMany(Wallpapers::class,'id_category');
+        return $this->hasMany(Wallpaper::class,'id_category');
     }
 
     public function blogs()
