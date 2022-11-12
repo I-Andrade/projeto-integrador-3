@@ -45,7 +45,7 @@
                                             </span>
                                         </a>
                                     </div>
-                                    <img src="{{$wallpaper->image}}" alt=""></a>
+                                    <img src="{{$wallpaper->image}}" alt="{{$wallpaper->name}}"></a>
                                 </div>
                             @endforeach
                         </div> <!-- end of grid -->
