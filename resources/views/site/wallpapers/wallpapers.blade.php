@@ -4,7 +4,7 @@
 <!-- Header -->
 
 
-   @section('title', 'Sites')
+   @section('title', 'Wallpapers')
 
    @section('content')
 
@@ -39,7 +39,7 @@
                             @foreach($categoria as $wallpaper)
                                 <div class="element-item embalagens" >
                                     <div class="element-item-overlay">
-                                        <a href="{{$wallpaper->image}}">
+                                        <a href="{{$wallpaper->image}}" target="_blank">
                                             <span>
                                                 {{$wallpaper->name}}
                                             </span>

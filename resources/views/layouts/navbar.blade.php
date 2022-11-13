@@ -47,7 +47,7 @@
             <li class="nav-item dropdown">
                 @php
                     $categoriasController = new App\Http\Controllers\CategoriaController();
-                    $categorias = $categoriasController->getCategoriasByType(1);
+                    $categorias = $categoriasController->getCategoriasBlogNavBar();
                 @endphp
                 <a class="nav-link dropdown-toggle page-scroll" href="/blogs" id="navbarDropdown" role="button"
                     aria-haspopup="true" aria-expanded="false">Blog</a>

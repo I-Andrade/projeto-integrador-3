@@ -7,10 +7,14 @@ use App\Models\blog;
 use App\Models\categoria;
 class BlogController extends Controller
 {
+
+    private $url = 'https://drive.google.com/uc?export=view&id=';
+
     public function getAllBlogs()
     {
         $blogs = blog::all();
-        $categorias = categoria::where('type', 1)->get();
+        $categoriasComMaterias = $blogs->pluck('id_category')->unique();
+        $categorias = categoria::where('type', 1)->whereIn('id',$categoriasComMaterias)->get();
         $blogs->categorias = $categorias;
         $blogsDestaques = $blogs->take(2);
         return view('site/blog/blog', ['blogs' => $blogs, 'blogsDestaques' => $blogsDestaques,'categorias' => $categorias, 'categoriaFiltrada' => 0]);
@@ -19,7 +23,9 @@ class BlogController extends Controller
     public function getBlogByCategoria($idCategoria)
     {
         $blogs = blog::where('id_category',$idCategoria)->get();
-        $categorias = categoria::where('type', 1)->get();
+        $categoriasDosBlogs = blog::select('id_category')->distinct('id_category')->get();
+        $categoriasComMaterias = $categoriasDosBlogs->pluck('id_category');
+        $categorias = categoria::where('type', 1)->whereIn('id',$categoriasComMaterias)->get();
         $blogs->categorias = $categorias;
         $blogsDestaques = $blogs->take(2); 
         return view('site/blog/blog', ['blogs' => $blogs, 'blogsDestaques' => $blogsDestaques,'categorias' => $categorias, 'categoriaFiltrada' => $idCategoria]);
@@ -27,16 +33,22 @@ class BlogController extends Controller
 
     public function getBlog($id)
     {
+        $blogs = blog::select('id_category')->distinct('id_category')->get();
+        $categoriasComMaterias = $blogs->pluck('id_category');
+        $categorias = categoria::where('type', 1)->whereIn('id',$categoriasComMaterias)->get();
+        $blogs->categorias = $categorias;
+
         $blog = blog::whereId($id)->get();
-        $categorias = categoria::where('type', 1)->get();
         return view('site/blog/paginadetalhe', ['materias' => $blog, 'categorias' => $categorias]);
     }
 
     public function createBlog(Request $request)
     {
-        $blog = blog::create($request->all());
-        $blog->save();
-        return redirect("/blog/$blog->id_category");
+        $dados = $request->all();
+        if($dados['image'])
+            $dados['image'] = $this->url . $dados['image'];
+        $blog = blog::create($dados);       
+        return redirect("/blog/$blog->id");
     }
 
     public function updateBlog(Request $request, $id)

@@ -43,20 +43,17 @@
 
                         <h3 class="mb-0">{{$blogDestaque->title}}</h3>
                         <div class="mb-1 text-muted">{{date('d/m/Y H:m:s', strtotime($blogDestaque->created_at))}}</div>
-                        <p class="card-text mb-auto">{{$blogDestaque->text}}</p>
+                        <p class="card-text mb-auto" align="justify">{{$blogDestaque->text}}</p>
                         <p>{{$blogDestaque->link_text}}</p>
                         <a href="/blog/{{$blogDestaque->id}}" class="stretched-link">{{$blogDestaque->link_url}}</a>
                     </div>
-                    <div class="col-auto d-none d-lg-block">
-
-                        <img class="about-image"  id="col-auto-img" width="400px" height="300px" src="{{$blogDestaque['idImagem']}}"
-                            role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                            focusable="false">
-
-
-
-                    </div>
-
+                    @if($blogDestaque->image)
+                        <div class="col-auto d-none d-lg-block">
+                            <img class="about-image"  id="col-auto-img" width="400px" height="300px" src="{{$blogDestaque->image}}"
+                                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                        </div>
+                    @endif
                 </div>
 
             </div>
@@ -74,18 +71,28 @@
                     <h2 class="blog-post-title">{{$blog->title}}</h2>
                     <p class="blog-post-meta">{{date('d/m/Y H:m:s', strtotime($blog->created_at))}} <a href="#">Fernanda Carrijo</a></p>
 
-                    <p>{{$blog->text}}
-                        </p>
-
-
-                    <div class="col d-none d-lg-block">
-                        <img class="about-image" width="600px" height="400px" src="{{"https://drive.google.com/uc?export=view&id=$blog->image"}}" width="200" height="250"
-                            role="img"
-                            focusable="false">
-
-                    </div><p>{{$blog->link_text}}</p><a href="/blog/{{$blog->id}}" class="stretched-link">{{$blog->link_url}}</a>
-
+                    <p align="justify">
+                        {{$blog->text}}
                     </p>
+
+                    @if($blog->image)
+                        <div class="col d-none d-lg-block">
+                            <img class="about-image" width="600px" height="400px" src="{{$blog->image}}" width="200" height="250"
+                                role="img"
+                                focusable="false">
+                        </div>
+                    @endif
+                    
+                    @if($blog->link_text)
+                        <p>{{$blog->link_text}}</p>
+                        
+                        @if($blog->link_url)
+                            <a href="/blog/{{$blog->id}}" class="stretched-link">
+                                {{$blog->link_url}}
+                            </a>
+                        @endif
+                    @endif
+                    
                     <hr>
                 </article>
                 @endforeach

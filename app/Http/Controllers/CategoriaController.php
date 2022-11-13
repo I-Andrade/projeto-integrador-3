@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Models\blog;
 use App\Models\categoria;
 
 use Illuminate\Http\Request;
@@ -54,6 +56,14 @@ class CategoriaController extends Controller
     {
         $categorias = categoria::where('type', $type)->get();
             return $categorias;
+    }
+
+    public function getCategoriasBlogNavBar()
+    {
+        $blogs = blog::all();
+        $categoriasComMaterias = $blogs->pluck('id_category')->unique();
+        $categorias = categoria::where('type', 1)->whereIn('id',$categoriasComMaterias)->get();
+        return $categorias;
     }
 
     public function getCategoriasBlog()
