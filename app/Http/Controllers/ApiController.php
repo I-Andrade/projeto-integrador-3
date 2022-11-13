@@ -32,7 +32,14 @@ class ApiController extends Controller
     */
     public function getAllWallpapers()
     {
-        $wallpapers = Wallpaper::all();
+        $wallpapers = Wallpaper::with('categoria')->get();
+        $wallpapers = $wallpapers->map(function ($wallpaper)
+        {
+            $wallpaper->category = $wallpaper->categoria->description;
+            $wallpaper = collect($wallpaper);
+            $wallpaper = $wallpaper->except('categoria','id_category');
+            return $wallpaper;
+        });
         return response()->json($wallpapers);
     }
 
@@ -56,7 +63,10 @@ class ApiController extends Controller
      */    
     public function getWallpaper($id)
     {
-        $wallpaper = Wallpaper::find($id);
+        $wallpaper = Wallpaper::with('categoria')->find($id);
+        $wallpaper->category = $wallpaper->categoria->description;
+        $wallpaper = collect($wallpaper);
+        $wallpaper = $wallpaper->except('categoria','id_category');
         return response()->json($wallpaper);
     }
    
