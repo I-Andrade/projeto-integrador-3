@@ -7,7 +7,7 @@
 @section('title', 'Fernanda Carrijo')
 
 @section('content')
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
 <div class="container">
     <header class="blog-header py-3">
       <div class="row flex-nowrap align-items-center">
@@ -39,20 +39,41 @@
 
                     <div class="col p-4 d-flex flex-column position-static">
 
+                        <h3 class="mb-0">
+                            {{$blogDestaque->title}}
+                        </h3>
+
+                        <div class="mb-1 text-muted">
+                            {{date('d/m/Y H:m:s', strtotime($blogDestaque->created_at))}}
+                        </div>
+
+                        <p class="card-text mb-auto" align="justify">
+                            @if (strlen($blogDestaque->text)>400)
+                                {{ substr($blogDestaque->text,0,400) }}... <i><b style="color:#E45032">ler mais...</b></i> 
+                            @else
+                                {{ $blogDestaque->text }}
+                            @endif      
+                        </p>
+
+                        {{-- <p>
+                            {{$blogDestaque->link_text}}
+                        </p> --}}
+                        
+                        {{-- <a href="/blog/{{$blogDestaque->id}}" class="stretched-link">
+                            {{$blogDestaque->link_url}}
+                        </a> --}}
+                        <a href="/blog/{{$blogDestaque->id}}" class="stretched-link">
+                            &nbsp;
+                        </a>
 
 
-                        <h3 class="mb-0">{{$blogDestaque->title}}</h3>
-                        <div class="mb-1 text-muted">{{date('d/m/Y H:m:s', strtotime($blogDestaque->created_at))}}</div>
-                        <p class="card-text mb-auto" align="justify">{{$blogDestaque->text}}</p>
-                        <p>{{$blogDestaque->link_text}}</p>
-                        <a href="/blog/{{$blogDestaque->id}}" class="stretched-link">{{$blogDestaque->link_url}}</a>
                     </div>
                     @if($blogDestaque->image)
-                        <div class="col-auto d-none d-lg-block">
-                            <img class="about-image"  id="col-auto-img" width="400px" height="300px" src="{{$blogDestaque->image}}"
-                                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
-                                focusable="false">
-                        </div>
+                        {{-- <div class="col-auto d-none d-lg-block">
+                            <img class="about-image"   id="col-auto-img" src="{{$blogDestaque->image}}"
+                                        role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                                        focusable="false">
+                        </div> --}}
                     @endif
                 </div>
 
@@ -69,15 +90,21 @@
                 @foreach($blogs as $blog)
                 <article class="blog-post position-relative">
                     <h2 class="blog-post-title">{{$blog->title}}</h2>
-                    <p class="blog-post-meta">{{date('d/m/Y H:m:s', strtotime($blog->created_at))}} <a href="#">Fernanda Carrijo</a></p>
+                    <p class="blog-post-meta">{{date('d/m/Y H:m:s', strtotime($blog->created_at))}}</p>
 
                     <p align="justify">
-                        {{$blog->text}}
+                        @if (strlen($blog->text)>400)
+                            {{ substr($blog->text,0,400) }}... <i><b style="color:#E45032">ler mais...</b></i> 
+                        @else
+                            {{ $blog->text }}
+                        @endif
                     </p>
 
+   
+
                     @if($blog->image)
-                        <div class="col d-none d-lg-block">
-                            <img class="about-image" width="600px" height="400px" src="{{$blog->image}}" width="200" height="250"
+                        <div class="col d-none d-lg-block" style="height: 500px">
+                            <img class="about-image" width="100%" style="max-height:500px;" src="{{$blog->image}}"
                                 role="img"
                                 focusable="false">
                         </div>
@@ -91,6 +118,10 @@
                                 {{$blog->link_url}}
                             </a>
                         @endif
+                    @else
+                        <a href="/blog/{{$blog->id}}" class="stretched-link">
+                            &nbsp;
+                        </a>
                     @endif
                     
                     <hr>
@@ -112,10 +143,10 @@
                             <img style = 'height:250; width: 200; margin-bottom: 12px;'src="/images/foto-fer_home.png">
                         </div>
                         <h3>Fernanda Carrijo</h3>
-                        <p>Sempre disposta a aprender e ensinar, sou uma pessoa bastante alegre, bem
+                        <p align="justify">Sempre disposta a aprender e ensinar, sou uma pessoa bastante alegre, bem
                             humorada e muito honesta. Tenho bom relacionamento com os colegas com
                             quem trabalho ou já trabalhei, mesmo fora da empresa.</p>
-                        <p>Tenho facilidade com programas e softwares, sou organizada do workspace aos
+                        <p align="justify">Tenho facilidade com programas e softwares, sou organizada do workspace aos
                             layouts, arquivos e pauta, esforçada para entregar com qualidade tudo que estiver
                             ao meu alcance e perfeccionista quando o assunto é planejamento e criação.
                             Dedicada, visto a camisa do meu time e me entrego de cabeça e coração para

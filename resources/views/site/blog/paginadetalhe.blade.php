@@ -38,7 +38,7 @@
                         <h2 class="blog-post-title">{{ $materia->title }}</h2>
                         @if($materia->image)
                             <div class="col d-none d-lg-block">
-                                <img class="about-image" id="col" width="100%" height="300px"
+                                <img class="about-image" id="col" width="100%"
                                     src="{{$materia->image}}">
                             </div>
                         @endif
@@ -47,8 +47,8 @@
                             {{date('d/m/Y H:m:s', strtotime($materia->created_at))}}
                         </p>
 
-                        <p>
-                            {{ $materia->text }}
+                        <p align="justify">
+                            {!! nl2br(e($materia->text)) !!}
                         </p>
 
                         @if($materia->link_text)
