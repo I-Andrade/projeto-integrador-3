@@ -1629,3 +1629,9 @@ input[type='checkbox'] {
     margin-left: auto;
     border-radius: 50%;
 	}
+
+/* Centralização do banner */
+.banner {
+	display: flex;
+	justify-content: center;
+}
