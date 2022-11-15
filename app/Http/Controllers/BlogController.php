@@ -24,14 +24,15 @@ class BlogController extends Controller
 
     public function getBlogByCategoria($idCategoria)
     {
-        $blogs = blog::where('id_category',$idCategoria)->get();
-        $categoriasDosBlogs = blog::select('id_category')->distinct('id_category')->get();
-        $categoriasComMaterias = $categoriasDosBlogs->pluck('id_category');
+        $allBlogs = blog::orderByDesc('id')->get();
+        $categoriasComMaterias = $allBlogs->pluck('id_category')->unique();
         $categorias = categoria::where('type', 1)->whereIn('id',$categoriasComMaterias)->get();
-        $blogs->categorias = $categorias;
-        $blogsDestaques = $blogs->sortByDesc('views')->take(2); 
+        $allBlogs->categorias = $categorias;
+        $blogsDestaques = $allBlogs->sortByDesc('views')->take(2); 
 
-        return view('site/blog/blog', ['blogs' => $blogs, 'blogsDestaques' => $blogsDestaques,'categorias' => $categorias, 'categoriaFiltrada' => $idCategoria]);
+        $blogs = blog::where('id_category',$idCategoria)->paginate(2);
+
+        return view('site/blog/blog', ['allBlogs' => $allBlogs, 'blogs' => $blogs, 'blogsDestaques' => $blogsDestaques,'categorias' => $categorias, 'categoriaFiltrada' => $idCategoria]);
     }
 
     public function getBlog($id)

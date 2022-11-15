@@ -4,7 +4,7 @@
 <!-- @include('layouts.header') -->
 
 
-@section('title', 'Fernanda Carrijo')
+@section('title', 'Fernanda Carrijo - Blog')
 
 @section('content')
 <br><br><br><br><br>
@@ -131,25 +131,37 @@
                 <br>
                 <nav class="blog-pagination" aria-label="Pagination">
                     
-                    <a href="/blogs?page={{$blogs->currentPage()-1 < 1 ? 1 : $blogs->currentPage()-1}}">
+                    @if($blogs->currentPage()<>1)     
+                        <a href="/blog{{$categoriaFiltrada == 0 ? 's' : '/categoria/' . $categoriaFiltrada}}?page={{$blogs->currentPage()-1 < 1 ? 1 : $blogs->currentPage()-1}}">
+                    @endif
                         <button class="btn btn-outline-dark" style="background-color: #E45032;color:#f9f5f0" {{$blogs->currentPage()==1 ? 'disabled' : ''}}>
                             Anterior
                         </button>
-                    </a> 
+                    @if($blogs->currentPage()<>1)
+                        </a> 
+                    @endif
 
                     @for ($i = 1; $i <= $blogs->lastPage(); $i++)
-                        <a href="/blogs?page={{$i}}">
-                        <button class="btn btn-outline-dark" {{$blogs->currentPage()==$i ? 'disabled style=background-color:#E45032;color:#f9f5f0;' : ''}}> 
-                            {{$i}}
-                    </button>
+                        @if($blogs->currentPage()<>$i)                            
+                            <a href="/blog{{$categoriaFiltrada == 0 ? 's' : '/categoria/' . $categoriaFiltrada}}?page={{$i}}">
+                        @endif
+                            <button class="btn btn-outline-dark" {{$blogs->currentPage()==$i ? 'disabled style=background-color:#E45032;color:#f9f5f0;' : ''}}> 
+                                {{$i}}
+                            </button>
+                        @if($blogs->currentPage()<>$i)                            
+                            </a>
+                        @endif
                     @endfor
                     
-                    <a href="/blogs?page={{$blogs->currentPage()+1 > $blogs->lastPage() ? $blogs->lastPage() : $blogs->currentPage()+1}}">
+                    @if($blogs->currentPage()<>$blogs->lastPage())
+                        <a href="/blog{{$categoriaFiltrada == 0 ? 's' : '/categoria/' . $categoriaFiltrada}}?page={{$blogs->currentPage()+1 > $blogs->lastPage() ? $blogs->lastPage() : $blogs->currentPage()+1}}">
+                    @endif
                         <button class="btn btn-outline-dark" style="background-color: #E45032;color:#f9f5f0" {{$blogs->currentPage()==$blogs->lastPage() ? 'disabled' : ''}}>
                             Próximo
                         </button>
-                    </a>
-                    
+                    @if($blogs->currentPage()<>$blogs->lastPage())
+                        </a>  
+                    @endif
                 </nav>
                 <br><br><br>
             </div>
