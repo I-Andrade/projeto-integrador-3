@@ -84,22 +84,15 @@
                     </div>
 
                 </li>
-                <div class="navbar-nav ml-auto" aria-labelledby="navbarDropdown">
-                    <li class="nav-item">
-                        {{ strtoupper(Auth::user()->name) }}
-                    </li>
-                    <li class="nav-item">
-                        <span class="nav-item social-icons">
-                            <form method="POST" action="{{ route('logout') }}">
-                                @csrf
-                                <button type="submit" class="form-control-submit-button">
-                                    Sair
-                                </button>
-                            </form>
-                        </span>
-
-                    </li>
-                </div>
+                <li class="nav-item">
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="btn btn-dark">
+                            Sair
+                        </button>
+                    </form>
+                </li>
+                
             @endauth
 
             <!-- end of dropdown menu -->
