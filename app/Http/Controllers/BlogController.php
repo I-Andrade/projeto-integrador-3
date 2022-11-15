@@ -12,12 +12,14 @@ class BlogController extends Controller
 
     public function getAllBlogs()
     {
-        $blogs = blog::all();
-        $categoriasComMaterias = $blogs->pluck('id_category')->unique();
+        $allBlogs = blog::orderByDesc('id')->get();
+        $categoriasComMaterias = $allBlogs->pluck('id_category')->unique();
         $categorias = categoria::where('type', 1)->whereIn('id',$categoriasComMaterias)->get();
-        $blogs->categorias = $categorias;
-        $blogsDestaques = $blogs->sortByDesc('views')->take(2);
-        return view('site/blog/blog', ['blogs' => $blogs, 'blogsDestaques' => $blogsDestaques,'categorias' => $categorias, 'categoriaFiltrada' => 0]);
+        $allBlogs->categorias = $categorias;
+        $blogsDestaques = $allBlogs->sortByDesc('views')->take(2);
+
+        $blogs = blog::orderByDesc('id')->paginate(2);
+        return view('site/blog/blog', ['allBlogs' => $allBlogs, 'blogs' => $blogs, 'blogsDestaques' => $blogsDestaques,'categorias' => $categorias, 'categoriaFiltrada' => 0]);
     }
 
     public function getBlogByCategoria($idCategoria)
@@ -28,6 +30,7 @@ class BlogController extends Controller
         $categorias = categoria::where('type', 1)->whereIn('id',$categoriasComMaterias)->get();
         $blogs->categorias = $categorias;
         $blogsDestaques = $blogs->sortByDesc('views')->take(2); 
+
         return view('site/blog/blog', ['blogs' => $blogs, 'blogsDestaques' => $blogsDestaques,'categorias' => $categorias, 'categoriaFiltrada' => $idCategoria]);
     }
 

@@ -103,7 +103,7 @@
    
 
                     @if($blog->image)
-                        <div class="col d-none d-lg-block" style="height: 500px">
+                        <div class="col d-none d-lg-block" style="max-height:500px;">
                             <img class="about-image" width="100%" style="max-height:500px;" src="{{$blog->image}}"
                                 role="img"
                                 focusable="false">
@@ -130,8 +130,26 @@
 
                 <br>
                 <nav class="blog-pagination" aria-label="Pagination">
-                    <a class="btn btn-outline-primary" href="#">Anterior</a>
-                    <a class="btn btn-outline-secondary disabled">Próximo</a>
+                    
+                    <a href="/blogs?page={{$blogs->currentPage()-1 < 1 ? 1 : $blogs->currentPage()-1}}">
+                        <button class="btn btn-outline-dark" style="background-color: #E45032;color:#f9f5f0" {{$blogs->currentPage()==1 ? 'disabled' : ''}}>
+                            Anterior
+                        </button>
+                    </a> 
+
+                    @for ($i = 1; $i <= $blogs->lastPage(); $i++)
+                        <a href="/blogs?page={{$i}}">
+                        <button class="btn btn-outline-dark" {{$blogs->currentPage()==$i ? 'disabled style=background-color:#E45032;color:#f9f5f0;' : ''}}> 
+                            {{$i}}
+                    </button>
+                    @endfor
+                    
+                    <a href="/blogs?page={{$blogs->currentPage()+1 > $blogs->lastPage() ? $blogs->lastPage() : $blogs->currentPage()+1}}">
+                        <button class="btn btn-outline-dark" style="background-color: #E45032;color:#f9f5f0" {{$blogs->currentPage()==$blogs->lastPage() ? 'disabled' : ''}}>
+                            Próximo
+                        </button>
+                    </a>
+                    
                 </nav>
                 <br><br><br>
             </div>
@@ -156,8 +174,9 @@
                     <div class="p-4">
                         <h4 class="fst-italic">Arquivo</h4>
                         <ol class="list-unstyled2 mb-0">
-                            @foreach($blogs as $blog)
+                            @foreach($allBlogs as $blog)
                             <li><a href="/blog/{{$blog->id}}">{{$blog->title}}</a></li>
+                            
                             @endforeach
                         </ol>
                     </div>
@@ -165,6 +184,5 @@
                 </div>
             </div>
         </div>
-
     </main>
 @endsection
