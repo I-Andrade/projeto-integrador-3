@@ -41,7 +41,7 @@
                                         {{$portifolio->title}}
                                     </span>
                                 </div>
-                                <img src="{{$portifolio->image}}" alt="{{$portifolio->title}}">
+                                <img src="{{$portifolio->imagemCapa}}" alt="{{$portifolio->title}}">
                             </a>
                         </div>
                     @endforeach

@@ -1,7 +1,7 @@
 @extends('layouts.mainAdmin')
 
 <!-- Header -->
-@include('layouts.header')
+<!-- @include('layouts.header') -->
 
 
 @section('title', 'Fernanda Carrijo - Blog')
