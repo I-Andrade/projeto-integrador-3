@@ -1,7 +1,5 @@
 @extends('layouts.mainAdmin')
 
-
-
 <br><br><br><br><br>
 
 @section('title', 'Fernanda Carrijo')
@@ -34,7 +32,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="col p-4 d-flex flex-column position-static">
-                    @foreach ($materias as $materia)
+                    
                         <h2 class="blog-post-title">{{ $materia->title }}</h2>
                         @if($materia->image)
                             <div class="col d-none d-lg-block">
@@ -44,7 +42,7 @@
                         @endif
                             
                         <p class="blog-post-meta">
-                            {{date('d/m/Y H:m:s', strtotime($materia->created_at))}}
+                            {{date('d/m/Y H:m:s', strtotime($materia->created_at))}} [{{$materia->views}} {{ $materia->views > 1 ? 'visualizações' : 'visualização'}}]
                         </p>
 
                         <p align="justify">
@@ -61,7 +59,6 @@
                             @endif
                         @endif
                         
-                    @endforeach
                 </div>
 
             </div> <!-- end of col -->

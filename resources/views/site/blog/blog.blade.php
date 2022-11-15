@@ -44,7 +44,7 @@
                         </h3>
 
                         <div class="mb-1 text-muted">
-                            {{date('d/m/Y H:m:s', strtotime($blogDestaque->created_at))}}
+                            {{date('d/m/Y H:m:s', strtotime($blogDestaque->created_at))}} [{{$blogDestaque->views}} {{ $blogDestaque->views > 1 ? 'visualizações' : 'visualização'}}]
                         </div>
 
                         <p class="card-text mb-auto" align="justify">
@@ -90,7 +90,7 @@
                 @foreach($blogs as $blog)
                 <article class="blog-post position-relative">
                     <h2 class="blog-post-title">{{$blog->title}}</h2>
-                    <p class="blog-post-meta">{{date('d/m/Y H:m:s', strtotime($blog->created_at))}}</p>
+                    <p class="blog-post-meta">{{date('d/m/Y H:m:s', strtotime($blog->created_at))}} [{{$blog->views}} {{ $blog->views > 1 ? 'visualizações' : 'visualização'}}]</p>
 
                     <p align="justify">
                         @if (strlen($blog->text)>400)
