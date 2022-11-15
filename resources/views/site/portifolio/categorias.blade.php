@@ -3,9 +3,9 @@
 
 
 
-   @section('title', 'Categorias')
+@section('title', 'Fernanda Carrijo - Portfólio')
 
-   @section('content')
+@section('content')
 
 
 <!-- Portfólio -->
@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="h2-heading">Categorias</h2>
+                <h2 class="h2-heading">Portfólio - Categorias</h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">

@@ -1,6 +1,6 @@
 @extends('layouts.mainAdmin')
 
-@section('title', 'Portifólio - Administrativo')
+@section('title', 'Portfólio - Administrativo')
 
 @section('content')
 
@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Novo Portifólio</h2>
+                    <h2>Novo Portfólio</h2>
                     <img class="decorative-line" src="images/decorative-line.svg" alt="decorative line">
 
                 </div> <!-- end of col -->
@@ -48,7 +48,7 @@
 
                             <div class="col-lg-4">
                                 <input type="tex" class="form-control-input" name="image" id="cBigImagem">
-                                <label class="label-control" for="cBigImagem">Link Imagem Capa</label>
+                                <label class="label-control" for="cBigImagem">ID Imagem Capa</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">

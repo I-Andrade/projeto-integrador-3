@@ -17,16 +17,16 @@
 <!-- Header -->
 
 
-   @section('title', 'Sites')
+@section('title', 'Fernanda Carrijo - Portfólio')
 
-   @section('content')
+@section('content')
 
 <!-- Projects -->
 <div id="projects" class="filter">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Portifólio - {{$titulo}}</h2>
+                <h2>Portfólio - {{$titulo}}</h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">
@@ -34,14 +34,19 @@
                 @include('layouts.navbarPort')
                 <div class="grid">
                     @foreach($portifolios as $portifolio)
-                    <div class="element-item embalagens">
-                        <a  href="/portifolio/{{$portifolio->id}}"><div class="element-item-overlay"><span>{{$portifolio->title}}</span></div><img src="{{$portifolio->image}}" alt=""></a>
-                    </div>
+                        <div class="element-item embalagens">
+                            <a  href="/portifolio/{{$portifolio->id}}">
+                                <div class="element-item-overlay">
+                                    <span>
+                                        {{$portifolio->title}}
+                                    </span>
+                                </div>
+                                <img src="{{$portifolio->image}}" alt="{{$portifolio->title}}">
+                            </a>
+                        </div>
                     @endforeach
-
                 </div> <!-- end of grid -->
                 <!-- end of filter -->
-
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of container -->

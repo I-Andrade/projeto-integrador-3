@@ -1,6 +1,6 @@
 @extends('layouts.mainAdmin')
 
-@section('title', 'Portifólio - Trabalhos')
+@section('title', 'Portfólio - Trabalhos')
 
 @section('content')
 
@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="h2-heading">Portifólio - Trabalhos</h2>
+                <h2 class="h2-heading">Portfólio - Trabalhos</h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">

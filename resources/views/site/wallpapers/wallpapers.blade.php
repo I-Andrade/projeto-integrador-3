@@ -4,12 +4,12 @@
 <!-- Header -->
 
 
-   @section('title', 'Sites')
+   @section('title', 'Fernanda Carrijo - Wallpapers')
 
    @section('content')
 
 <!-- Projects -->
-<div id="projects" class="filter">
+<div id="projects" class="filter" style="padding-bottom: 0">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -39,7 +39,7 @@
                             @foreach($categoria as $wallpaper)
                                 <div class="element-item embalagens" >
                                     <div class="element-item-overlay">
-                                        <a href="{{$wallpaper->image}}">
+                                        <a href="{{$wallpaper->image}}" target="_blank">
                                             <span>
                                                 {{$wallpaper->name}}
                                             </span>

@@ -36,7 +36,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <input type="tex" class="form-control-input" name="image" id="image">
-                                <label class="label-control" for="image"> Link imagem:</label>
+                                <label class="label-control" for="image"> ID imagem:</label>
                                 <div class="help-block with-errors"></div>
                             </div>
 

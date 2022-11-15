@@ -18,6 +18,9 @@ use App\Models\categoria;
 
 class ApiController extends Controller
 {
+
+    private $url = 'https://drive.google.com/uc?export=view&id=';
+
     /**
     * @OA\Get(
     *   path="/api/wallpapers",
@@ -114,9 +117,11 @@ class ApiController extends Controller
     //  */    
     public function createWallpaper(Request $request)
     {
-        $wallpaper = Wallpaper::create($request->all());
-        $wallpaper->save();
-        return redirect('/admin-wallpaper');
+        $dados = $request->all();
+        $dados['image'] = $this->url . $dados['image'];
+        Wallpaper::create($dados);
+
+        return redirect('/listawallpaper');
     }
 
     // /** @OA\Put(
@@ -200,7 +205,7 @@ class ApiController extends Controller
 
     public function getAdminAllWallpapers()
     {
-        $wallpapers = Wallpaper::with('categoria')->get();
+        $wallpapers = Wallpaper::with('categoria')->orderBy('id_category')->get();
         return view('/site/admin/listawallpaper', ['wallpapers' => $wallpapers]);
     }
 
