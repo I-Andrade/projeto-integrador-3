@@ -22,7 +22,7 @@
             <!-- Dropdown Menu -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle page-scroll" href="/portifolios" id="navbarDropdown" role="button"
-                    aria-haspopup="true" aria-expanded="false">Portifólio</a>
+                    aria-haspopup="true" aria-expanded="false">Portfólio</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="/portifolios/identidade"><span class="item-text">Identidade
                             Visual</span></a>
@@ -69,9 +69,9 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="/admin-cadCategoria"><span class="item-text">Categorias</span></a>
                         <div class="dropdown-items-divide-hr"></div>
-                        <a class="dropdown-item" href="/listaportfolio"><span class="item-text">Portifólio -
+                        <a class="dropdown-item" href="/listaportfolio"><span class="item-text">Portfólio -
                                 Trabalhos</span></a>
-                        <a class="dropdown-item" href="/admin-portfolio"><span class="item-text">Portifólio - Novo
+                        <a class="dropdown-item" href="/admin-portfolio"><span class="item-text">Portfólio - Novo
                                 trabalho</span></a>
                         <div class="dropdown-items-divide-hr"></div>
                         <a class="dropdown-item" href="/listablog"><span class="item-text">Blog - Postagens</span></a>

@@ -2,7 +2,7 @@
 
 <br><br><br><br><br>
 
-@section('title', 'Fernanda Carrijo')
+@section('title', 'Fernanda Carrijo - Blog')
 
 @section('content')
 

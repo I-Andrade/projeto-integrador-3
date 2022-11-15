@@ -4,12 +4,12 @@
 <!-- Header -->
 
 
-   @section('title', 'Wallpapers')
+   @section('title', 'Fernanda Carrijo - Wallpapers')
 
    @section('content')
 
 <!-- Projects -->
-<div id="projects" class="filter">
+<div id="projects" class="filter" style="padding-bottom: 0">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

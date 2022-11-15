@@ -3,7 +3,7 @@
 
 
 
-@section('title', 'Fernanda Carrijo')
+@section('title', 'Fernanda Carrijo - Portfólio')
 
 @section('content')
 
