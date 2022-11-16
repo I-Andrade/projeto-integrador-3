@@ -16,11 +16,11 @@
         </header>
 
 
-        <div class="nav-scroller py-1 mb-2 fst-italic">
-            <nav class="nav d-flex justify-content-between">
+    <div class="nav-scroller py-1 mb-2 fst-italic" style="background-color: #f9f5f0;">
+      <nav class="nav d-flex justify-content-around" style="align-items-center" >
                 @foreach ($categorias as $categoria)
-                    <a class="p-2 link-secondary" href="/blog/categoria/{{$categoria->id}}">
-                        <h4>{{ $categoria->description }}</h4>
+                    <a class="p-3 link-secondary" href="/blog/categoria/{{$categoria->id}}">
+                        <h4 class="mb-0">{{ strtoupper($categoria->description) }}</h4>
                     </a>
                 @endforeach
             </nav>
