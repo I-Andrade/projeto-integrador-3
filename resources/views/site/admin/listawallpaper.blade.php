@@ -1,6 +1,6 @@
 @extends('layouts.mainAdmin')
 
-@section('title', 'Portfólio - Trabalhos')
+@section('title', 'Wallpaper - Listagem')
 
 @section('content')
 
@@ -10,35 +10,34 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="h2-heading">Portfólio - Trabalhos</h2>
+                <h2 class="h2-heading">Wallpaper - Listagem</h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
         <div class="row">
             <div class="col-lg-12">
 
-
                 <!-- Card -->
-                <div class="col-lg-12">
+                <div class="col-lg-10">
 
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Categoria</th>
-                                <th>Titulo Trabalho</th>
+                                <th>Nome</th>
                                 <th>Data Postagem</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
                         <tbody id="tbody">
-                            @foreach ($portifolios as $portifolio)
+                            @foreach ($wallpapers as $wallpaper)
                                 <tr>
-                                    <td>{{$portifolio->id}}</td>
-                                    <td>{{strtoupper($portifolio->category)}}</td>
-                                    <td><strong>{{$portifolio->title}}<strong></td>
-                                    <td>{{date('d/m/Y H:m:s', strtotime($portifolio->created_at))}}</td>
+                                    <td>{{$wallpaper->id}}</td>
+                                    <td>{{strtoupper($wallpaper->categoria->description)}}</td>
+                                    <td><strong>{{$wallpaper->name}}<strong></td>
+                                    <td>{{date('d/m/Y H:m:s', strtotime($wallpaper->created_at))}}</td>
                                     <td>
-                                        <form method="POST" action="/portifolio/{{$portifolio->id}}">
+                                        <form method="POST" action="/wallpaper/{{$wallpaper->id}}">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit">
@@ -54,9 +53,8 @@
 
                 <!-- end of card -->
                 <div class="row">
-                    <div class="col-lg-12">
-                        Total de {{$portifolios->count()}} trabalhos postados.
-                    </div>
+                    Total de {{$wallpapers->count()}} Wallpapers publicados.
+
                 </div>
 
                 <br><br><br><br><br>

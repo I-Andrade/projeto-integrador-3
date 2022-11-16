@@ -1,6 +1,6 @@
-@extends('layouts.main')
+@extends('layouts.mainAdmin')
 
-@section('title', 'Portifólio - Administrativo')
+@section('title', 'Portfólio - Administrativo')
 
 @section('content')
 
@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Novo Portifólio</h2>
+                    <h2>Novo Portfólio</h2>
                     <img class="decorative-line" src="images/decorative-line.svg" alt="decorative line">
 
                 </div> <!-- end of col -->
@@ -19,10 +19,11 @@
                 <div class="col-lg-12">
 
                     <!-- Contact Form -->
-                    <form id="contactForm" data-toggle="validator" data-focus="false">
+                    <form id="contactForm" data-toggle="validator" data-focus="false" action="/portifolio" method="POST">
+                        @csrf
                         <div class="row">
                             <div class="col-lg-4">
-                                <input type="text" class="form-control-input" id="cname" required="">
+                                <input type="text" class="form-control-input" id="cname" name="title" >
                                 <label class="label-control" for="cname">Titulo</label>
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -30,12 +31,12 @@
 
                             <div class="col-lg-4">
                                 <label for="country" class="form-label">Categoria: </label>
-                                <select class="form-select" id="categoria" required="">
-                                    <option value="">Identidade Visual</option>
-                                    <option value="">Embalagens</option>
-                                    <option value="">Midias Sociais</option>
-                                    <option value="">Sites</option>
-                                    <option value="">Campanhas</option>
+                                <select class="form-select" id="categoria" name="category" required>
+                                    <option value="identidade">Identidade Visual</option>
+                                    <option value="embalagem">Embalagens</option>
+                                    <option value="sites">Sites</option>
+                                    <option value="campanha">Campanhas</option>
+                                    <option value="midia">Midias Sociais</option>
                                 </select>
 
 
@@ -45,14 +46,14 @@
                         </div>
                         <div class="row">
 
-                            <div class="col-lg-4"><input type="tex" class="form-control-input" id="cBigImagem"
-                                    required="">
-                                <label class="label-control" for="cemail">Link Imagem Capa</label>
+                            <div class="col-lg-4">
+                                <input type="tex" class="form-control-input" name="image" id="cBigImagem">
+                                <label class="label-control" for="cBigImagem">ID Imagem Capa</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
-                                <input type="text" class="form-control-input" id="descImagens" required="">
-                                <label class="label-control" for="cemail">IDs outras Imagens</label>
+                                <input type="text" class="form-control-input"id="descImagens">
+                                <label class="label-control" for="descImagens">IDs outras Imagens</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="row">
@@ -85,9 +86,12 @@
 
                         </div>
 
+                        <div hidden id='inputsImages'>
+
+                        </div>
 
                         <div class="form-group">
-                            <textarea class="form-control-textarea" id="cmessage" required=""></textarea>
+                            <textarea class="form-control-textarea" id="cmessage" name="description" required></textarea>
                             <label class="label-control" for="cmessage">Descrição do Trabalho</label>
                             <div class="help-block with-errors"></div>
                         </div>

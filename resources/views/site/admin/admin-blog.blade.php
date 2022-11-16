@@ -1,8 +1,9 @@
-@extends('layouts.main')
+@extends('layouts.mainAdmin')
 
 @section('title', 'Blog - Administrativo')
 
 @section('content')
+
 <link rel="stylesheet" href="css/blog.css">
 
     <!-- Contact -->
@@ -24,18 +25,18 @@
                         @csrf
                         <div class="row">
                             <div class="col-lg-4">
-                                <label class="label-control" for="title">Titulo</label>
                                 <input type="text" class="form-control-input" name="title" id="title">
+                                <label class="label-control" for="title">Titulo</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
-                                <label class="label-control" for="image_name"> Nome Imagem:</label>
                                 <input type="text" class="form-control-input" name="image_name" id="image_name">
+                                <label class="label-control" for="image_name"> Nome Imagem:</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">
-                                <label class="label-control" for="image"> Link imagem:</label>
                                 <input type="tex" class="form-control-input" name="image" id="image">
+                                <label class="label-control" for="image"> ID imagem:</label>
                                 <div class="help-block with-errors"></div>
                             </div>
 
@@ -43,14 +44,14 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-4">
-                                <label class="label-control" for="link_text">Texto Anterior ao Link</label>
                                 <input type="text" class="form-control-input" name="link_text" id="link_text">
+                                <label class="label-control" for="link_text">Texto Anterior ao Link</label>
                                 <div class="help-block with-errors"></div>
                             </div>
 
                             <div class="col-lg-4">
-                                <label class="label-control" for="link_url">Link</label>
                                 <input type="text" class="form-control-input" name="link_url" id="link_url">
+                                <label class="label-control" for="link_url">Link</label>
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="col-lg-4">

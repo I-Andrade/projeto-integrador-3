@@ -2,7 +2,7 @@
         margin: 0;
         padding: 0;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -10,19 +10,25 @@
 
     .slider {
         margin: 60 auto;
-        width: 80%;
-        height: 550px;
+        width: 90%;
+        height: 400px;
         overflow: hidden;
     }
 
     .slides {
         width: 100%;
-        height: 550px;
+        height: 100%;
         display:inline-flex;
     }
 
     .slides input {
         display: none;
+    }
+
+    .img {
+        width: 300px;
+        height: 300px;
+        margin-right: 10px;
     }
 
     .slide-first {
@@ -40,15 +46,15 @@
     }
 
     .slide img {
-        width: 200px;
+        width: 100%;
     }
 
     .manual-navigation {
         position: absolute;
-        width: 80%;
+        width: 100%;
         display: flex;
         justify-content: center;
-        margin-top: 520px;
+        margin-top: 380px;
 
     }
 
@@ -92,8 +98,8 @@
     }
     .navigation-auto{
         position: absolute;
-        width: 80%;
-        margin-top: 520px;
+        width: 100%;
+        margin-top: 380px;
         display: flex;
         justify-content: center;
     }

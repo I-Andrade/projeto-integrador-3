@@ -1214,7 +1214,7 @@ input[type='checkbox'] {
 	margin-bottom: 1.75rem;
 	margin-left: auto;
 	border-radius: 50%;
-	background-color: #E45032;
+	background-color: #213737;
 }
 
 .cards-1 .card-image .fas {
@@ -1321,6 +1321,7 @@ input[type='checkbox'] {
 
 .filter .element-item img {
 	max-width: 100%;
+	height: 100%;
 	margin: 0;
 	transition: all 0.3s;
 }
@@ -1620,3 +1621,33 @@ input[type='checkbox'] {
 		right: 1.5rem;
 	}
 	/* end of header */
+
+	.img-icon {
+	width: 12.5rem;
+    height: 12.5rem;
+    margin-right: auto;
+    margin-bottom: 1.75rem;
+    margin-left: auto;
+    border-radius: 50%;
+	}
+
+/* Centralização do banner */
+.banner {
+	display: flex;
+	justify-content: center;
+}
+
+.container-login {
+		display: flex;
+		justify-content: center;
+
+	}
+
+.col-lg-12-login {
+	-ms-flex: 0 0 100%;
+	flex: 0 0 100%;
+	max-width: 100%;
+	margin-top: 3rem;
+	text-align: center;
+
+}
