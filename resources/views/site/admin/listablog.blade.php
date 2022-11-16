@@ -19,7 +19,7 @@
 
 
                 <!-- Card -->
-                <div class="col-lg-10">
+                <div class="col-lg-12">
 
                     <table class="table">
                         <thead>
@@ -55,8 +55,9 @@
 
                 <!-- end of card -->
                 <div class="row">
-                    Total de {{$blogs->count()}} matérias postadas.
-
+                    <div class="col-lg-12">
+                        Total de {{$blogs->count()}} matérias postadas.
+                    </div>
                 </div>
 
                 <br><br><br><br><br>

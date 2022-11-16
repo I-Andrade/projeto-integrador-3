@@ -8,16 +8,17 @@
 
     <!-- Contact -->
     <div id="contact" class="form-2">
-        <div class="container">
+        <div class="container" style="width: 40%">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Categoria - Administrativo</h2>
+                    <h2>Categorias</h2>
                     <img class="decorative-line" src="images/decorative-line.svg" alt="decorative line">
-
+                    
                     <form class="form-group" method="POST" action="/categoria">
                         @csrf
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
+                                <h3>Nova categoria</h3>
                                 <div>
                                     <label>
                                         Blog
@@ -31,7 +32,7 @@
                                     </label>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 <input type="text" class="form-control-input" id="cadCategoria" name="description"
                                     required>
                                 <label class="label-control" for="cadCategoria">Nova Categoria</label>
@@ -55,11 +56,7 @@
 
 
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h2 class="h2-heading">Categorias</h2>
-                    </div> <!-- end of col -->
-                    <!-- end of row -->
-
+                    
                     <div class="col-lg-12">
 
                         <!-- Card -->
@@ -94,11 +91,15 @@
 
 
                         <!-- end of card -->
-                        <div class="row">
+                        <div>
                             Total de {{ $catBlog->count() }} categorias de Blogs cadastradas.
                             <br>
                             * Exclusão não possível, pois há registros vinculados à categoria.
                         </div>
+
+                            <br>
+                            <br>
+                            <br>
 
                         <!-- Card -->
 
@@ -132,16 +133,11 @@
 
 
                         <!-- end of card -->
-                        <div class="row">
+                        <div>
                             Total de {{ $catWallpaper->count() }} categorias de Wallpapers cadastradas.
                             <br>
                             * Exclusão não possível, pois há registros vinculados à categoria.
                         </div>
-
-                        <br>
-                        <br>
-                        <br>
-
                     </div> <!-- end of col -->
                     <!-- end of row -->
                 </div>

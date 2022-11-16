@@ -18,7 +18,7 @@
 
 
                 <!-- Card -->
-                <div class="col-lg-10">
+                <div class="col-lg-12">
 
                     <table class="table">
                         <thead>
@@ -54,8 +54,9 @@
 
                 <!-- end of card -->
                 <div class="row">
-                    Total de {{$portifolios->count()}} trabalhos postados.
-
+                    <div class="col-lg-12">
+                        Total de {{$portifolios->count()}} trabalhos postados.
+                    </div>
                 </div>
 
                 <br><br><br><br><br>
