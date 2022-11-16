@@ -15,12 +15,12 @@
       </div>
     </header>
 
-    <div class="nav-scroller py-1 mb-2 fst-italic">
-      <nav class="nav d-flex justify-content-between">
+    <div class="nav-scroller py-1 mb-2 fst-italic" style="background-color: #f9f5f0;">
+      <nav class="nav d-flex justify-content-around" style="align-items-center" >
         @foreach($categorias as $categoria)
-        <a class="p-2 link-secondary" href="/blog/categoria/{{$categoria->id}}">
-            <h4 style="{{ $categoriaFiltrada == $categoria->id ? 'color:red' : 'color:grey'}}">
-                {{$categoria->description}}
+        <a class="p-3 link-secondary" href="/blog/categoria/{{$categoria->id}}">
+            <h4 class="mb-0" style="{{ $categoriaFiltrada == $categoria->id ? 'color:red' : 'color:grey'}}">
+                {{strtoupper($categoria->description)}}
             </h4>
         </a>
         @endforeach
@@ -35,7 +35,7 @@
             @foreach($blogsDestaques as $blogDestaque)
             <div class="col-md-6">
 
-                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 ml-0 shadow-sm h-md-250 position-relative">
 
                     <div class="col p-4 d-flex flex-column position-static">
 
@@ -129,7 +129,7 @@
                 @endforeach
 
                 <br>
-                <nav class="blog-pagination" aria-label="Pagination">
+                <nav class="blog-pagination nav d-flex justify-content-center" aria-label="Pagination">
                     
                     @if($blogs->currentPage()<>1)     
                         <a href="/blog{{$categoriaFiltrada == 0 ? 's' : '/categoria/' . $categoriaFiltrada}}?page={{$blogs->currentPage()-1 < 1 ? 1 : $blogs->currentPage()-1}}">

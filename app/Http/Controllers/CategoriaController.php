@@ -48,7 +48,11 @@ class CategoriaController extends Controller
     public function deleteCategoria($id)
     {
         $categoria = categoria::find($id);
-        $categoria->delete();
+        $naoPossuiWallpaper = $categoria->wallpapers->isEmpty();
+        $naoPossuiBlog = $categoria->blogs->isEmpty();
+        if($naoPossuiWallpaper && $naoPossuiBlog) {
+            $categoria->delete();
+        }
         return redirect('/admin-cadCategoria');
     }
 
