@@ -1635,6 +1635,7 @@ input[type='checkbox'] {
 .banner {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 .container-login {
