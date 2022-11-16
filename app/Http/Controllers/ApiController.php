@@ -66,7 +66,7 @@ class ApiController extends Controller
      */    
     public function getWallpaper($id)
     {
-        $wallpaper = Wallpaper::with('categoria')->find($id);
+        $wallpaper = Wallpaper::with('categoria')->findOrFail($id);
         $wallpaper->category = $wallpaper->categoria->description;
         $wallpaper = collect($wallpaper);
         $wallpaper = $wallpaper->except('categoria','id_category');
