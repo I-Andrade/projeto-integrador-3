@@ -18,7 +18,7 @@ class categoria extends Model
 
     public function blogs()
     {
-        return $this->hasMany(Blog::class,'id_category');
+        return $this->hasMany(blog::class,'id_category');
     }
 
 }
