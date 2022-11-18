@@ -29,7 +29,7 @@ class BlogController extends Controller
         $categoriasComMaterias = $allBlogs->pluck('id_category')->unique();
         $categorias = categoria::where('type', 1)->whereIn('id',$categoriasComMaterias)->get();
         $allBlogs->categorias = $categorias;
-        $blogsDestaques = $allBlogs->sortByDesc('views')->take(2); 
+        $blogsDestaques = $allBlogs->where('id_category',$idCategoria)->sortByDesc('views')->take(2); 
 
         $blogs = blog::where('id_category',$idCategoria)->paginate($this->perPage);
 
