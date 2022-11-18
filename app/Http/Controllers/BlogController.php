@@ -9,6 +9,7 @@ class BlogController extends Controller
 {
 
     private $url = 'https://drive.google.com/uc?export=view&id=';
+    private $perPage = 3;
 
     public function getAllBlogs()
     {
@@ -18,7 +19,7 @@ class BlogController extends Controller
         $allBlogs->categorias = $categorias;
         $blogsDestaques = $allBlogs->sortByDesc('views')->take(2);
 
-        $blogs = blog::orderByDesc('id')->paginate(2);
+        $blogs = blog::orderByDesc('id')->paginate($this->perPage);
         return view('site/blog/blog', ['allBlogs' => $allBlogs, 'blogs' => $blogs, 'blogsDestaques' => $blogsDestaques,'categorias' => $categorias, 'categoriaFiltrada' => 0]);
     }
 
@@ -28,9 +29,9 @@ class BlogController extends Controller
         $categoriasComMaterias = $allBlogs->pluck('id_category')->unique();
         $categorias = categoria::where('type', 1)->whereIn('id',$categoriasComMaterias)->get();
         $allBlogs->categorias = $categorias;
-        $blogsDestaques = $allBlogs->sortByDesc('views')->take(2); 
+        $blogsDestaques = $allBlogs->where('id_category',$idCategoria)->sortByDesc('views')->take(2); 
 
-        $blogs = blog::where('id_category',$idCategoria)->paginate(2);
+        $blogs = blog::where('id_category',$idCategoria)->paginate($this->perPage);
 
         return view('site/blog/blog', ['allBlogs' => $allBlogs, 'blogs' => $blogs, 'blogsDestaques' => $blogsDestaques,'categorias' => $categorias, 'categoriaFiltrada' => $idCategoria]);
     }
