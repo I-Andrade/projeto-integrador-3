@@ -9,26 +9,13 @@ use Illuminate\Support\Facades\Http;
 class InstagramApiController extends Controller
 {
 
-    public function getId()
-    {
-        if(env('APP_ENV') == 'staging') {
-            return 14;
-        }
-
-        if(env('APP_ENV') == 'production') {
-            return 4;
-        }
-        
-        return 0;
-    }
-
     public function getMedia()
     {
         if(env('APP_ENV') =='local') {
             return $this->returnTestPhotos();
         }
 
-        $instagram = InstagramApi::find($this->getId());
+        $instagram = InstagramApi::find(env('INSTA_ID'));
 
         if(!isset($instagram)) {
             return $this->returnTestPhotos();
@@ -55,7 +42,7 @@ class InstagramApiController extends Controller
 
     public function getNewCode()
     {
-        $instagram = InstagramApi::find($this->getId());
+        $instagram = InstagramApi::find(env('INSTA_ID'));
 
         $url = 'https://www.instagram.com/oauth/authorize?'
                     . 'client_id=' . $instagram->client_id
@@ -68,7 +55,7 @@ class InstagramApiController extends Controller
 
     public function getNewToken(Request $request)
     {
-        $instagram = InstagramApi::find($this->getId());
+        $instagram = InstagramApi::find(env('INSTA_ID'));
 
         $response = Http::asForm()
                 ->post('https://api.instagram.com/oauth/access_token', [
