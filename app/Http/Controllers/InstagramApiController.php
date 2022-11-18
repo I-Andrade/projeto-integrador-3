@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Http;
 
 class InstagramApiController extends Controller
 {
-    private $id = 14;
 
     public function getMedia()
     {
@@ -16,7 +15,7 @@ class InstagramApiController extends Controller
             return $this->returnTestPhotos();
         }
 
-        $instagram = InstagramApi::find($this->id);
+        $instagram = InstagramApi::find(env('INSTA_ID'));
 
         if(!isset($instagram)) {
             return $this->returnTestPhotos();
@@ -43,7 +42,7 @@ class InstagramApiController extends Controller
 
     public function getNewCode()
     {
-        $instagram = InstagramApi::find($this->id);
+        $instagram = InstagramApi::find(env('INSTA_ID'));
 
         $url = 'https://www.instagram.com/oauth/authorize?'
                     . 'client_id=' . $instagram->client_id
@@ -56,7 +55,7 @@ class InstagramApiController extends Controller
 
     public function getNewToken(Request $request)
     {
-        $instagram = InstagramApi::find($this->id);
+        $instagram = InstagramApi::find(env('INSTA_ID'));
 
         $response = Http::asForm()
                 ->post('https://api.instagram.com/oauth/access_token', [
@@ -112,36 +111,19 @@ class InstagramApiController extends Controller
     {
 
         return (object) [
-                  (object) ['media_url' => "/images/insta-feed-stg/insta-feed1.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed2.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed3.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed4.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed5.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed1.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed2.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed3.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed4.jpg"]
-                 ,(object) ['media_url' => "https://images.pexels.com/photos/9509207/pexels-photo-9509207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-                  ,(object) ['media_url' => "https://images.pexels.com/photos/5840867/pexels-photo-5840867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-                  ,(object) ['media_url' => "https://images.pexels.com/photos/8123145/pexels-photo-8123145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-                  ,(object) ['media_url' => "https://images.pexels.com/photos/12789673/pexels-photo-12789673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-                  ,(object) ['media_url' => "https://images.pexels.com/photos/4834992/pexels-photo-4834992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-                  ,(object) ['media_url' => "https://images.pexels.com/photos/13516347/pexels-photo-13516347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed5.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed1.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed2.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed3.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed4.jpg"]
-                 ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed5.jpg"]
+                 (object) ['media_url' => "/images/insta-feed-stg/insta-feed1.jpg"]
+                ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed2.jpg"]
+                ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed3.jpg"]
+                ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed4.jpg"]
+                ,(object) ['media_url' => "/images/insta-feed-stg/insta-feed5.jpg"]
+                ,(object) ['media_url' => "https://images.pexels.com/photos/9509207/pexels-photo-9509207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
+                ,(object) ['media_url' => "https://images.pexels.com/photos/5840867/pexels-photo-5840867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
+                ,(object) ['media_url' => "https://images.pexels.com/photos/8123145/pexels-photo-8123145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
+                ,(object) ['media_url' => "https://images.pexels.com/photos/12789673/pexels-photo-12789673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
+                ,(object) ['media_url' => "https://images.pexels.com/photos/4834992/pexels-photo-4834992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
+                ,(object) ['media_url' => "https://images.pexels.com/photos/13516347/pexels-photo-13516347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
+
 
             ];
-        // return (object) [
-        //           (object) ['media_url' => "https://images.pexels.com/photos/9509207/pexels-photo-9509207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-        //          ,(object) ['media_url' => "https://images.pexels.com/photos/5840867/pexels-photo-5840867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-        //          ,(object) ['media_url' => "https://images.pexels.com/photos/8123145/pexels-photo-8123145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-        //          ,(object) ['media_url' => "https://images.pexels.com/photos/12789673/pexels-photo-12789673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-        //          ,(object) ['media_url' => "https://images.pexels.com/photos/4834992/pexels-photo-4834992.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-        //          ,(object) ['media_url' => "https://images.pexels.com/photos/13516347/pexels-photo-13516347.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
-        //     ];
     }
 }
