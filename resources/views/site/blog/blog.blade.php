@@ -11,7 +11,9 @@
 <div class="container">
     <header class="blog-header py-3">
       <div class="row flex-nowrap align-items-center">
-        <h1 class="display-4 fst-italic">BLOG</h1>
+        <a style="text-decoration:none" href="/blogs">
+            <h1 class="display-4 fst-italic">BLOG</h1>
+        </a>
       </div>
     </header>
 
@@ -169,7 +171,7 @@
             <div class="col-md-4">
                 <div class="position-sticky" style="top: 2rem;">
                     <div class="p-4 mb-3 bg-light rounded">
-                        <div style = 'margin-left: 40px' class="about-image">
+                        <div class="about-image" style='display:flex'>
                             <img style = 'height:250; width: 200; margin-bottom: 12px;'src="/images/foto-fer_home.png">
                         </div>
                         <h3>Fernanda Carrijo</h3>

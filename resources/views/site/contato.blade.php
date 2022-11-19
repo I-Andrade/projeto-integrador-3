@@ -1,3 +1,9 @@
+<style>
+    .col-lg-12{
+        margin-top: 30px;
+    }
+</style>
+
 @extends('layouts.mainAdmin')
 
 @section('title', 'Fernanda Carrijo - Contato')
@@ -26,7 +32,7 @@
             <div class="row">
 
                     <div class="col-lg-5">
-                    <div class="text-container">
+                    <div class="container">
                         <h3>Vamos conversar!</h3>
                         <p>Está com dúvidas ou quer fazer solicitações?</p>
                         <p>Mande uma mensagem <strong style="color:#E45032">;)</strong></p>

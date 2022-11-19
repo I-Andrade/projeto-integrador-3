@@ -494,7 +494,6 @@ input[type='checkbox'] {
 	font: 700 0.75rem/0.75rem "Mukta", sans-serif;
 	font-size: 1.200rem;
 	transition: all 0.2s;
-
 }
 
 .navbar-custom .navbar-brand.logo-image img {
@@ -1259,7 +1258,7 @@ input[type='checkbox'] {
 /*     12. Projects     */
 /************************/
 .filter {
-	padding-top: 6.5rem;
+	padding-top: 7.5rem;
 	padding-bottom: 7rem;
 	background-color: #f9f5f0;
 }
