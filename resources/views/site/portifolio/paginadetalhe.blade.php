@@ -50,7 +50,7 @@
 
                 {{-- <div class="row"> --}}
                     <div class="col-lg-12">
-                        <div class="text-container">
+                        <div class="container">
                             <p>{!! nl2br(e($portifolio->description)) !!}</p>
                         </div> <!-- end of text-container -->
                     </div> <!-- end of col -->

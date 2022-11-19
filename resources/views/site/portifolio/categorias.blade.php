@@ -40,7 +40,7 @@
 
                 <!-- Card -->
                 <div class="card">
-                <nav>
+                    <nav>
                         <a href="portifolios/embalagem">
                     </nav>
                     <div class="card-image">
