@@ -13,11 +13,11 @@
                 <h2 class="h2-heading">Wallpaper - Listagem</h2>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
+        
         <div class="row">
             <div class="col-lg-12">
-
                 <!-- Card -->
-                <div class="col-lg-10">
+                <div class="col-lg-12">
 
                     <table class="table">
                         <thead>
@@ -53,8 +53,9 @@
 
                 <!-- end of card -->
                 <div class="row">
-                    Total de {{$wallpapers->count()}} Wallpapers publicados.
-
+                    <div class="col-lg-12">
+                        Total de {{$wallpapers->count()}} Wallpapers publicados.
+                    </div>
                 </div>
 
                 <br><br><br><br><br>

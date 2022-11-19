@@ -11,7 +11,9 @@
 <div class="container">
     <header class="blog-header py-3">
       <div class="row flex-nowrap align-items-center">
-        <h1 class="display-4 fst-italic">BLOG</h1>
+        <a style="text-decoration:none" href="/blogs">
+            <h1 class="display-4 fst-italic">BLOG</h1>
+        </a>
       </div>
     </header>
 
