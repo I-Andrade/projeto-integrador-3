@@ -14,7 +14,7 @@
                     <img class="decorative-line" src="images/decorative-line.svg" alt="decorative line">
                     <form class="form-group" action=/insta-new-code>
                         <div class="col-lg-12">
-                            <h3>Tokens de curta duração</h3>
+                            <h3>Tokens de autorização</h3>
                                 <button type="submit" class="form-control-submit-button">Gerar</button>
                         </div>
                         <div class="col-lg-12">
